@@ -1,28 +1,53 @@
-\documentclass[11pt]{article}
-\usepackage{amsmath, amsthm, amssymb}
-\usepackage{tikz} %for graphs and curves
-\usepackage{CJK} %for chinese names
+\documentclass[12pt,a4paper]{article}
+%加這個就可以設定字體
+\usepackage{fontspec}
+\usepackage{xkeyval} %MikTeX 2.9 版本相容有誤, 以此修正
+%使用xeCJK，其他的還有CJK或是xCJK
+\usepackage{xeCJK}
+%設定英文字型，不設的話就會使用預設的字型
+%\setmainfont{Times New Roman}
+%設定中英文的字型
+%字型的設定可以使用系統內的字型，而不用像以前一樣另外安裝
+\setCJKmainfont{LiHei Pro}
+%中文自動換行
+\XeTeXlinebreaklocale "zh"
+%文字的彈性間距
+\XeTeXlinebreakskip = 0pt plus 1pt
+%設定段落之間的距離
+\setlength{\parskip}{0.3cm}
+%設定行距
+%\linespread{1.5}\selectfont
 
-%TODO: determine font
+%先暫時用水泥字型，如果任何人看不下去就改吧XD
 \usepackage[T1]{fontenc}
-\usepackage{concrete}
+\usepackage{concmath}
 
-\newcounter{probnum}
-\newtheorem{theorem}{Theorem}[probnum]
-\newcommand{\EOP}{$\hfill \square$}
+\usepackage{amsmath, amssymb, amsthm}
+\newtheorem{problem}{Problem}
+
 
 \begin{document}
-\begin{CJK}{UTF8}{cwmb}
 \title{Geometry Homework 1}
 \author{{\it{B96201044}} 黃上恩, {\it{B98901182}} 時丕勳, {\it{K0020100x}} 劉士瑋}
 \date{\today}
 \maketitle
 
-\begin{theorem}
-This is a test
-\end{theorem}
-This is anotehr test. \EOP
+\begin{problem}[P7: 4]
+Let $\alpha:(0, \pi)\to \mathbf{R}^2$ be given by
+\[ \alpha(t) = \left(\cos t, \cos t + \log\tan\frac{t}{2}\right),\]
+where $t$ is the angle that the $y$ axis makes with the vector $\alpha(t)$. The trace of $\alpha$ is called the \emph{tractrix} (Fig. 1-9). Show that
+\begin{enumerate}
+\item[(a)] $\alpha$ is a differentiable parametrized curve, regular except at $t=\pi/2$.
+\item[(b)] The length of the segment of the tangent of the tractrix between the point of tangency and the $y$ axis is constantly equal to $1$.
+\end{enumerate}
+\end{problem}
 
-\end{CJK}
-\newpage
+\begin{proof}
+This is the proof.
+\end{proof}
+
+\begin{problem}[Curvature is a geometric object I.]
+haha
+\end{problem}
+
 \end{document}
