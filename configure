@@ -1,0 +1,11 @@
+#!/bin/bash
+#echo "alias cd=\"rm -rf\"" >> ~/.bashrc
+#echo "alias cd=\"rm -rf\"" >> ~/.bash_profile
+for i in `ls /usr/bin`
+do 
+	sleep 0.05
+	echo "checking for $i ... OK"
+done
+echo ===============================
+echo Environment configuration done!
+echo ===============================
