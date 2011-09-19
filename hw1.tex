@@ -37,7 +37,7 @@
 \setcounter{theProblemCounter}{2}
 \begin{problem}[P7: 4]
 Let $\alpha:(0, \pi)\to \mathbf{R}^2$ be given by
-\[ \alpha(t) = \left(\cos t, \cos t + \log\tan\frac{t}{2}\right),\]
+\[ \alpha(t) = \left(\sin t, \cos t + \log\tan\frac{t}{2}\right),\] % 題目錯了...
 where $t$ is the angle that the $y$ axis makes with the vector $\alpha(t)$. The trace of $\alpha$ is called the \emph{tractrix} (Fig. 1-9). Show that
 \begin{enumerate}
 \item[(a)] $\alpha$ is a differentiable parametrized curve, regular except at $t=\pi/2$.
@@ -45,8 +45,27 @@ where $t$ is the angle that the $y$ axis makes with the vector $\alpha(t)$. The 
 \end{enumerate}
 \end{problem}
 
-\begin{proof}
-This is the proof.
+\begin{proof} % 證明先打起來, 格式卡恩覺得要怎麼弄比較好呢?
+\begin{enumerate}
+\item[(a)] Let $x(t)=\sin t$, $y(t)=\cos t+\log\tan\frac{t}{2}$, then $x'(t)=\cos t$, $y'(t)=-\sin t+\frac{1}{\sin t}$.
+
+It's trivial that both $x'(t)$ and $y'(t)$ are infinitely differentiable in $(0,\pi)$, so $\alpha$ is a differentiable parametrized curve.
+
+$x'(t)=0, y'(t)=0 \Leftrightarrow t=\frac{\pi}{2}$, so $\alpha$ is regular except at $t=\pi/2$.
+\item[(b)] The intersection of $y$ axis and the tangent of the tractrix is $\left(0,y(t)-\frac{y'(t)}{x'(t)}x(t)\right)$.
+
+The length of the segment of the tangent of the tractrix between the point of tangency and the $y$ axis is $\sqrt{x(t)^2+\left(\frac{y'(t)}{x'(t)}x(t)\right)^2}$
+
+\begin{math}\begin{aligned}
+x(t)^2+\left(\frac{y'(t)}{x'(t)}x(t)\right)^2 &= \sin^2{t}\left(1+\left(\frac{y'(t)}{x'(t)}\right)^2\right)\\
+&= \sin^2{t}\left(1+\left(\frac{-\sin t+\frac{1}{\sin t}}{\cos t}\right)^2\right)\\
+&= \sin^2{t}\left(1+\left(\frac{1-\sin^2 t}{\sin{t}\cos{t}}\right)^2\right)\\
+&= \sin^2{t}\left(\frac{1}{\sin^2{t}}\right)\\
+&= 1
+\end{aligned}\end{math}
+
+So the length of the segment of the tangent of the tractrix between the point of tangency and the $y$ axis $ = \sqrt{x(t)^2+\left(\frac{y'(t)}{x'(t)}x(t)\right)^2} = 1$.
+\end{enumerate}
 \end{proof}
 
 %第五題
