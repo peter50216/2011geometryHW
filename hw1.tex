@@ -84,6 +84,20 @@ where $r$ is a positive constant and $n$ is the normal vector, is called a \emph
 For (a)-(c), $A(\cdot)$ denotes the area bounded by the corresponding curve, and $\kappa_\alpha, \kappa_\beta$ are the curvatures of $\alpha$ and $\beta$, respectively.
 \end{problem}
 \begin{proof}
+\begin{enumerate}
+\item[]
+\item[(a)] Length of $\beta$ is 
+\[\int_0^l ||\beta'(s)|| ds = \int_0^l ||\alpha'(s)-rn'(s)||.\]
+By definition of normal vector $n$, $n'(s)=-\kappa(s)\alpha'(s)/||\alpha'(s)||$. Therefore, the length of $\beta$ equals
+\begin{align*}
+\int_0^l ||\beta'(s)|| ds =& \int_0^l ||\alpha'(s)+r\kappa(s)\frac{\alpha'(s)}{||\alpha'(s)||}|| ds \\
+ =& \int_0^l ||(1+\frac{r\kappa(s)}{||\alpha'(s)||})\alpha'(s)|| ds\\
+ =& \int_0^l (1+\frac{r\kappa(s)}{||\alpha'(s)||})\cdot ||\alpha'(s)|| ds\\
+ =& \int_0^l ||\alpha'(s)|| ds + r\int_0^l \kappa(s) ds\\
+ =& \mbox{ length of $\alpha$} + 2\pi r.
+\end{align*}
+\item[(b)]
+\end{enumerate}
 %Let $p\in C$ is the farthest point from the center of the disk on the curve. We want to prove that $\kappa(p)\ge 1/r$.
 
 %WLOG, we can rotate and translate the curve so that $p$ is at the origin and the tangent of $C$ at $p$ is the $x$ axis.
@@ -136,17 +150,18 @@ Let $F(x, y)=c$ defines a plane curve. Prove that the curvature of the curve sat
 Where $F_x^2+F_y^2\ne 0$.
 \end{problem}
 \begin{proof}
-Let $\alpha$ be a point in the plane such that $F(\alpha)=c$. Consider the circle of curvature passing through $\alpha$. If we observed the intersection of two line respectively perpendicular to the lines tangent to $F=c$ and passing respectively through $\alpha$ and another point $\alpha'\in F=c$, the intersection approaphes the centre of the circle $o$ as $\alpha'\rightarrow \alpha$. 
+Let $\alpha$ be a point in the plane such that $F(\alpha)=c$. Consider the circle of curvature passing through $\alpha$. If we observed the intersection of two line respectively perpendicular to the lines tangent to $F=c$ and passing respectively through $\alpha$ and another point $\alpha'\in F=c$, the intersection approaches the centre of the circle $o$ as $\alpha'\rightarrow \alpha$. 
 Thus,
 $$
-	|\alpha' - \alpha| = r\sin \theta
+	|\alpha' - \alpha| = r\sin \theta,
 $$
-, where $\theta$ is the angle between the vectors $o-\alpha$ and $o-\alpha'$. By the formula of exterior product, 
+where $\theta$ is the angle between the vectors $o-\alpha$ and $o-\alpha'$. By the formula of exterior product, 
 $$
 	\sin\theta = \frac{|(o - \alpha) \times (o - \alpha')|}{|o - \alpha||o - \alpha'|}
 $$
 Let $n$ denote $ \displaystyle \nabla F/|\nabla F| $ rotated counterclockwise by $\pi/2$.
 Since $\alpha' - \alpha$ is perpendicular to $\displaystyle\frac{\nabla F(\alpha)}{|\nabla F(\alpha)|} $, and since $o - \alpha$ and $o - \alpha'$ are respectively parallel to $\displaystyle \frac{\nabla F(\alpha)}{|\nabla F(\alpha)|} $ and $ \displaystyle\frac{\nabla F(\alpha')}{|\nabla F(\alpha')|} $, we obtained
+
 \begin{align*}
 	|\kappa| = 1/r = &\lim_{\alpha'\rightarrow \alpha}\frac{|(o - \alpha) \times (o - \alpha')|}{|\alpha' - \alpha||o - \alpha||o - \alpha'|} =
 	      \lim_{\alpha'\rightarrow \alpha}\frac{|\nabla F(\alpha) \times \nabla F(\alpha')|}{|\alpha' - \alpha||\nabla F(\alpha)||\nabla F(\alpha')|}\\
