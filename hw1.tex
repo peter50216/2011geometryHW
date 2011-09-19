@@ -136,6 +136,59 @@ Let $F(x, y)=c$ defines a plane curve. Prove that the curvature of the curve sat
 Where $F_x^2+F_y^2\ne 0$.
 \end{problem}
 \begin{proof}
+Let $\alpha$ be a point in the plane such that $F(\alpha)=c$. Consider the circle of curvature passing through $\alpha$. If we observed the intersection of two line respectively perpendicular to the lines tangent to $F=c$ and passing through $\alpha$ and another point $\alpha'\in F=c$, the center of the circle $o$ will be the limit as $\alpha'\rightarrow \alpha$. 
+Thus,
+$$
+	|\alpha' - \alpha| = r\sin \theta
+$$
+, where $\theta$ is the angle between the vectors $o-\alpha$ and $o-\alpha'$. By the formula of exterior product, 
+$$
+	\sin\theta = \frac{|(o - \alpha) \times (o - \alpha')|}{|o - \alpha||o - \alpha'|}
+$$
+Let $n$ denote $ \displaystyle \nabla F/|\nabla F| $ rotated counterclockwise by $\pi/2$.
+Since $\alpha' - \alpha$ is perpendicular to $\displaystyle\frac{\nabla F(\alpha)}{|\nabla F(\alpha)|} $, and since $o - \alpha$ and $o - \alpha'$ are respectively parallel to $\displaystyle \frac{\nabla F(\alpha)}{|\nabla F(\alpha)|} $ and $ \displaystyle\frac{\nabla F(\alpha')}{|\nabla F(\alpha')|} $, we obtained
+\begin{align*}
+	|\kappa| = 1/r = &\lim_{\alpha'\rightarrow \alpha}\frac{|(o - \alpha) \times (o - \alpha')|}{|\alpha' - \alpha||o - \alpha||o - \alpha'|} =
+	      \lim_{\alpha'\rightarrow \alpha}\frac{|\nabla F(\alpha) \times \nabla F(\alpha')|}{|\alpha' - \alpha||\nabla F(\alpha)||\nabla F(\alpha')|}\\
+	      = &\lim_{t\rightarrow 0}\frac{|\nabla F(\alpha) \times \nabla F(\alpha + tn)|}{tn|\nabla F(\alpha)||\nabla F(\alpha + tn)|} \\
+	      = &\lim_{t\rightarrow 0}\frac{|(F_x(\alpha)\vec i + F_y(\alpha)\vec j) \times (F_x(\alpha + tn)\vec i + F_y(\alpha + tn)\vec j)|}{tn|\nabla F(\alpha)|^2}\\
+	      = &\lim_{t\rightarrow 0}\frac{|F_x(\alpha)F_y(\alpha + tn) - F_x(\alpha + tn)F_y(\alpha)|}{tn|\nabla F(\alpha)|^2}\\
+	      = &\lim_{t\rightarrow 0}\frac{|F_x(\alpha)[F_y(\alpha + tn) - F_y(\alpha)] - [F_x(\alpha + tn) - F_x(\alpha)]F_y(\alpha)|}{tn|\nabla F(\alpha)|^2}\\
+	      = &\frac{|F_x(F_{yx}\vec i + F_{yy}\vec j)\cdot n - F_y(F_{xx}\vec i + F_{xy}\vec j)\cdot n|}{|\nabla F|^2}\\
+	      = &\frac{|[(F_xF_{yx} - F_yF_{xx})\vec i + (F_xF_{yy} - F_yF_{xy})\vec j]\cdot n|}{|\nabla F|^2}\\
+	      = &\frac{|[(F_xF_{yx} - F_yF_{xx})\vec i + (F_xF_{yy} - F_yF_{xy})\vec j]\cdot (F_y\vec i - F_x\vec j)/\nabla F|}{|\nabla F|^2}\\
+	      = &
+	      \frac{
+		      \left|
+		      \left[
+			      \begin{array}{cc} F_y & -F_x\end{array}
+		      \right]
+			      \left[
+			      \begin{array}{cc} F_{xx} & F_{xy} \\ F_{xy} & F_{yy} \end{array}
+		      \right]
+			      \left[
+			      \begin{array}{c} F_y \\ -F_x\end{array}
+		      \right]
+		      \right|
+	      }
+		{
+			|\nabla F|^3
+		}\\
+		= &
+		\left|
+		\frac{
+			\left[
+				\begin{array}{cc} F_y, & -F_x\end{array}
+			\right]
+				\left[
+				\begin{array}{cc} F_{xx} & F_{xy} \\ F_{xy} & F_{yy} \end{array}
+			\right]
+				\left[
+				\begin{array}{c} F_y \\ -F_x\end{array}
+			\right]
+		}{(F_x^2+F_y^2)^\frac32}
+		\right|
+\end{align*}
 \end{proof}
 
 \end{document}
