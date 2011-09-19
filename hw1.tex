@@ -23,7 +23,8 @@
 \usepackage{concmath}
 
 \usepackage{amsmath, amssymb, amsthm}
-\newtheorem{problem}{Problem}
+\newcounter{theProblemCounter}
+\newtheorem{problem}[theProblemCounter]{Problem}
 
 
 \begin{document}
@@ -32,6 +33,8 @@
 \date{\today}
 \maketitle
 
+%第三題
+\setcounter{theProblemCounter}{2}
 \begin{problem}[P7: 4]
 Let $\alpha:(0, \pi)\to \mathbf{R}^2$ be given by
 \[ \alpha(t) = \left(\cos t, \cos t + \log\tan\frac{t}{2}\right),\]
@@ -46,8 +49,54 @@ where $t$ is the angle that the $y$ axis makes with the vector $\alpha(t)$. The 
 This is the proof.
 \end{proof}
 
+%第五題
+\setcounter{theProblemCounter}{4}
+\begin{problem}[P47: 6]
+If a closed plane curve $C$ is contained inside a disk of radius $r$, prove that there exists a point $p\in C$ such that the curvature $\kappa$ of $C$ at $p$ satisfies $|\kappa|\ge 1/r$.
+\end{problem}
+
+%第八題
+\setcounter{theProblemCounter}{7}
 \begin{problem}[Curvature is a geometric object I.]
-haha
+$X(s)=(x(s), y(s))$, where $s$ is the arc-length parameter.
+\[ M = \left[
+\begin{array}{cc} a_{11} & a_{12} \\ a_{21} & a_{22} \end{array},
+\right]
+M^t = M^{-1}, \mbox{i.e. $M$ is orthogonal.}
+\]
+Let $\bar{M}(s) = M\cdot \left[\begin{array}{c} x(s)\\y(s)\end{array}\right] + \left[\begin{array}{c}\alpha \\ \beta\end{array}\right]$,  $\alpha, \beta\in \mathbf{R}$. What is the relation between $\kappa_X(s)$ and $\kappa_{\bar{X}}(s)$?
+\end{problem}
+
+%第九題
+\begin{problem}[Curvature is a geometric object II.]
+$X(t) = (x(t), y(t))$ be a regular curve. Let
+\[ \kappa(x(t), y(t)) \equiv \kappa(t) = \frac{
+\left|
+\begin{array}{cc} x' & y' \\ x'' & y'' \end{array}
+\right|
+}{(x'^2+y'^2)^\frac32} \]
+Let $Y(u) = X(t(u))$, $t'(u)\ne 0$. Discuss the relation of $\kappa(x(t), y(t))$ and $\kappa(x(t(u)), y(t(u)))$ at the corresponding points.
+\end{problem}
+
+%第十題
+\begin{problem}
+Let $F(x, y)=c$ defines a plane curve. Prove that the curvature of the curve satisfies
+\[
+|\kappa| = \left|
+\frac{
+\left[
+\begin{array}{cc} F_y, & -F_x\end{array}
+\right]
+\left[
+\begin{array}{cc} F_{xx} & F_{xy} \\ F_{xy} & F_{yy} \end{array}
+\right]
+\left[
+\begin{array}{c} F_y \\ -F_x\end{array}
+\right]
+}{(F_x^2+F_y^2)^\frac32}
+\right|
+\]
+Where $F_x^2+F_y^2\ne 0$.
 \end{problem}
 
 \end{document}
