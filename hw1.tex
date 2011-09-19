@@ -37,7 +37,7 @@
 \setcounter{theProblemCounter}{2}
 \begin{problem}[P7: 4]
 Let $\alpha:(0, \pi)\to \mathbf{R}^2$ be given by
-\[ \alpha(t) = \left(\sin t, \cos t + \log\tan\frac{t}{2}\right),\] % 題目錯了...
+\[ \alpha(t) = \left(\sin t, \cos t + \log\tan\frac{t}{2}\right),\] % 題目錯了... //是說...錯在哪裡呀OQ 我完全看不出來...
 where $t$ is the angle that the $y$ axis makes with the vector $\alpha(t)$. The trace of $\alpha$ is called the \emph{tractrix} (Fig. 1-9). Show that
 \begin{enumerate}
 \item[(a)] $\alpha$ is a differentiable parametrized curve, regular except at $t=\pi/2$.
@@ -46,12 +46,14 @@ where $t$ is the angle that the $y$ axis makes with the vector $\alpha(t)$. The 
 \end{problem}
 
 \begin{proof} % 證明先打起來, 格式卡恩覺得要怎麼弄比較好呢?
+
 \begin{enumerate}
-\item[(a)] Let $x(t)=\sin t$, $y(t)=\cos t+\log\tan\frac{t}{2}$, then $x'(t)=\cos t$, $y'(t)=-\sin t+\frac{1}{\sin t}$.
+\item[]
+\item[(a)] Let $x(t)=\sin t$, $y(t)=\cos t+\log\tan\frac{t}{2}$, then \[x'(t)=\cos t; \ \  y'(t)=-\sin t+\frac{1}{\sin t}.\]
 
 It's trivial that both $x'(t)$ and $y'(t)$ are infinitely differentiable in $(0,\pi)$, so $\alpha$ is a differentiable parametrized curve.
 
-$x'(t)=0, y'(t)=0 \Leftrightarrow t=\frac{\pi}{2}$, so $\alpha$ is regular except at $t=\pi/2$.
+$x'(t)=0, y'(t)=0 \Longleftrightarrow t=\frac{\pi}{2}$, so $\alpha$ is regular except at $t=\pi/2$.
 \item[(b)] The intersection of $y$ axis and the tangent of the tractrix is $\left(0,y(t)-\frac{y'(t)}{x'(t)}x(t)\right)$.
 
 The length of the segment of the tangent of the tractrix between the point of tangency and the $y$ axis is $\sqrt{x(t)^2+\left(\frac{y'(t)}{x'(t)}x(t)\right)^2}$
@@ -68,13 +70,20 @@ So the length of the segment of the tangent of the tractrix between the point of
 \end{enumerate}
 \end{proof}
 
-%第五題
+%第五題 %皮皮 電波 對不起我打錯題目了...
 \setcounter{theProblemCounter}{4}
 \begin{problem}[P47: 6]
-If a closed plane curve $C$ is contained inside a disk of radius $r$, prove that there exists a point $p\in C$ such that the curvature $\kappa$ of $C$ at $p$ satisfies $|\kappa|\ge 1/r$.
+Let $\alpha(s), s\in [0, l]$ be a closed convex plane curve positively oriented. The curve
+\[ \beta(s)=\alpha(s) - rn(s),\]
+where $r$ is a positive constant and $n$ is the normal vector, is called a \emph{parallel} curve to $\alpha$ (Fig. 1-37). Show that
+\begin{enumerate}
+\item[(a)] Length of $\beta = $ length of $\alpha + 2\pi r$.
+\item[(b)] $A(\beta)=A(\alpha)+rl+\pi r^2$.
+\item[(c)] $\kappa_\beta(s) = \kappa_\alpha(s)/(1+r\kappa_\alpha(s))$.
+\end{enumerate}
 \end{problem}
 \begin{proof}
-Let $p\in C$ is the farthest point from the center of the disk on the curve. We want to prove that $\kappa(p)\ge 1/r$.
+%Let $p\in C$ is the farthest point from the center of the disk on the curve. We want to prove that $\kappa(p)\ge 1/r$.
 \end{proof}
 %第八題
 \setcounter{theProblemCounter}{7}
