@@ -103,16 +103,17 @@ $$
 $$
 , where $\|\cdot\|_z$ denotes the $z$-component of a vector , and then
 \begin{align*}
-\oint_0^l \beta\times\beta' ds &= \oint_0^l (\alpha - rn)\times(\alpha - rn)'ds \\&= \oint_0^l \alpha\times\alpha' ds + r^2\oint_0^l n\times n' ds + r\oint_0^l (\alpha'\times n - \alpha\times n') ds
-\\&= \oint_0^l \alpha\times\alpha' ds - r^2\oint_0^l n\times(-\kappa\alpha'/||\alpha'||) ds 
+\oint_0^l \beta\times\beta' ds =& \oint_0^l (\alpha - rn)\times(\alpha - rn)'ds
+\\=& \oint_0^l \alpha\times\alpha' ds + r^2\oint_0^l n\times n' ds + r\oint_0^l (\alpha'\times n - \alpha\times n') ds
+\\=& \oint_0^l \alpha\times\alpha' ds - r^2\oint_0^l n\times(-\kappa\alpha'/||\alpha'||) ds 
 \\&- r\oint_0^l (\alpha\times n)'ds + 2r\oint_0^l\alpha'\times n ds
-\\&= \oint_0^l \alpha\times\alpha' ds - r^2\oint_0^l n\times(-\kappa\alpha'/||\alpha'||) ds 
+\\=& \oint_0^l \alpha\times\alpha' ds - r^2\oint_0^l n\times(-\kappa\alpha'/||\alpha'||) ds 
 \\&- (\alpha\times n\vert_{s=0}^l) + 2r\oint_0^l\alpha'\times n ds.
 \end{align*}
 Since the third term of the last value is zero and that $\alpha'\times n = \|\alpha'\|e_z$, 
 \begin{align*}
-A(\beta) &= \left\|\frac 12\oint_0^l \alpha\times\alpha' ds - \frac{r^2}2\oint_0^l n\times(-\kappa\alpha'/||\alpha'||) ds + r\oint_0^l\alpha'\times n ds\right\|_z
-\\&= A(\alpha) + \frac{r^2}2\oint_0^l \kappa ds + r\oint_0^l\|\alpha\| ds = A(\alpha) + \pi r^2 + rl.
+A(\beta) =& \left\|\frac 12\oint_0^l \alpha\times\alpha' ds - \frac{r^2}2\oint_0^l n\times(-\kappa\alpha'/||\alpha'||) ds + r\oint_0^l\alpha'\times n ds\right\|_z
+\\=& A(\alpha) + \frac{r^2}2\oint_0^l \kappa ds + r\oint_0^l\|\alpha\| ds = A(\alpha) + \pi r^2 + rl.
 \end{align*}
 
 \end{enumerate}
