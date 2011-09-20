@@ -97,6 +97,24 @@ By definition of normal vector $n$, $n'(s)=-\kappa(s)\alpha'(s)/||\alpha'(s)||$.
  =& \mbox{ length of $\alpha$} + 2\pi r.
 \end{align*}
 \item[(b)]
+Let $D$ and $D'$ denote the region bounded by $\alpha$ and $\beta'$. By Green's theorem, 
+$$
+\iint_D dxdy = \frac 12\left\|\oint_0^l \alpha\times\alpha' ds\right\|_z; \iint_{D'} dxdy = \frac 12\left\|\oint_0^l \beta\times\beta' ds\right\|_z
+$$
+, and then
+\begin{align*}
+\oint_0^l \beta\times\beta' ds &= \oint_0^l (\alpha - rn)\times(\alpha - rn)'ds \\&= \oint_0^l \alpha\times\alpha' ds + r^2\oint_0^l n\times n' ds + r\oint_0^l (\alpha'\times n - \alpha\times n') ds
+\\&= \oint_0^l \alpha\times\alpha' ds - r^2\oint_0^l (\alpha''/\kappa)\times(-\kappa\alpha'/||\alpha'||) ds 
+\\&- r\oint_0^l (\alpha\times n)'ds + 2r\oint_0^l\alpha'\times n ds
+\\&= \oint_0^l \alpha\times\alpha' ds - r^2\oint_0^l (\alpha''/\kappa)\times(-\kappa\alpha'/||\alpha'||) ds 
+\\&- r\oint_0^l (\alpha\times(\alpha''/\kappa))'ds + 2r\oint_0^l\alpha'\times n ds
+\end{align*}
+Since $\alpha\parallel\alpha''$ and $\alpha'\times n = \|\alpha'\|e_z$, 
+\begin{align*}
+A(\beta) &= \left\|\frac 12\oint_0^l \alpha\times\alpha' ds - \frac{r^2}2\oint_0^l n\times(-\kappa\alpha'/||\alpha'||) ds + r\oint_0^l\alpha'\times n ds\right\|_z
+\\&= A(\alpha) + \frac{r^2}2\oint_0^l \kappa ds + r\oint_0^l\|\alpha\| ds = A(\alpha) + \pi r^2 + rl
+\end{align*}
+
 \end{enumerate}
 %Let $p\in C$ is the farthest point from the center of the disk on the curve. We want to prove that $\kappa(p)\ge 1/r$.
 
