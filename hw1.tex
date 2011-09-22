@@ -149,6 +149,24 @@ $X(t) = (x(t), y(t))$ be a regular curve. Let
 Let $Y(u) = X(t(u))$, $t'(u)\ne 0$. Discuss the relation of $\kappa(x(t), y(t))$ and $\kappa(x(t(u)), y(t(u)))$ at the corresponding points.
 \end{problem}
 \begin{proof}
+We denote $\frac{dx}{dt}, \frac{d^2x}{dt^2}, \frac{dy}{dt}, \frac{d^2y}{dt^2}$ by $x', x'', y', y''$ respectively:
+\begin{align*}
+\kappa(x(t(u)), y(t(u))) = & \kappa(u) = \frac{\left|
+\begin{array}{cc}
+x'\frac{dt}{du} & y'\frac{dt}{du}\\
+x''\left(\frac{dt}{du}\right)^2 + x'\frac{d^2t}{du^2} &
+y''\left(\frac{dt}{du}\right)^2 + y'\frac{d^2t}{du^2}
+\end{array}
+\right|}{
+\left(\left(x'\frac{dt}{du}\right)^2+\left(y'\frac{dt}{du}\right)^2\right)^\frac32
+} \\
+= & \frac{
+\left|
+\begin{array}{cc} x' & y' \\ x'' & y'' \end{array}
+\right| (dt/du)^3
+}{(x'^2+y'^2)^\frac32 (dt/du)^3} = \kappa(t)
+\end{align*}
+This means that the curvature is never changed at corresponding points when in change of variables.
 \end{proof}
 
 %第十題
