@@ -133,6 +133,9 @@ M^t = M^{-1}, \mbox{i.e. $M$ is orthogonal.}
 Let $\bar{X}(s) = M\cdot \left[\begin{array}{c} x(s)\\y(s)\end{array}\right] + \left[\begin{array}{c}\alpha \\ \beta\end{array}\right]$,  $\alpha, \beta\in \mathbf{R}$. What is the relation between $\kappa_X(s)$ and $\kappa_{\bar{X}}(s)$?
 \end{problem}
 \begin{proof}
+We first claim that $s$ is also the arc-length parameter for $\bar{X}$. This is because $\|\bar{X}'(s)\| = \|(a_{11}x'(s)+a_{12}y'(s), a_{21}x'(s)+a_{22}y'(s))\| = (a^2_{11}+a^2_{12})(x'(s))^2+(a^2_{21}+a^2_{22})(y'(s))^2$. Since $M$ is orthogonal, we have $a^2_{11}+a^2_{12}=1=a^2_{21}+a^2_{22}$ and since $s$ is the arc-length parameter of $X$, $\|X'(s)\|=1$. Therefore, $\|\bar{X}'(s)\| = (x'(s))^2+(y'(s))^2 = \|X'(s)\| = 1$.
+
+Now, $|\kappa_{\bar{X}}(s)|$ is simply $\|\bar{X}''(s)\| = \|X''(s)\| = |\kappa_{X}(s)|$. There might be a negation on $\kappa_{\bar{X}}(s)$ from $\kappa_X(s)$ due to the reflection of the curve.
 \end{proof}
 
 %第九題
