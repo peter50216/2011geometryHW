@@ -1,4 +1,4 @@
-\documentclass[12pt,a4paper]{article}
+\documentclass[10pt,a4paper]{article}
 \usepackage{amsmath, amssymb, amsthm}
 %加這個就可以設定字體
 \usepackage{fontspec}
@@ -22,6 +22,9 @@
 %先暫時用水泥字型，如果任何人看不下去就改吧XD
 \usepackage[T1]{fontenc}
 \usepackage{concmath}
+%\usepackage[urw-garamond]{mathdesign}
+%\usepackage[T1]{fontenc}
+%\usepackage{mathptmx}
 
 \newcounter{theProblemCounter}
 \newtheorem{problem}[theProblemCounter]{Problem}
@@ -86,7 +89,7 @@ For (a)-(c), $A(\cdot)$ denotes the area bounded by the corresponding curve, and
 \begin{proof}
 \begin{enumerate}
 \item[]
-\item[(a)] Since $\alpha$ is a closed convex plane curve, by the theorem of turning tangents (P.37), we have \[ \int_0^l \kappa(s)ds = 2\pi \] Therefore, length of $\beta$ is 
+\item[(a)] Since $\alpha$ is a closed convex plane curve, by the theorem of turning tangents (P.37), we have \[ \int_0^l \kappa(s)ds = 2\pi \] Moreover, $\kappa(s)$ and $r$ are both positive by definition, so $r\kappa(s)/\|\alpha'(s)\|$ is always non-negative. Therefore, length of $\beta$ is 
 \[\int_0^l \|\beta'(s)\| ds = \int_0^l \|\alpha'(s)-rn'(s)\|ds.\]
 By definition of normal vector $n$, $n'(s)=-\kappa(s)\alpha'(s)/\|\alpha'(s)\|$. Therefore, the length of $\beta$ equals
 \begin{align*}
@@ -97,6 +100,8 @@ By definition of normal vector $n$, $n'(s)=-\kappa(s)\alpha'(s)/\|\alpha'(s)\|$.
  =& \mbox{ length of $\alpha$} + 2\pi r.
 \end{align*}
 \item[(b)]
+By using the result of (c), we knew that $\kappa_\beta$ is always positive, so $\beta$ is a convex closed curve and hence simple.
+
 Let $D$ and $D'$ denote the region bounded by $\alpha$ and $\beta$. By Green's theorem, 
 $$
 \iint_D dxdy = \frac 12\left\|\oint_0^l \alpha\times\alpha' ds\right\|_z; \iint_{D'} dxdy = \frac 12\left\|\oint_0^l \beta\times\beta' ds\right\|_z
@@ -113,7 +118,7 @@ $$
 Since the third term of the last value is zero and that $\alpha'\times n = \|\alpha'\|e_z$, 
 \begin{align*}
 A(\beta) =& \left\|\frac 12\oint_0^l \alpha\times\alpha' ds - \frac{r^2}2\oint_0^l n\times(-\kappa\alpha'/\|\alpha'\|) ds + r\oint_0^l\alpha'\times n ds\right\|_z
-\\=& A(\alpha) + \frac{r^2}2\oint_0^l \kappa ds + r\oint_0^l\|\alpha'\| ds = A(\alpha) + \pi r^2 + rl.
+\\=& \left| A(\alpha) + \frac{r^2}2\oint_0^l \kappa ds + r\oint_0^l\|\alpha'\| ds \right| = A(\alpha) + \pi r^2 + rl.
 \end{align*}
 \item[(c)]
 \begin{align*}
@@ -182,7 +187,7 @@ This means that the curvature is never changed at corresponding points when in c
 
 %第十題
 \begin{problem}
-Let $F(x, y)=c$ defines a plane curve. Prove that the curvature of the curve satisfies
+Let $F(x, y)=c$ define a plane curve. Prove that the curvature of the curve satisfies
 \[
 |\kappa| = \left|
 \frac{
