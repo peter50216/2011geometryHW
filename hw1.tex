@@ -121,7 +121,10 @@ A(\beta) =& \left\|\frac 12\oint_0^l \alpha\times\alpha' ds - \frac{r^2}2\oint_0
 &=t(s)+r\kappa_\alpha(s)t(s)\\
 &=(1+r\kappa_\alpha(s))t(s)\\
 \beta''(s)&=(1+r\kappa_\alpha(s))\kappa_\alpha n(s)+r\kappa_\alpha'(s) t(s)\\
-\kappa_\beta(s)&=\frac{(1+r\kappa_\alpha(s))(1+r\kappa_\alpha(s))\kappa_\alpha}{(1+r\kappa_\alpha(s))^3}\\
+\kappa_\beta(s)&=\frac{\left|
+\begin{array}{cc} 1+r\kappa_\alpha(s) & 0 \\ r\kappa_\alpha'(s) & (1+r\kappa_\alpha(s))\kappa_\alpha \end{array}
+\right|}{(1+r\kappa_\alpha(s))^3}\\
+&=\frac{(1+r\kappa_\alpha(s))(1+r\kappa_\alpha(s))\kappa_\alpha}{(1+r\kappa_\alpha(s))^3}\\
 &=\frac{\kappa_\alpha}{1+r\kappa_\alpha(s)}
 \end{align*}
 \end{enumerate}
