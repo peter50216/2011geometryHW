@@ -9,7 +9,9 @@
 %\setmainfont{Times New Roman}
 %設定中英文的字型
 %字型的設定可以使用系統內的字型，而不用像以前一樣另外安裝
-\setCJKmainfont{LiHei Pro}
+\setCJKmainfont{文泉驛微米黑}
+\setCJKfamilyfont{lh}{LiHei Pro}
+\newcommand{\LiHei}{\CJKfamily{lh}}
 %中文自動換行
 \XeTeXlinebreaklocale "zh"
 %文字的彈性間距
@@ -30,7 +32,7 @@
 
 \begin{document}
 \title{{\fontspec{Copperplate Gothic Bold}Geometry Homework 2}}
-\author{{\it{B96201044}} 黃上恩, {\it{B98901182}} 時丕勳, {\it{K0020100x}} 劉士瑋}
+\author{{\it{B96201044}} {\LiHei 黃上恩}, {\it{B98901182}} {\LiHei 時丕勳}, {\it{K0020100x}} {\LiHei 劉士瑋}}
 \date{\today}
 \maketitle
 
@@ -55,7 +57,7 @@ Assume that all parametrized curve $\alpha$ has the property that all its tangen
 %第五題
 \setcounter{theProblemCounter}{4}
 \begin{problem}
-以 $t=0$ 開始將曲線 $(t^2, t^3)$ 化成長度參數。並討論 $t=0$ 時的曲綠。
+以 $t=0$ 開始將曲線 $(t^2, t^3)$ 化成長度參數。並討論 $t=0$ 時的曲率。
 \end{problem}
 
 %第六題
