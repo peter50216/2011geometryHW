@@ -42,6 +42,21 @@
 If a closed plane curve $C$ is contained inside a disk of radius $r$, prove that there exists a point $p\in C$ such that the curvature $\kappa$ of $C$ at $p$ satifies $|\kappa|\ge 1/r$.
 \end{problem}
 \begin{proof}
+Let $X(s)$ denote the curve $C$, where $s\in [0, l]$ is an arc-length parameter, that is, $\|X'(s)\|\equiv 1$. Since $C$ is contained inside a disk of radius $r$, let $A$ be the centre of the disk. So we have
+\begin{equation} \|X(s)-A\|\le r\end{equation}
+Consider $f(s)=\left\langle X(s)-A, X(s)-A\right\rangle$. Since $[0, l]$ is compact, the maximum exists, denoting by $f(s') = \max_{s\in[0,l]}f(s)$. Therefore, we have $f'(s')=0$ and $f''(s') \le 0$. Now 
+\begin{equation}
+	f''(s)=2\left(\|X'(s)\|^2+\kappa(s)\left\langle X(s)-A, N(s)\right\rangle\right),
+\end{equation}
+where $X''(s)=\kappa(s)N(s)$ and $N(s)$ is the normal vector. Take $s=s'$ in (2) we have $f''(s') \le 0$ and hence
+\begin{equation}
+\kappa(s')\left\langle X(s)-A, N(s)\right\rangle \le -1
+\end{equation}
+This implies
+\begin{equation}
+|\kappa(s')\left\langle X(s)-A, N(s)\right\rangle| \ge 1
+\end{equation}
+%Not done yet...
 \end{proof}
 
 %第四題
