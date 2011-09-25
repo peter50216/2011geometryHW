@@ -74,6 +74,33 @@ Let $P$ be the fixed point, and let $X(s)$ be this curve. Then from description,
 以 $t=0$ 開始將曲線 $(t^2, t^3)$ 化成長度參數。並討論 $t=0$ 時的曲率。
 \end{problem}
 
+\begin{proof}
+Consider $t>0$, the length of the curve of $t$ is
+\begin{equation}
+\int_0^t 3t\sqrt{(4/9)+t^2}\ dt = \int_0^t \frac32\sqrt{(4/9)+t^2}\ dt^2 = \left(\frac49+t^2\right)^{3/2}-\frac{8}{27}
+\end{equation}
+Let $s>0$ be the arc-length parameter, note that $s>0$ equivalent to $t>0$, so we have $s=(4/9+t^2)^{3/2}-8/27$ and hence
+\begin{equation}
+t = \sqrt{\left(s+\frac{8}{27}\right)^{2/3} - \frac{4}{9}}
+\end{equation}
+Therefore the curve with arc-length parameter $s>0$ is
+\begin{equation}
+\left(\left(s+8/27)\right)^{2/3} - 4/9, 
+\left(\left(s+8/27\right)^{2/3} - 4/9\right)^{3/2}\right)
+\end{equation}
+By symmetry, for the case $s<0$ the corresponding curve is
+\begin{equation}
+\left(\left(8/27-s)\right)^{2/3} - 4/9, 
+-\left(\left(8/27-s\right)^{2/3} - 4/9\right)^{3/2}\right)
+\end{equation}
+We can write them together to get the result,
+\begin{equation}
+\left(\left(8/27+|s|)\right)^{2/3} - 4/9, 
+sign(s)\cdot\left(\left(8/27+|s|\right)^{2/3} - 4/9\right)^{3/2}\right)
+\end{equation}
+
+\end{proof}
+
 %第六題
 \setcounter{theProblemCounter}{5}
 \begin{problem}
