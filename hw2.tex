@@ -29,7 +29,6 @@
 \newcounter{theProblemCounter}
 \newtheorem{problem}[theProblemCounter]{Problem}
 
-
 \begin{document}
 \title{{\fontspec{Copperplate Gothic Bold}Geometry Homework 2}}
 \author{{\it{B96201044}} {\LiHei 黃上恩}, {\it{B98901182}} {\LiHei 時丕勳}, {\it{K0020100x}} {\LiHei 劉士瑋}}
@@ -98,6 +97,8 @@ We can write them together to get the result,
 \left(\left(8/27+|s|)\right)^{2/3} - 4/9, 
 sign(s)\cdot\left(\left(8/27+|s|\right)^{2/3} - 4/9\right)^{3/2}\right)
 \end{equation}
+For $t\ne 0$, $X'(t)=(2t, 3t^2)\ne 0$, so the curvature is
+$\kappa(t)=((2t)(6t)-(3t^2)(2)) / \sqrt{4t^2+9t^4} = 6t / \sqrt{4+9t^2} \to 0$ as $t\to 0$. So when $t=0$, the curvature can be defined to be 0 so that $\kappa(t)$ at $t=0$ is continuous.
 \end{proof}
 
 %第六題
@@ -110,6 +111,31 @@ sign(s)\cdot\left(\left(8/27+|s|\right)^{2/3} - 4/9\right)^{3/2}\right)
 \end{enumerate}
 \end{problem}
 \begin{proof}
+\begin{enumerate}
+\item[]
+\item[(a)] 原本圖形上的點 $(x, f(x))$ 經過縮放後會到 $(\lambda x, \lambda f(x)) = (\lambda x, \lambda f(\frac{\lambda x}{\lambda}))$，所以新的函數圖形就是 $y = \lambda f(\frac{x}{\lambda})$。
+\item[(b)] 原本的曲率是
+\begin{equation}
+\kappa = \frac{\left|\begin{array}{cc} x' & y' \\ x'' & y''\end{array}
+\right|
+}{(x'^2+y'^2)^{3/2}}
+= \frac{\left|\begin{array}{cc} 1 & f' \\ 0 & f''\end{array}
+\right|
+}{(1+f'^2)^{3/2}}
+= \frac{f''}{(1+f'^2)^{3/2}}
+\end{equation}
+新的曲率是
+\begin{equation}
+\kappa_{\mbox{new}} = \frac{\left|\begin{array}{cc} x' & y' \\ x'' & y''\end{array}
+\right|
+}{(x'^2+y'^2)^{3/2}}
+= \frac{\left|\begin{array}{cc} 1 & \lambda f'\cdot \frac{1}{\lambda} \\ 0 & \frac{1}{\lambda}\cdot f''\end{array}
+\right|
+}{(1+f'^2)^{3/2}}
+= \frac{\frac{1}{\lambda}f''}{(1+f'^2)^{3/2}}
+\end{equation}
+是原本的 $1/\lambda$ 倍。
+\end{enumerate}
 \end{proof}
 
 %第七題
@@ -118,6 +144,37 @@ sign(s)\cdot\left(\left(8/27+|s|\right)^{2/3} - 4/9\right)^{3/2}\right)
 如圖，有一橢圓，其焦點為 $O_1$ 和 $O_2$，設 $L$ 切橢圓於 $P$，且 $L$ 與 $\overline{O_2P}$ 之夾角為 $\theta$。以 $\theta$ 為參數，說明曲率 $\kappa\propto\sin^3\theta$
 \end{problem}
 \begin{proof}
+不妨假設 $O_1, O_2$ 皆落在 $X$ 軸上，我們將此橢圓參數化為 $(a\cos t, b\sin t)$，其中 $t\in [0, 2\pi]$ 而且 $a>b$。於是可得橢圓之兩焦點座標分別是 $(c, 0), (-c, 0)$ 其中 $c=\sqrt{a^2-b^2}$。計算此曲線的曲率為
+\begin{equation}
+\kappa(t) = \frac{\left|
+\begin{array}{cc}
+-a\sin t & b\cos t\\
+-a\cos t & -b\sin t\end{array}
+\right|}{(a^2 \sin^2 t + b^2 \cos^2 t)^{3/2}}
+=\frac{ab}{(a^2 \sin^2 t + b^2 \cos^2 t)^{3/2}}
+\end{equation}
+現在來計算 $\sin\theta(t)$，其實 $\theta(t)$ 就是向量 $O_2P = (a\cos t-c, b\sin t)$ 與切向量 $(-a\sin t, b\cos t)$ 的有向夾角，所以
+\begin{align}
+\sin\theta(t) =& \frac{\left|
+\begin{array}{cc}  a\cos t-c& b\sin t\\
+-a\sin t & b\cos t\end{array}
+\right|
+}{\sqrt{(a\cos t-c)^2 + b^2\sin^2t} \sqrt{a^2\sin^2t+b^2\cos^2t}}\\
+=& \frac{ab-bc\cos t}
+{\sqrt{a^2\cos^2t-2ac\cos t+c^2 + b^2\sin^2t}\sqrt{a^2\sin^2t+b^2\cos^2t}}\\
+=& \frac{b(a-c\cos t)}
+{\sqrt{a^2\cos^2t-2ac\cos t+a^2-b^2\cos^2t}\sqrt{a^2\sin^2t+b^2\cos^2t}}\\
+=&\frac{b(a-c\cos t)}
+{\sqrt{c^2\cos^2t-2ac\cos t+a^2}\sqrt{a^2\sin^2t+b^2\cos^2t}}\\
+=&\frac{b(a-c\cos t)}
+{\sqrt{(a-c\cos t)^2}\sqrt{a^2\sin^2t+b^2\cos^2t}}\\
+=&\frac{b}{\sqrt{a^2\sin^2t+b^2\cos^2t}}
+\end{align}
+而從 (17) 推到 (18) 是因為 $c\cos t \le c < a$。於是
+\begin{equation}
+\kappa(t) = \frac{ab}{(a^2\sin^2t+b^2\cos^2t)^{3/2}}
+= \frac{a}{b^2} \frac{b^3}{(a^2\sin^2t+b^2\cos^2t)^{3/2}} \propto \sin^3\theta
+\end{equation}
 \end{proof}
 
 %第九題
