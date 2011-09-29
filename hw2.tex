@@ -184,6 +184,17 @@ $\kappa(t)=((2t)(6t)-(3t^2)(2)) / \sqrt{4t^2+9t^4} = 6t / \sqrt{4+9t^2} \to 0$ a
 \[\kappa(0)\ne 0\Rightarrow \lim_{t\to 0}P(t)=\gamma_0 + \frac{1}{\kappa(0)}N_0\]
 \end{problem}
 \begin{proof}
-$\gamma_0+vN_0=\gamma(t)+uN(t)\ \Rightarrow\ v=\frac{\left|\begin{array}{cc}\ &\ \\ \gamma(t)-\gamma_0&N(t)\\\ &\ \end{array}\right|}{\left|\begin{array}{cc}\ &\ \\ N_0& N(t)\\\ &\ \end{array}\right|}$
+Let $P(t)=\gamma_0 + v(t)N_0$, then $\gamma_0+v(t)N_0=\gamma(t)+uN(t)$\\
+\[v(t)=\frac{\left|\begin{array}{cc}\ &\ \\ \gamma(t)-\gamma_0&N(t)\\\ &\ \end{array}\right|}{\left|\begin{array}{cc}\ &\ \\ N_0& N(t)\\\ &\ \end{array}\right|}\]\\
+Assume that $t$ is arc-length parameter, then:\\
+\begin{align}
+\lim_{t\to 0} P(t) &= \lim_{t\to 0}\left(\gamma_0 + v(t)N_0\right)\\
+&= \gamma_0 + \lim_{t\to 0}v(t)N_0\\
+&= \gamma_0 + \lim_{t\to 0}\frac{\left|\begin{array}{cc}\ &\ \\ \gamma(t)-\gamma_0&N(t)\\\ &\ \end{array}\right|}{\left|\begin{array}{cc}\ &\ \\ N_0& N(t)\\\ &\ \end{array}\right|} N_0\\
+&= \gamma_0 + \lim_{t\to 0}\frac{\left(\left|\begin{array}{cc}\ &\ \\ \gamma(t)-\gamma_0&N(t)\\\ &\ \end{array}\right|\right)'}{\left(\left|\begin{array}{cc}\ &\ \\ N_0& N(t)\\\ &\ \end{array}\right|\right)'} N_0\\
+&= \gamma_0 + \lim_{t\to 0}\frac{\left|\begin{array}{cc}\ &\ \\ \gamma'(t)&N(t)\\\ &\ \end{array}\right|+\left|\begin{array}{cc}\ &\ \\ \gamma(t)-\gamma_0&N'(t)\\\ &\ \end{array}\right|}{\left|\begin{array}{cc}\ &\ \\ N_0& N'(t)\\\ &\ \end{array}\right|} N_0\\
+&= \gamma_0 + \frac{\left|\begin{array}{cc}\ &\ \\ T_0&N_0\\\ &\ \end{array}\right|}{\left|\begin{array}{cc}\ &\ \\ N_0& -\kappa_0T_0\\\ &\ \end{array}\right|} N_0\\
+&= \gamma_0 + \frac{1}{\kappa_0} N_0
+\end{align}
 \end{proof}
 \end{document}
