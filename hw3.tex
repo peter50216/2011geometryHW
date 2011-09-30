@@ -1,0 +1,92 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{amsmath, amssymb, amsthm}
+%加這個就可以設定字體
+\usepackage{fontspec}
+\usepackage{xkeyval} %MikTeX 2.9 版本相容有誤, 以此修正
+%使用xeCJK，其他的還有CJK或是xCJK
+\usepackage{xeCJK}
+%設定英文字型，不設的話就會使用預設的字型
+%\setmainfont{Times New Roman}
+%設定中英文的字型
+%字型的設定可以使用系統內的字型，而不用像以前一樣另外安裝
+\setCJKmainfont{文泉驛微米黑}
+\setCJKfamilyfont{lh}{LiHei Pro}
+\newcommand{\LiHei}{\CJKfamily{lh}}
+%中文自動換行
+\XeTeXlinebreaklocale "zh"
+%文字的彈性間距
+\XeTeXlinebreakskip = 0pt plus 1pt
+%設定段落之間的距離
+\setlength{\parskip}{0.3cm}
+%設定行距
+%\linespread{1.5}\selectfont
+
+%先暫時用水泥字型，如果任何人看不下去就改吧XD
+\usepackage[T1]{fontenc}
+\usepackage{concmath}
+%\usepackage{mathptmx} %Times
+
+\newcounter{theProblemCounter}
+\newtheorem{problem}[theProblemCounter]{Problem}
+
+\begin{document}
+\title{{\fontspec{Copperplate Gothic Bold}Geometry Homework 2}}
+\author{{\it{B96201044}} {\LiHei 黃上恩}, {\it{B98901182}} {\LiHei 時丕勳}, {\it{K0020100x}} {\LiHei 劉士瑋}}
+\date{\today}
+\maketitle
+
+%第三題
+\setcounter{theProblemCounter}{2}
+\begin{problem}[P26: 16]
+Show that the knowledge of the vector function $n=n(s)$ (normal vector) of a curve $\alpha$, with nonzero torsion everywhere, determines the curvature $\kappa(s)$ and the torsion $\tau$ of $\alpha$.  ($\vec{n}$ 能決定曲線嗎？說明題目錯誤並找反例。)
+\end{problem}
+\begin{proof}
+
+\end{proof}
+
+%第四題
+\setcounter{theProblemCounter}{3}
+\begin{problem}[P26: 17，另一種描述 Helix 的方式]
+In general, a curve $\alpha$ is called a \emph{helix} if the tangent lines of $\alpha$ make a constant angle with a fixed direction. Assume that $\tau(s)\ne 0$, $s\in I$, and prove that:
+\begin{enumerate}
+\item[(a)] $\alpha$ is a helix if and only if $\kappa/\tau=$constant.
+\item[(b)] $\alpha$ is a helix if and only if the lines containing $n(s)$ and passing through $\alpha(s)$ are parallel to a fixed plane.
+\item[(c)] $\alpha$ is a helix if and only if the lines containing $b(s)$ and passing through $\alpha(s)$ make a constant angle with a fixed direction.
+\item[(d)] The curve\[
+\alpha(s)=\left(\frac{a}{c}\int \sin\theta(s) ds, \frac{a}{c}\int \cos\theta(s) ds, \frac{b}{c} s
+\right),
+\]
+where $c^2=a^2+b^2$, is a helix, and that $\kappa/\tau=a/b$.
+\end{enumerate}
+\end{problem}
+
+%第六題
+\setcounter{theProblemCounter}{5}
+\begin{problem}
+$\gamma(s)$ 長度參數。若將 $T(s)$ 寫成 $(\sin\phi\cos\theta, \sin\phi\sin\theta, \cos\phi)$， $\phi,\theta$ 是 $s$ 的函數。說明 $\kappa(s)=\sqrt{\phi'^2+\theta'^2\sin^2\phi}$。
+\end{problem}
+
+%第七題
+\setcounter{theProblemCounter}{6}
+\begin{problem}
+$\gamma:\mathbb{R}\to\mathbb{R}^3$，不妨假設是長度參數。
+\begin{enumerate}
+\item[(b)] 若 $M^tM=I$，$\det(M)=-1$ 且 $\overline{\gamma}=M\gamma$，討論 $\kappa, \tau$ 變化。
+\item[(c)] $\overline{\gamma}(s)=\gamma(-s)$，說明 $\kappa, \tau$ 變化。
+\end{enumerate}
+\end{problem}
+
+%第八題
+\setcounter{theProblemCounter}{7}
+\begin{problem}
+說明 $\overline{\gamma}(u)=\gamma(-s)$ 時，在對應點
+\[
+\frac{\det(\overline\gamma',\overline\gamma'',
+\overline\gamma''')}{|\overline\gamma'\times \overline\gamma''|^2}(u) = 
+\frac{\det(\gamma',\gamma'',\gamma''')}{|\gamma'\times\gamma''|^2}(t)
+\]
+再用 chain rule 直接說明。
+\end{problem}
+\begin{proof}
+\end{proof}
+\end{document}
