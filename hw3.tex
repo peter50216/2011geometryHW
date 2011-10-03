@@ -72,7 +72,7 @@ $\gamma(s)$ 長度參數。若將 $T(s)$ 寫成 $(\sin\phi\cos\theta, \sin\phi\s
 \end{problem}
 \begin{proof}
 \begin{align*}
-\T'(s)&=(\phi'\cos\phi\cos\theta-\theta'\sin\phi\sin\theta,\phi'\cos\phi\sin\theta+\theta'\sin\phi\cos\theta,-\phi'\sin\phi)\\
+T'(s)&=(\phi'\cos\phi\cos\theta-\theta'\sin\phi\sin\theta,\phi'\cos\phi\sin\theta+\theta'\sin\phi\cos\theta,-\phi'\sin\phi)\\
 \rightarrow\kappa(s)&=\left|T'(s)\right|\\
 &=\sqrt{\phi'^2\cos^2\phi\cos^2\theta+\theta'^2\sin^2\phi\sin^2\theta+\phi'^2\cos^2\phi\sin^2\theta+\theta'^2\sin^2\phi\cos^2\theta+\phi'^2\sin^2\phi}\\
 &=\sqrt{\phi'^2+\theta'^2\sin^2\phi}
@@ -93,10 +93,21 @@ $\gamma:\mathbb{R}\to\mathbb{R}^3$，不妨假設是長度參數。
 \item[(b)] $\overline{\gamma}'=M\gamma'$\\
 \begin{align*}
 \left|\overline{\gamma}'\right|&=\sqrt{\overline{\gamma}'^T\overline{\gamma}'}\\
-&=\sqrt{\gamma'^TM^TM\gamma'}
-&=\sqrt{\gamma'^T\gamma'}
-&=\left|\gamma'\right|
+&=\sqrt{\gamma'^TM^TM\gamma'}\\
+&=\sqrt{\gamma'^T\gamma'}\\
+&=\left|\gamma'\right|\\
+&=1
 \end{align*}
+So $s$ is arc-length parameter for $\overline{\gamma}$ too.\\
+\begin{align*}
+\kappa_{\overline{\gamma}}&=\left|\overline{\gamma}''\right|\\
+&=\sqrt{\overline{\gamma}''^T\overline{\gamma}''}\\
+&=\sqrt{\gamma''^TM^TM\gamma''}\\
+&=\sqrt{\gamma''^T\gamma''}\\
+&=\left|\gamma''\right|\\
+&=\kappa_{\gamma}
+\end{align*}
+So $\kappa$ remains the same.
 \item[(c)]
 \end{enumerate}
 \end{proof}
