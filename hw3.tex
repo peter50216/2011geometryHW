@@ -68,12 +68,12 @@ where $c^2=a^2+b^2$, is a helix, and that $\kappa/\tau=a/b$.
 %第六題
 \setcounter{theProblemCounter}{5}
 \begin{problem}
-$\gamma(s)$ 長度參數。若將 $\gamma(s)$ 寫成 $(\sin\phi\cos\theta, \sin\phi\sin\theta, \cos\phi)$， $\phi,\theta$ 是 $s$ 的函數。說明 $\kappa(s)=\sqrt{\phi'^2+\theta'^2\sin^2\phi}$。%合理猜測題目打錯了
+$\gamma(s)$ 長度參數。若將 $T(s)$ 寫成 $(\sin\phi\cos\theta, \sin\phi\sin\theta, \cos\phi)$， $\phi,\theta$ 是 $s$ 的函數。說明 $\kappa(s)=\sqrt{\phi'^2+\theta'^2\sin^2\phi}$
 \end{problem}
 \begin{proof}
 \begin{align*}
-\gamma'(s)&=(\phi'\cos\phi\cos\theta-\theta'\sin\phi\sin\theta,\phi'\cos\phi\sin\theta+\theta'\sin\phi\cos\theta,-\phi'\sin\phi)\\
-\rightarrow\kappa(s)&=\left|\gamma'(s)\right|\\
+\T'(s)&=(\phi'\cos\phi\cos\theta-\theta'\sin\phi\sin\theta,\phi'\cos\phi\sin\theta+\theta'\sin\phi\cos\theta,-\phi'\sin\phi)\\
+\rightarrow\kappa(s)&=\left|T'(s)\right|\\
 &=\sqrt{\phi'^2\cos^2\phi\cos^2\theta+\theta'^2\sin^2\phi\sin^2\theta+\phi'^2\cos^2\phi\sin^2\theta+\theta'^2\sin^2\phi\cos^2\theta+\phi'^2\sin^2\phi}\\
 &=\sqrt{\phi'^2+\theta'^2\sin^2\phi}
 \end{align*}
@@ -89,7 +89,16 @@ $\gamma:\mathbb{R}\to\mathbb{R}^3$，不妨假設是長度參數。
 \end{enumerate}
 \end{problem}
 \begin{proof}
-
+\begin{enumerate}
+\item[(b)] $\overline{\gamma}'=M\gamma'$\\
+\begin{align*}
+\left|\overline{\gamma}'\right|&=\sqrt{\overline{\gamma}'^T\overline{\gamma}'}\\
+&=\sqrt{\gamma'^TM^TM\gamma'}
+&=\sqrt{\gamma'^T\gamma'}
+&=\left|\gamma'\right|
+\end{align*}
+\item[(c)]
+\end{enumerate}
 \end{proof}
 
 %第八題
