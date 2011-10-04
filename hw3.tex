@@ -90,7 +90,7 @@ $\gamma:\mathbb{R}\to\mathbb{R}^3$，不妨假設是長度參數。
 \end{problem}
 \begin{proof}
 \begin{enumerate}
-\item[(b)] $\overline{\gamma}'=M\gamma'$\\
+\item[(b)]
 \begin{align*}
 \left|\overline{\gamma}'\right|&=\sqrt{\overline{\gamma}'^T\overline{\gamma}'}\\
 &=\sqrt{\gamma'^TM^TM\gamma'}\\
@@ -108,14 +108,38 @@ So $s$ is arc-length parameter for $\overline{\gamma}$ too.\\
 &=\kappa_{\gamma}
 \end{align*}
 So $\kappa$ remains the same.
+
 \item[(c)]
+\begin{align*}
+\left|\overline{\gamma}'(s)\right|&=\sqrt{\overline{\gamma}'(s)^T\overline{\gamma}'(s)}\\
+&=\sqrt{\left(-\gamma'^T(-s)\right)\left(-\gamma'(-s)\right)}\\
+&=\sqrt{\gamma'(-s)^T\gamma'(-s)}\\
+&=\left|\gamma'(-s)\right|\\
+&=1
+\end{align*}
+So $s$ is arc-length parameter for $\overline{\gamma}$ too.\\
+\begin{align*}
+\kappa_{\overline{\gamma}}(s)&=\left|\overline{\gamma}''(s)\right|\\
+&=\sqrt{\overline{\gamma}''(s)^T\overline{\gamma}''(s)}\\
+&=\sqrt{\gamma''(-s)^T\gamma''(-s)}\\
+&=\left|\gamma''(-s)\right|\\
+&=\kappa_{\gamma}(-s)
+\end{align*}
+So $\kappa_{\overline{\gamma}}(s)=\kappa_{\gamma}(-s)$.
+\begin{align*}
+\tau_{\overline{\gamma}}(s)&=\frac{\left|\overline{\gamma}'(s)\ \overline{\gamma}''(s)\ \overline{\gamma}'''(s)\right|}{\left|\overline{\gamma}'(s)\times\overline{\gamma}''(s)\right|^2}\\
+&=\frac{\left|-\gamma'(-s)\ \gamma''(-s)\ -\gamma'''(-s)\right|}{\left|-\gamma'(-s)\times\gamma''(-s)\right|^2}\\
+&=\frac{\left|\gamma'(-s)\ \gamma''(-s)\ \gamma'''(-s)\right|}{\left|\gamma'(-s)\times\gamma''(-s)\right|^2}\\
+&=\tau_{\gamma}(-s)
+\end{align*}
+So $\tau_{\overline{\gamma}}(s)=\tau_{\gamma}(-s)$.
 \end{enumerate}
 \end{proof}
 
 %第八題
 \setcounter{theProblemCounter}{7}
 \begin{problem}
-說明 $\overline{\gamma}(u)=\gamma(-s)$ 時，在對應點
+說明 $\overline{\gamma}(u)=\gamma(t(u))$ 時，在對應點%卡恩打錯題目了啦XD
 \[
 \frac{\det(\overline\gamma',\overline\gamma'',
 \overline\gamma''')}{|\overline\gamma'\times \overline\gamma''|^2}(u) = 
