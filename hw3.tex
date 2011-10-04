@@ -38,7 +38,7 @@
 %第三題
 \setcounter{theProblemCounter}{2}
 \begin{problem}[P26: 16]
-Show that the knowledge of the vector function $n=n(s)$ (normal vector) of a curve $\alpha$, with nonzero torsion everywhere, determines the curvature $\kappa(s)$ and the torsion $\tau$ of $\alpha$.  ($\vec{n}$ 能決定曲線嗎？說明題目錯誤並找反例。)
+Show that the knowledge of the vector function $n=n(s)$ (normal vector) of a curve $\alpha$, with nonzero torsion everywhere, determines the curvature $\kappa(s)$ and the torsion $\tau(s)$ of $\alpha$.  ($\vec{n}$ 能決定曲線嗎？說明題目錯誤並找反例。)
 \end{problem}
 \begin{proof}
 Consider the helix $\alpha(s)=(a\cos{\frac{s}{\sqrt{a^2+b^2}}},a\sin{\frac{s}{\sqrt{a^2+b^2}}},{\frac{bs}{\sqrt{a^2+b^2}}})$\\
@@ -52,8 +52,8 @@ So if two helix has the same $a^2+b^2$ (e.g. $\alpha_1(s)=(\frac{1}{2}\cos{s},\f
 In general, a curve $\alpha$ is called a \emph{helix} if the tangent lines of $\alpha$ make a constant angle with a fixed direction. Assume that $\tau(s)\ne 0$, $s\in I$, and prove that:
 \begin{enumerate}
 \item[(a)] $\alpha$ is a helix if and only if $\kappa/\tau=$constant.
-\item[(b)] $\alpha$ is a helix if and only if the lines containing $n(s)$ and passing through $\alpha(s)$ are parallel to a fixed plane.
-\item[(c)] $\alpha$ is a helix if and only if the lines containing $b(s)$ and passing through $\alpha(s)$ make a constant angle with a fixed direction.
+\item[(b)] $\alpha$ is a helix if and only if the lines containing $N(s)$ and passing through $\alpha(s)$ are parallel to a fixed plane.
+\item[(c)] $\alpha$ is a helix if and only if the lines containing $B(s)$ and passing through $\alpha(s)$ make a constant angle with a fixed direction.
 \item[(d)] The curve\[
 \alpha(s)=\left(\frac{a}{c}\int \sin\theta(s) ds, \frac{a}{c}\int \cos\theta(s) ds, \frac{b}{c} s
 \right),
@@ -62,9 +62,10 @@ where $c^2=a^2+b^2$, is a helix, and that $\kappa/\tau=a/b$.
 \end{enumerate}
 \end{problem}
 \begin{proof}
+WLOG, assume that $s$ is arc-length parameter, $V$ is the fixed direction. Let $T(s)=\alpha'(s)$, $T'(s)=\kappa N(s)$ and $B=T\times N$.
 \begin{enumerate}
+\item[]
 \item[(a)]
-Assume that $s$ is arc-length parameter, $V$ is the fixed direction.\\
 \begin{align*}
 <T,V>&=C\\
 \rightarrow <T',V>&=0\\
@@ -86,7 +87,13 @@ $\rightarrow \kappa/\tau=\mp\frac{\left|V\times T\right|}{C}$, but because $\kap
 
 Conversely, let $\kappa/\tau\equiv c$ be a constant. Define vector $V$ by $V(s) = T(s)-cB(s)$. We claim $V$ is a constant since $V'(s)=T'(s)-cB'(s)=\kappa(s) N(s) - c\tau(s) N(s) = (\kappa(s)-c\tau(s))N(s)=0$. Now $\left\langle V, T\right\rangle$ is constant because $\left\langle V, T\right\rangle'=\kappa\left\langle V,N\right\rangle = \kappa\left\langle T-cB, N\right\rangle = 0$. This implies $T$ make a constant angle with $V$.
 \item[(b)]
+$\left\langle V, T\right\rangle \equiv c$ implies $0=\left\langle V, T\right\rangle' = \kappa\left\langle V, N\right\rangle$, but $\kappa = \|\alpha'\|\ne 0$, so $\left\langle V, N\right\rangle=0$. Therefore $N(s)$ is always perpendicular to $V$. Consider any fixed plane $P$ with $V$ be the normal vector, then $N(s)$ is parallel to $P$.
+
+Conversely, if $N(s)$ parallel to a fixed plane $P$, define $V$ be a normal vector of $P$. This implies $N(s)\perp V$, therefore $\left\langle V, T\right\rangle' = \kappa\left\langle V, N\right\rangle = 0$. So $T$ makes a constant angle with $V$.
 \item[(c)]
+From the proof above, we have $\left\langle V, N\right\rangle = 0$, so $V = \left\langle V, T\right\rangle T + \left\langle V, B\right\rangle B$. Since $V, \left\langle V, T\right\rangle$ are both constant and the orientation between $T, B$ is fixed, $\left\langle V, B\right\rangle$ is a constant. This implies $B$ makes a constant angle with $V$.
+
+Conversely, let $V$ be the fixed direction, then $0=\left\langle V, B\right\rangle = -\tau\left\langle V, N\right\rangle$. Since $\tau\ne 0$, so $V\perp N$ hence by (b), $T$ makes a constant angle with $V$.
 \item[(d)]
 \end{enumerate}
 \end{proof}
