@@ -62,7 +62,31 @@ where $c^2=a^2+b^2$, is a helix, and that $\kappa/\tau=a/b$.
 \end{enumerate}
 \end{problem}
 \begin{proof}
-
+\begin{enumerate}
+\item[(a)]
+Assume that $s$ is arc-length parameter, $V$ is the fixed direction.\\
+\begin{align*}
+<T,V>&=C\\
+\rightarrow <T',V>&=0\\
+&=<\kappa N,V>\\
+\rightarrow <N,V>&=0\\
+\rightarrow <N',V>&=0\\
+&=<-\kappa T-\tau B,V>\\
+&=-\kappa C-\tau <B,V>\\
+&=-\kappa C-\tau <T\times N,V>\\
+&=-\kappa C-\tau <V\times T,N>\\
+\end{align*}
+$\because T\perp N, V\perp N\rightarrow V\times T=\pm\left|V\times T\right|N$\\
+\begin{align*}
+\rightarrow 0&=-\kappa C-\tau <V\times T,N>\\
+&=-\kappa C\mp\tau\left|V\times T\right|\\
+\end{align*}
+$\because$ T make a constant angle with $V$, $\left|V\times T\right|$ is a constant.\\
+$\rightarrow \kappa/\tau=\mp\frac{\left|V\times T\right|}{C}$, but because $\kappa, \tau$ are continuous, $\kappa/\tau$ is constant.
+\item[(b)]
+\item[(c)]
+\item[(d)]
+\end{enumerate}
 \end{proof}
 
 %第六題
@@ -108,6 +132,8 @@ So $s$ is arc-length parameter for $\overline{\gamma}$ too.\\
 &=\kappa_{\gamma}
 \end{align*}
 So $\kappa$ remains the same.
+
+%TODO tau
 
 \item[(c)]
 \begin{align*}
