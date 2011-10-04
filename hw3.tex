@@ -148,5 +148,26 @@ So $\tau_{\overline{\gamma}}(s)=\tau_{\gamma}(-s)$.
 再用 chain rule 直接說明。
 \end{problem}
 \begin{proof}
+\begin{align*}
+\overline{\gamma}'(u)&=\gamma'(t(u))t'(u)\\
+\overline{\gamma}''(u)&=\gamma''(t(u))t'(u)^2+\gamma'(t(u))t''(u)\\
+\overline{\gamma}'''(u)&=\gamma'''(t(u))t'(u)^3+3\gamma''(t(u))t'(u)t''(u)+\gamma'(t(u))t'''(u)
+\end{align*}
+\begin{align*}
+\rightarrow \det(\overline\gamma',\overline\gamma'',\overline\gamma''')(u)
+&=\det(\gamma'(t(u))t'(u),\gamma''(t(u))t'(u)^2+\gamma'(t(u))t''(u),\\ &\hspace{4em}\gamma'''(t(u))t'(u)^3+3\gamma''(t(u))t'(u)t''(u)+\gamma'(t(u))t'''(u))\\
+&=\det(\gamma'(t(u))t'(u),\gamma''(t(u))t'(u)^2,\gamma'''(t(u))t'(u)^3+3\gamma''(t(u))t'(u)t''(u))\\
+&=\det(\gamma'(t(u))t'(u),\gamma''(t(u))t'(u)^2,\gamma'''(t(u))t'(u)^3)\\
+&=t'(u)^6\det(\gamma'(t(u)),\gamma''(t(u)),\gamma'''(t(u)))
+\end{align*}
+\begin{align*}
+|\overline\gamma'\times \overline\gamma''|^2(u) &=|\left(\gamma'(t(u))t'(u)\right)\times\left(\gamma''(t(u))t'(u)^2+\gamma'(t(u))t''(u)\right)|^2\\
+&=|\left(\gamma'(t(u))t'(u)\right)\times\left(\gamma''(t(u))t'(u)^2\right)|^2\\
+&=t'(u)^6|\gamma'(t(u))\times\gamma''(t(u))|^2
+\end{align*}
+\begin{align*}
+\rightarrow \frac{\det(\overline\gamma',\overline\gamma'',\overline\gamma''')}{|\overline\gamma'\times \overline\gamma''|^2}(u) &= \frac{t'(u)^6\det(\gamma',\gamma'',\gamma''')}{t'(u)^6|\gamma'\times\gamma''|^2}(t)\\
+&=\frac{\det(\gamma',\gamma'',\gamma''')}{|\gamma'\times\gamma''|^2}(t)
+\end{align*}
 \end{proof}
 \end{document}
