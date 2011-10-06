@@ -9,7 +9,8 @@
 %\setmainfont{Times New Roman}
 %設定中英文的字型
 %字型的設定可以使用系統內的字型，而不用像以前一樣另外安裝
-\setCJKmainfont{文泉驛微米黑}
+%\setCJKmainfont{文泉驛微米黑}
+\setCJKmainfont{WenQuanYi Micro Hei}
 \setCJKfamilyfont{lh}{LiHei Pro}
 \newcommand{\LiHei}{\CJKfamily{lh}}
 %中文自動換行
@@ -30,7 +31,8 @@
 \newtheorem{problem}[theProblemCounter]{Problem}
 
 \begin{document}
-\title{{\fontspec{Copperplate Gothic Bold}Geometry Homework 3}}
+%\title{{\fontspec{Copperplate Gothic Bold}Geometry Homework 3}}
+\title{{\fontspec{Copperplate}Geometry Homework 3}}
 \author{{\it{B96201044}} {\LiHei 黃上恩}, {\it{B98901182}} {\LiHei 時丕勳}, {\it{K0020100x}} {\LiHei 劉士瑋}}
 \date{\today}
 \maketitle
@@ -99,6 +101,13 @@ From the proof above, we have $\left\langle V, N\right\rangle = 0$, so $V = \lef
 
 Conversely, let $V$ be the fixed direction, then $0=\left\langle V, B\right\rangle = -\tau\left\langle V, N\right\rangle$. Since $\tau\ne 0$, so $V\perp N$ hence by (b), $T$ makes a constant angle with $V$.
 \item[(d)]
+Let $V = (0, 0, 1)$ and $T(s) = \alpha'(s) = \left(\frac{a}{c}\sin\theta(s), \frac{a}{c}\cos\theta(s), \frac{b}{c}\right)$. Then $\|T(s)\| = 1$ and hence $\langle T, V\rangle = \frac bc = constant$ implies $\alpha(s)$ that is a helix. \par
+By (a), 
+\begin{align*}
+\kappa/\tau &=-\frac{\langle V\times T,N\rangle}{C} \\
+&= -\frac{\langle (-\frac{a}{c}\cos\theta(s), 0), \frac{a}{c}\sin\theta(s), (\frac ac\theta'(s)\cos\theta(s), -\frac ac\theta'(s)\sin\theta(s), 0)/\left|\frac ac\theta'(s)\right|\rangle}{b/c} \\
+&= \frac {(a/c)^2\theta'(s)/\left|(a/c)\theta'(s)\right|}{b/c} = a/b
+\end{align*}
 \end{enumerate}
 \end{proof}
 
