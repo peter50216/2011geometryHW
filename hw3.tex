@@ -145,9 +145,22 @@ So $s$ is arc-length parameter for $\overline{\gamma}$ too.\\
 &=\kappa_{\gamma}
 \end{align*}
 So $\kappa$ remains the same.
-
-%TODO tau
-
+\begin{align*}
+N'&=-\kappa T-\tau B\\
+\rightarrow \tau&=-\langle N',B\rangle\\
+N_{\overline{\gamma}}&=\frac{\overline{\gamma}''}{\kappa_{\overline{\gamma}}}\\
+&=M\frac{\gamma''}{\kappa_{\gamma}}\\
+&=MN_{\gamma}\\
+\rightarrow N'_{\overline{\gamma}}&=MN'_{\gamma}\\
+\tau_{\overline{\gamma}}&=-\langle N'_{\overline{\gamma}},B_{\overline{\gamma}}\rangle\\
+&=-\langle MN'_{\gamma},T_{\overline{\gamma}}\times N_{\overline{\gamma}}\rangle\\
+&=-\langle MN'_{\gamma},\left(MT_{\gamma}\right)\times \left(MN_{\gamma}\right)\rangle\\
+&=-\det(M)\langle N'_{\gamma},\left(T_{\gamma}\right)\times \left(N_{\gamma}\right)\rangle\\
+&=-\det(M)\langle N'_{\gamma},B_{\gamma}\rangle\\
+&=\det(M)\tau_{\gamma}\\
+&=-\tau_{\gamma}\\
+\end{align*}
+So $\tau_{\overline{\gamma}}=-\tau_{\gamma}$.
 \item[(c)]
 \begin{align*}
 \left|\overline{\gamma}'(s)\right|&=\sqrt{\overline{\gamma}'(s)^T\overline{\gamma}'(s)}\\
