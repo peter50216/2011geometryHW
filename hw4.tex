@@ -1,0 +1,88 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{amsmath, amssymb, amsthm}
+%加這個就可以設定字體
+\usepackage{fontspec}
+\usepackage{xkeyval} %MikTeX 2.9 版本相容有誤, 以此修正
+%使用xeCJK，其他的還有CJK或是xCJK
+\usepackage{xeCJK}
+%設定英文字型，不設的話就會使用預設的字型
+%\setmainfont{Times New Roman}
+%設定中英文的字型
+%字型的設定可以使用系統內的字型，而不用像以前一樣另外安裝
+%\setCJKmainfont{文泉驛微米黑}
+\setCJKmainfont{WenQuanYi Micro Hei}
+\setCJKfamilyfont{lh}{LiHei Pro}
+\newcommand{\LiHei}{\CJKfamily{lh}}
+%中文自動換行
+\XeTeXlinebreaklocale "zh"
+%文字的彈性間距
+\XeTeXlinebreakskip = 0pt plus 1pt
+%設定段落之間的距離
+\setlength{\parskip}{0.3cm}
+%設定行距
+%\linespread{1.5}\selectfont
+
+%先暫時用水泥字型，如果任何人看不下去就改吧XD
+\usepackage[T1]{fontenc}
+\usepackage{concmath}
+%\usepackage{mathptmx} %Times
+
+\newcounter{theProblemCounter}
+\newtheorem{problem}[theProblemCounter]{Problem}
+
+\begin{document}
+\title{{\fontspec{Copperplate Gothic Bold}Geometry Homework 4}}
+%\title{{\fontspec{Copperplate}Geometry Homework 4}}
+\author{{\it{B96201044}} {\LiHei 黃上恩}, {\it{B98901182}} {\LiHei 時丕勳}, {\it{K0020100x}} {\LiHei 劉士瑋}}
+\date{\today}
+\maketitle
+
+%第三題
+\setcounter{theProblemCounter}{2}
+\begin{problem}
+\begin{enumerate}
+\item[]
+\item[(a)] 假設 $\kappa(s)\ne 0, \tau(s)\ne 0$，由四點決定一球，討論空間曲線 $\gamma(s)$ 的密切球，並決定球心與半徑。
+\item[(b)] 討論螺線 $(a\cos t, a\sin t, bt)$ 的密切球，$a>0$。
+\end{enumerate}
+\end{problem}
+\begin{proof}
+\end{proof}
+
+%第四題
+\setcounter{theProblemCounter}{3}
+\begin{problem}
+$\kappa\ne 0, \tau \ne 0$ 為兩常數，請決定 $\kappa(s)=\kappa, \tau(s)=\tau$ 的曲線方程式。(長度參數 $s$)
+\end{problem}
+
+%第五題
+\setcounter{theProblemCounter}{4}
+\begin{problem}[Darboux vector]
+$\gamma(s)$ arc length
+\begin{enumerate}
+\item[(a)] 說明 $\exists$ vector $\omega(s)$ (called \emph{Darboux vector}) such that 
+\[
+\left\{
+\begin{array}{ccc}
+T' &=& \omega\times T\\
+N' &=& \omega\times N\\
+B' &=& \omega\times B\end{array}
+\right.
+\]
+\item[(b)] $V(s)$ is a vector along $\gamma(s)$ 且 w.r.t $(T, N,B)$, $V(s)=(v_1(s), v_2(s), v_3(s))$ $\Rightarrow V' = (v_1', v_2', v_3') + \omega \times V$
+\item[(c)] 說明 $\omega=\frac12 (T\times T' + N\times N' + B\times B')$
+\end{enumerate}
+\end{problem}
+
+%第八題
+\setcounter{theProblemCounter}{7}
+\begin{problem}
+\begin{enumerate}
+\item[]
+\item[(a)] 令函數 $x_i:\mathbb{R}^n\to \mathbb{R}. (x_1,\cdots, x_n)\mapsto x_i$。計算 $[dx_i]$，在不同的 $a\in \mathbb{R}^n$， $dx_i$ 如何隨 $a$ 變化。
+\item[(b)] 由上題微分式 $df=\frac{\partial f}{\partial x_1} dx_1 + \cdots + \frac{\partial f}{\partial x_n} dx_n$ 與映射 $df$ 結合起來。
+\item[(c)] $f:\mathbb{R}^n\to \mathbb{R}^m$，怎麼利用上題幫你計算 $df$
+\end{enumerate}
+\end{problem}
+
+\end{document}
