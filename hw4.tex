@@ -108,6 +108,40 @@ B' &=& \omega\times B\end{array}
 \item[(b)] $V(s)$ is a vector along $\gamma(s)$ 且 w.r.t $(T, N,B)$, $V(s)=(v_1(s), v_2(s), v_3(s))$ $\Rightarrow V' = (v_1', v_2', v_3') + \omega \times V$
 \item[(c)] 說明 $\omega=\frac12 (T\times T' + N\times N' + B\times B')$
 \end{enumerate}
+\begin{proof}
+\begin{enumerate}
+\item[(a)]
+Let $\omega(s)=-\tau T+\kappa B$, then:
+\begin{align*}
+\omega\times T &= \left(-\tau T+\kappa B\right)\times T\\
+&=\kappa N\\
+&=T'\\
+\omega\times N &= \left(-\tau T+\kappa B\right)\times N\\
+&=-\kappa T-\tau B\\
+&=N'\\
+\omega\times B &= \left(-\tau T+\kappa B\right)\times B\\
+&=\tau N\\
+&=B'
+\end{align*}
+So $\omega(s)$ satisfy the conditions.
+\item[(b)]
+\begin{align*}
+V&=v_1 T+v_2 N+v_3 B\\
+\rightarrow V'&=v_1' T+v_2' N+v_3' B+v_1 T'+v_2 N'+v_3 B'\\
+&=v_1' T+v_2' N+v_3' B+v_1\omega\times T+v_2\omega\times N+v_3\omega\times B\\
+&=v_1' T+v_2' N+v_3' B+\omega\times\left(v_1T\right)+\omega\times\left(v_2N\right)+\omega\times\left(v_3B\right)\\
+&=v_1' T+v_2' N+v_3' B+\omega\times\left(v_1T+v_2N+v_3B\right)\\
+&=\left(v_1',v_2',v_3'\right)+\omega\times V
+\end{align*}
+\item[(c)]
+\begin{align*}
+\frac12 (T\times T' + N\times N' + B\times B')&=\frac12 (T\times \kappa N + N\times\left(-\kappa T-\tau B\right) + B\times \tau N)\\
+&=\frac12 (\kappa B + \kappa B-\tau T - \tau T)\\
+&= -\tau T+\kappa B\\
+&=\omega
+\end{align*}
+\end{enumerate}
+\end{proof}
 \end{problem}
 
 %第八題
@@ -119,6 +153,8 @@ B' &=& \omega\times B\end{array}
 \item[(b)] 由上題微分式 $df=\frac{\partial f}{\partial x_1} dx_1 + \cdots + \frac{\partial f}{\partial x_n} dx_n$ 與映射 $df$ 結合起來。
 \item[(c)] $f:\mathbb{R}^n\to \mathbb{R}^m$，怎麼利用上題幫你計算 $df$
 \end{enumerate}
+\begin{proof}
+\end{proof}
 \end{problem}
 
 \end{document}
