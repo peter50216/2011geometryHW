@@ -149,11 +149,23 @@ V&=v_1 T+v_2 N+v_3 B\\
 \begin{problem}
 \begin{enumerate}
 \item[]
-\item[(a)] 令函數 $x_i:\mathbb{R}^n\to \mathbb{R}. (x_1,\cdots, x_n)\mapsto x_i$。計算 $[dx_i]$，在不同的 $a\in \mathbb{R}^n$， $dx_i$ 如何隨 $a$ 變化。
-\item[(b)] 由上題微分式 $df=\frac{\partial f}{\partial x_1} dx_1 + \cdots + \frac{\partial f}{\partial x_n} dx_n$ 與映射 $df$ 結合起來。
+\item[(a)] 令函數 $x_i:\begin{array}{c}\mathbb{R}^n\to \mathbb{R}.\\ (x_1,\cdots, x_n)\mapsto x_i\end{array}$。計算 $[dx_i]$，在不同的 $a\in \mathbb{R}^n$， $dx_i$ 如何隨 $a$ 變化。
+\item[(b)] 由上題將微分式 $df=\frac{\partial f}{\partial x_1} dx_1 + \cdots + \frac{\partial f}{\partial x_n} dx_n$ 與映射 $df$ 結合起來。
 \item[(c)] $f:\mathbb{R}^n\to \mathbb{R}^m$，怎麼利用上題幫你計算 $df$
 \end{enumerate}
 \begin{proof}
+\begin{enumerate}
+\item[(a)]
+$[dx_i]=\begin{bmatrix}\frac{\partial x_i}{\partial x_1}&\cdots& \frac{\partial x_i}{\partial x_j} & \cdots & \frac{\partial x_i}{\partial x_n}\end{bmatrix}=e_i^T$\\
+$dx_i$ 不隨 $a$ 變化.
+\item[(b)]
+\begin{align*}
+df&=\frac{\partial f}{\partial x_1} dx_1 + \cdots + \frac{\partial f}{\partial x_n} dx_n\\
+&=\begin{bmatrix}\frac{\partial f_1}{\partial x_1}\\ \vdots \\ \frac{\partial f_m}{\partial x_1}\end{bmatrix}e_1^T + \cdots + \begin{bmatrix}\frac{\partial f_1}{\partial x_n}\\ \vdots \\ \frac{\partial f_m}{\partial x_n}\end{bmatrix}e_n^T\\
+&=\begin{bmatrix}\frac{\partial f_1}{\partial x_1} & \cdots & \frac{\partial f_1}{\partial x_n}\\ \vdots& &\vdots \\ \frac{\partial f_m}{\partial x_1} & \cdots & \frac{\partial f_m}{\partial x_n}\end{bmatrix}
+\end{align*}
+\item[(c)]
+\end{enumerate}
 \end{proof}
 \end{problem}
 
