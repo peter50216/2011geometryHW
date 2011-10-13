@@ -156,8 +156,11 @@ V&=v_1 T+v_2 N+v_3 B\\
 \begin{proof}
 \begin{enumerate}
 \item[(a)]
-$[dx_i]=\begin{bmatrix}\frac{\partial x_i}{\partial x_1}&\cdots& \frac{\partial x_i}{\partial x_j} & \cdots & \frac{\partial x_i}{\partial x_n}\end{bmatrix}=e_i^T$\\
-$dx_i$ 不隨 $a$ 變化.
+$[dx_i](v)=\left(\frac{d(x_i(\gamma(t)))}{dt}\right)_{t=0}$, where $\gamma(0)=a, \gamma'(0)=v$\\
+令 $\gamma(t)=\left(\gamma_1(t),\cdots,\gamma_n(t)\right)$, 則 $x_i(\gamma(t))=\gamma_i(t)$\\
+$\rightarrow \left(\frac{d(x_i(\gamma(t)))}{dt}\right)_{t=0}=\left(\frac{d(\gamma_i(t))}{dt}\right)_{t=0}=v_i=x_i(v)$\\
+$\rightarrow [dx_i]=e_i^T$.
+故 $dx_i$ 不隨 $a$ 變化.
 \item[(b)]
 \begin{align*}
 df&=\frac{\partial f}{\partial x_1} dx_1 + \cdots + \frac{\partial f}{\partial x_n} dx_n\\
