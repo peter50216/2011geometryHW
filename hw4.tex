@@ -155,6 +155,7 @@ V&=v_1 T+v_2 N+v_3 B\\
 \end{enumerate}
 \begin{proof}
 \begin{enumerate}
+\item[]
 \item[(a)]
 $[dx_i](v)=\left(\frac{d(x_i(\gamma(t)))}{dt}\right)_{t=0}$, where $\gamma(0)=a, \gamma'(0)=v$\\
 令 $\gamma(t)=\left(\gamma_1(t),\cdots,\gamma_n(t)\right)$, 則 $x_i(\gamma(t))=\gamma_i(t)$\\
@@ -162,12 +163,13 @@ $\rightarrow \left(\frac{d(x_i(\gamma(t)))}{dt}\right)_{t=0}=\left(\frac{d(\gamm
 $\rightarrow [dx_i]=e_i^T$.
 故 $dx_i$ 不隨 $a$ 變化.
 \item[(b)]
+因為 $[df](e_i) =\frac{d}{dt}(f\circ \gamma(t))\bigg|_{t=0}$，其中 $\gamma(0)=a, \gamma'(0)=e_i$，因此左式會變成 $\lim_{t\to 0} (f(a+te_i)-f(a))/t = \frac{\partial f}{\partial x_i}(a)$。於是對於一般的 $v=(v_1,v_2,\cdots, v_n)\in \mathbb{R}^n$，$df:T_p\mathbb{R}^n\to T_p\mathbb{R}$，而且 $[df](v) = [df](\sum_{k=1}^n v_ke_k) = \sum_{k=1}^n [df](e_k)\cdot v_k = \sum_{k=1}^n \frac{\partial f}{\partial x_k}(a)\cdot [dx_k](v)$。於是可以得到我們要的結果 $df=\frac{\partial f}{\partial x_1} dx_1 + \cdots + \frac{\partial f}{\partial x_n} dx_n$。
+\item[(c)]
 \begin{align*}
 df&=\frac{\partial f}{\partial x_1} dx_1 + \cdots + \frac{\partial f}{\partial x_n} dx_n\\
 &=\begin{bmatrix}\frac{\partial f_1}{\partial x_1}\\ \vdots \\ \frac{\partial f_m}{\partial x_1}\end{bmatrix}e_1^T + \cdots + \begin{bmatrix}\frac{\partial f_1}{\partial x_n}\\ \vdots \\ \frac{\partial f_m}{\partial x_n}\end{bmatrix}e_n^T\\
 &=\begin{bmatrix}\frac{\partial f_1}{\partial x_1} & \cdots & \frac{\partial f_1}{\partial x_n}\\ \vdots& &\vdots \\ \frac{\partial f_m}{\partial x_1} & \cdots & \frac{\partial f_m}{\partial x_n}\end{bmatrix}
 \end{align*}
-\item[(c)]
 \end{enumerate}
 \end{proof}
 \end{problem}
