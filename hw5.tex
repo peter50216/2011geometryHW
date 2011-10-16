@@ -1,0 +1,85 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{amsmath, amssymb, amsthm}
+%加這個就可以設定字體
+\usepackage{fontspec}
+\usepackage{xkeyval} %MikTeX 2.9 版本相容有誤, 以此修正
+%使用xeCJK，其他的還有CJK或是xCJK
+\usepackage{xeCJK}
+%設定英文字型，不設的話就會使用預設的字型
+%\setmainfont{Times New Roman}
+%設定中英文的字型
+%字型的設定可以使用系統內的字型，而不用像以前一樣另外安裝
+%\setCJKmainfont{文泉驛微米黑}
+\setCJKmainfont{WenQuanYi Micro Hei}
+\setCJKfamilyfont{lh}{LiHei Pro}
+\newcommand{\LiHei}{\CJKfamily{lh}}
+%中文自動換行
+\XeTeXlinebreaklocale "zh"
+%文字的彈性間距
+\XeTeXlinebreakskip = 0pt plus 1pt
+%設定段落之間的距離
+\setlength{\parskip}{0.3cm}
+%設定行距
+%\linespread{1.5}\selectfont
+
+%先暫時用水泥字型，如果任何人看不下去就改吧XD
+\usepackage[T1]{fontenc}
+\usepackage{concmath}
+%\usepackage{mathptmx} %Times
+
+\newcounter{theProblemCounter}
+\newtheorem{problem}[theProblemCounter]{Problem}
+
+\begin{document}
+\title{{\fontspec{Copperplate Gothic Bold}Geometry Homework 5}}
+%\title{{\fontspec{Copperplate}Geometry Homework 4}}
+\author{{\it{B96201044}} {\LiHei 黃上恩}, {\it{B98901182}} {\LiHei 時丕勳}, {\it{K0020100x}} {\LiHei 劉士瑋}}
+\date{\today}
+\maketitle
+
+%第一題
+\setcounter{theProblemCounter}{0}
+\begin{problem}[參見 P67 Ex16]
+考慮
+\[
+\begin{array}{ccccc}
+\mathbb{X}: & \mathbb{R}^2 & \to & S^2\setminus \{N\} & , N=(0,0,1) \\
+& (u, v) & \mapsto & \left(\frac{2u}{u^2+v^2+1}, \frac{2v}{u^2+v^2+1},\frac{u^2+v^2-1}{u^2+v^2+1}\right) &
+\end{array}
+\]
+
+\begin{enumerate}
+\item[(a)] 檢查這的確是 $S^2\setminus \{N\}$ 的參數式
+\item[(b)] 計算 $E, F, G$，$E=G$ 嗎？
+\item[(c)] 計算 $\mathbb{X}_u, \mathbb{X}_v$
+\item[(d)] 若 $W_1, W_2$ 是 $\mathbb{R}^2$ 兩以 $a$ 為起點的向量，說明 $W_1, W_2$ 的夾角 $=d\mathbb{X}(W_1)$ 與 $d\mathbb{X}(W_2)$ 的夾角
+\end{enumerate}
+\end{problem}
+
+%第二題
+\setcounter{theProblemCounter}{1}
+\begin{problem}[旋轉面]
+$\mathbb{X}(\theta, s)=(a(s)\cos\theta, a(s)\sin\theta, b(s))$，其中 $(a(s), b(s))$ 為長度參數之平面曲線。計算 $E, F, G$ 並討論其 regular 的條件。
+\end{problem}
+
+%第三題
+\setcounter{theProblemCounter}{2}
+\begin{problem}[管面]
+設空間曲線 $\gamma(s)$， $s$ 長度參數，$\vec{t}, \vec{n}, \vec{b}$ 為 Frenet frame。令 $\mathbb{X}_l(s,\theta)=\gamma(s)+l\cos\theta\vec{n}(s) + l\sin\theta\vec{b}(s), l>0$，計算 $E, F, G$ 並討論其 regular 條件。
+\end{problem}
+
+%第六題
+\setcounter{theProblemCounter}{5}
+\begin{problem}[Ex6, p100]
+Show that
+\[ \mathbf{x}(u, v) = (u\sin\alpha\cos v, u\sin\alpha\sin v, u\cos\alpha)
+\]
+where $0<u<\infty, 0<v<2\pi, \alpha=\mbox{const.}$,
+is a parametrization of the cone with $2\alpha$ as the angle of the vertex. In the corresponding coordinate neighborhood, prove that the curve
+\[
+\mathbf{x}(c\exp(v\sin\alpha \cot \beta), v),\ \ \ c=\mbox{const.}, \beta = \mbox{const.},
+\]
+intersects the generators of the cone ($v=$ const.) under the constant angle $\beta$.
+\end{problem}
+
+\end{document}
