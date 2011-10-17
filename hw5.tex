@@ -31,8 +31,8 @@
 \newtheorem{problem}[theProblemCounter]{Problem}
 
 \begin{document}
-\title{{\fontspec{Copperplate Gothic Bold}Geometry Homework 5}}
-%\title{{\fontspec{Copperplate}Geometry Homework 4}}
+%\title{{\fontspec{Copperplate Gothic Bold}Geometry Homework 5}}
+\title{{\fontspec{Copperplate}Geometry Homework 5}}
 \author{{\it{B96201044}} {\LiHei 黃上恩}, {\it{B98901182}} {\LiHei 時丕勳}, {\it{K0020100x}} {\LiHei 劉士瑋}}
 \date{\today}
 \maketitle
@@ -110,6 +110,8 @@ $\Leftrightarrow \left|\frac{1}{l\kappa(s)}\right|>1$\\
 $\Leftrightarrow \left|\kappa(s)\right|<\frac{1}{l}$\\
 \end{proof}
 
+\newcommand{\mat}[7]{ \left[\begin{array}{cc}#1 & #2\end{array}\right]\left[\begin{array}{cc}#5 & #6 \\ #6 & #7\end{array}\right]\left[\begin{array}{c}#3 \\ #4\end{array}\right] }
+\newcommand{\matnl}[7]{ \left[\begin{array}{cc}#1 & #2\end{array}\right]\left[\begin{array}{cc}#5 & #6 \\ #6 & #7\end{array}\right]\\&\left[\begin{array}{c}#3 \\ #4\end{array}\right] }
 %第六題
 \setcounter{theProblemCounter}{5}
 \begin{problem}[Ex6, p100]
@@ -124,6 +126,31 @@ is a parametrization of the cone with $2\alpha$ as the angle of the vertex. In t
 intersects the generators of the cone ($v=$ const.) under the constant angle $\beta$.
 \end{problem}
 \begin{proof}
+\begin{align*}
+d\mathbf{x} = \left[\begin{array}{ccc}\sin\alpha\cos v & \sin\alpha\sin v & \cos\alpha \\ -u\sin\alpha\sin v & u\sin\alpha\cos v & 0\end{array}\right]
+\end{align*}
+We have $\mathbf{x}_u \times \mathbf{x}_v = (-, -, u)\neq 0$ whenever $u > 0$.
+To show that the angle is $\beta$, define
+\begin{align*}
+E &:= \langle \mathbf{x}_u, \mathbf{x}_u\rangle = \sin^2\alpha\cos^2 v + \sin^2\alpha\sin^2 v + \cos^2\alpha) = 1\\
+F &:= \langle \mathbf{x}_u, \mathbf{x}_v\rangle = -u\sin^2\alpha\cos v\sin v + u\sin^2\alpha\sin v\cos v + 0 = 0\\
+G &:= \langle \mathbf{x}_v, \mathbf{x}_v\rangle = u^2\sin^2\alpha\sin^2 v + u^2\sin^2\alpha\cos^2 v + 0 = u^2\sin^2\alpha\\
+\langle\langle (a, b), (c, d)\rangle\rangle &:= 
+\mat abcdEFG
+\end{align*}
+to be the first fundamental form of $\mathbf{x}$. Then
+\begin{align*}
+A &:= \partial(u, v)/\partial u = (1, 0) \\
+B &:= \partial(c\exp(v\sin\alpha \cot \beta), v)/\partial v = (c\sin\alpha\cot\beta\exp(v\sin\alpha\cot\beta), 1).
+\end{align*}
+Fixing the intersection at $(c\exp(v\sin\alpha\cot\beta), v)$, we got
+\begin{align*}
+\langle\langle A, B\rangle\rangle &= \mat abcdEFG  \\&= \mat 10{c\sin\alpha\cot\beta\exp(v\sin\alpha\cot\beta)}110{c^2\exp(2v\sin\alpha\cot\beta)\sin^2\alpha} \\&= c\sin\alpha\cot\beta\exp(v\sin\alpha\cot\beta)\\
+\langle\langle A, A\rangle\rangle &= \mat ababEFG  \\&= \mat 101010{c^2\exp(2v\sin\alpha\cot\beta)\sin^2\alpha} \\&= 1\\
+\langle\langle B, B\rangle\rangle &= \mat cdcdEFG  \\&= \matnl {c\sin\alpha\cot\beta\exp(v\sin\alpha\cot\beta)}1{c\sin\alpha\cot\beta\exp(v\sin\alpha\cot\beta)}110{c^2\exp(2v\sin\alpha\cot\beta)\sin^2\alpha} \\&= c^2\sin^2\alpha\cot^2\beta\exp(2v\sin\alpha\cot\beta) + c^2\sin^2\alpha\exp(2v\sin\alpha\cot\beta)\\
+&=c^2\sin^2\alpha\csc^2\beta\exp(2v\sin\alpha\cot\beta)\\
+\cos\theta &= \frac{\langle\langle A, B\rangle\rangle}{\sqrt{\langle\langle A, A\rangle\rangle\langle\langle B, B\rangle\rangle}} = \frac{c\sin\alpha\cot\beta\exp(v\sin\alpha\cot\beta)}{\left|c\sin\alpha\csc\beta\exp(v\sin\alpha\cot\beta)\right|} = \pm \cos\beta\\
+\end{align*}
 \end{proof}
 
 \end{document}
