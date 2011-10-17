@@ -37,13 +37,14 @@
 \date{\today}
 \maketitle
 
+\newcommand{\bx}{\mathbb{X}}
 %第一題
 \setcounter{theProblemCounter}{0}
 \begin{problem}[參見 P67 Ex16]
 考慮
 \[
 \begin{array}{ccccc}
-\mathbb{X}: & \mathbb{R}^2 & \to & S^2\setminus \{N\} & , N=(0,0,1) \\
+\bx: & \mathbb{R}^2 & \to & S^2\setminus \{N\} & , N=(0,0,1) \\
 & (u, v) & \mapsto & \left(\frac{2u}{u^2+v^2+1}, \frac{2v}{u^2+v^2+1},\frac{u^2+v^2-1}{u^2+v^2+1}\right) &
 \end{array}
 \]
@@ -51,22 +52,43 @@
 \begin{enumerate}
 \item[(a)] 檢查這的確是 $S^2\setminus \{N\}$ 的參數式
 \item[(b)] 計算 $E, F, G$，$E=G$ 嗎？
-\item[(c)] 計算 $\mathbb{X}_u, \mathbb{X}_v$
-\item[(d)] 若 $W_1, W_2$ 是 $\mathbb{R}^2$ 兩以 $a$ 為起點的向量，說明 $W_1, W_2$ 的夾角 $=d\mathbb{X}(W_1)$ 與 $d\mathbb{X}(W_2)$ 的夾角
+\item[(c)] 計算 $\bx_u, \bx_v$
+\item[(d)] 若 $W_1, W_2$ 是 $\mathbb{R}^2$ 兩以 $a$ 為起點的向量，說明 $W_1, W_2$ 的夾角 $=d\bx(W_1)$ 與 $d\bx(W_2)$ 的夾角
 \end{enumerate}
 \end{problem}
+\begin{proof}
+\end{proof}
 
 %第二題
 \setcounter{theProblemCounter}{1}
 \begin{problem}[旋轉面]
-$\mathbb{X}(\theta, s)=(a(s)\cos\theta, a(s)\sin\theta, b(s))$，其中 $(a(s), b(s))$ 為長度參數之平面曲線。計算 $E, F, G$ 並討論其 regular 的條件。
+$\bx(\theta, s)=(a(s)\cos\theta, a(s)\sin\theta, b(s))$，其中 $(a(s), b(s))$ 為長度參數之平面曲線。計算 $E, F, G$ 並討論其 regular 的條件。
 \end{problem}
+\begin{proof}
+\begin{align*}
+\bx_{\theta}&=(-a(s)\sin\theta, a(s)\cos\theta,0)\\
+\bx_{s}&=(a'(s)\cos\theta, a'(s)\sin\theta, b'(s))\\
+\rightarrow E&=a(s)^2\sin^2\theta+a(s)^2\cos^2\theta\\
+&=a(s)^2\\
+F&=-a(s)a'(s)\sin\theta\cos\theta+a(s)a'(s)\cos\theta\sin\theta\\
+&=0\\
+G&=a'(s)^2\sin^2\theta+a'(s)^2\cos^2\theta\\
+&=a'(s)^2\\
+&=1\\
+\left|\bx_{\theta}\times\bx_{s}\right|&=\sqrt{EG-F^2}\\
+&=\sqrt{a(s)^2}\\
+&=\left|a(s)\right|\\
+\end{align*}
+So $\bx$ is regular iff $a(s)\neq 0$.
+\end{proof}
 
 %第三題
 \setcounter{theProblemCounter}{2}
 \begin{problem}[管面]
-設空間曲線 $\gamma(s)$， $s$ 長度參數，$\vec{t}, \vec{n}, \vec{b}$ 為 Frenet frame。令 $\mathbb{X}_l(s,\theta)=\gamma(s)+l\cos\theta\vec{n}(s) + l\sin\theta\vec{b}(s), l>0$，計算 $E, F, G$ 並討論其 regular 條件。
+設空間曲線 $\gamma(s)$， $s$ 長度參數，$\vec{t}, \vec{n}, \vec{b}$ 為 Frenet frame。令 $\bx_l(s,\theta)=\gamma(s)+l\cos\theta\vec{n}(s) + l\sin\theta\vec{b}(s), l>0$，計算 $E, F, G$ 並討論其 regular 條件。
 \end{problem}
+\begin{proof}
+\end{proof}
 
 %第六題
 \setcounter{theProblemCounter}{5}
@@ -81,5 +103,7 @@ is a parametrization of the cone with $2\alpha$ as the angle of the vertex. In t
 \]
 intersects the generators of the cone ($v=$ const.) under the constant angle $\beta$.
 \end{problem}
+\begin{proof}
+\end{proof}
 
 \end{document}
