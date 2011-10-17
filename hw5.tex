@@ -68,7 +68,7 @@ $\bx(\theta, s)=(a(s)\cos\theta, a(s)\sin\theta, b(s))$，其中 $(a(s), b(s))$ 
 \begin{align*}
 \bx_{\theta}&=(-a(s)\sin\theta, a(s)\cos\theta,0)\\
 \bx_{s}&=(a'(s)\cos\theta, a'(s)\sin\theta, b'(s))\\
-\rightarrow E&=a(s)^2\sin^2\theta+a(s)^2\cos^2\theta\\
+\Rightarrow E&=a(s)^2\sin^2\theta+a(s)^2\cos^2\theta\\
 &=a(s)^2\\
 F&=-a(s)a'(s)\sin\theta\cos\theta+a(s)a'(s)\cos\theta\sin\theta\\
 &=0\\
@@ -88,6 +88,26 @@ So $\bx$ is regular iff $a(s)\neq 0$.
 設空間曲線 $\gamma(s)$， $s$ 長度參數，$\vec{t}, \vec{n}, \vec{b}$ 為 Frenet frame。令 $\bx_l(s,\theta)=\gamma(s)+l\cos\theta\vec{n}(s) + l\sin\theta\vec{b}(s), l>0$，計算 $E, F, G$ 並討論其 regular 條件。
 \end{problem}
 \begin{proof}
+\begin{align*}
+\bx_{ls}&=\gamma'(s)+l\cos\theta\vec{n}'(s) + l\sin\theta\vec{b}'(s)\\
+&=\vec{t}(s)+l\cos\theta\left(-\kappa(s)\vec{t}(s)-\tau(s)\vec{b}(s)\right) + l\tau(s)\sin\theta\vec{n}(s)\\
+&=(1-l\kappa(s)\cos\theta)\vec{t}(s) + l\tau(s)\sin\theta\vec{n}(s) - l\tau(s)\cos\theta\vec{b}(s)\\
+\bx_{l\theta}&=-l\sin\theta\vec{n}(s) + l\cos\theta\vec{b}(s)\\
+\Rightarrow E&=(1-l\kappa(s)\cos\theta)^2+(l\tau(s)\sin\theta)^2+(l\tau(s)\cos\theta)^2\\
+&=(1-l\kappa(s)\cos\theta)^2+l^2\tau(s)^2\\
+F&=-l^2\tau(s)\sin^2\theta-l^2\tau(s)\cos^2\theta\\
+&=-l^2\tau(s)\\
+G&=l^2\sin^2\theta+l^2\cos^2\theta\\
+&=l^2\\
+\left|\bx_{ls}\times\bx_{l\theta}\right|&=\sqrt{EG-F^2}\\
+&=\sqrt{l^2\left((1-l\kappa(s)\cos\theta)^2+l^2\tau(s)^2\right)-l^4\tau(s)^2}\\
+&=\sqrt{l^2(1-l\kappa(s)\cos\theta)^2}\\
+&=l\left|1-l\kappa(s)\cos\theta\right|\\
+\end{align*}
+So $\bx$ is regualr iff $l\kappa(s)\cos\theta\neq 1 \forall s,\theta$\\
+$\Leftrightarrow \frac{1}{l\kappa(s)}\neq \cos\theta$\\
+$\Leftrightarrow \left|\frac{1}{l\kappa(s)}\right|>1$\\
+$\Leftrightarrow \left|\kappa(s)\right|<\frac{1}{l}$\\
 \end{proof}
 
 %第六題
