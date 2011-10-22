@@ -1,0 +1,87 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{amsmath, amssymb, amsthm}
+%加這個就可以設定字體
+\usepackage{fontspec}
+\usepackage{xkeyval} %MikTeX 2.9 版本相容有誤, 以此修正
+%使用xeCJK，其他的還有CJK或是xCJK
+\usepackage{xeCJK}
+%設定英文字型，不設的話就會使用預設的字型
+%\setmainfont{Times New Roman}
+%設定中英文的字型
+%字型的設定可以使用系統內的字型，而不用像以前一樣另外安裝
+%\setCJKmainfont{文泉驛微米黑}
+\setCJKmainfont{WenQuanYi Micro Hei}
+\setCJKfamilyfont{lh}{LiHei Pro}
+\newcommand{\LiHei}{\CJKfamily{lh}}
+%中文自動換行
+\XeTeXlinebreaklocale "zh"
+%文字的彈性間距
+\XeTeXlinebreakskip = 0pt plus 1pt
+%設定段落之間的距離
+\setlength{\parskip}{0.3cm}
+%設定行距
+%\linespread{1.5}\selectfont
+
+%先暫時用水泥字型，如果任何人看不下去就改吧XD
+\usepackage[T1]{fontenc}
+\usepackage{concmath}
+%\usepackage{mathptmx} %Times
+
+\newcounter{theProblemCounter}
+\newtheorem{problem}[theProblemCounter]{Problem}
+
+\begin{document}
+\title{{\fontspec{Copperplate Gothic Bold}Geometry Homework 6}}
+%\title{{\fontspec{Copperplate}Geometry Homework 5}}
+\author{{\it{B96201044}} {\LiHei 黃上恩}, {\it{B98901182}} {\LiHei 時丕勳}, {\it{K0020100x}} {\LiHei 劉士瑋}}
+\date{\today}
+\maketitle
+
+\newcommand{\bx}{\mathbb{X}}
+%第一題
+\setcounter{theProblemCounter}{0}
+\begin{problem}[Ex P151 2]
+Show that if a surface is tangent to a plane along a curve, then the points of this curve are either parabolic or planar.
+\end{problem}
+\begin{proof}
+\end{proof}
+
+%第三題
+\setcounter{theProblemCounter}{2}
+\begin{problem}[Ex P151 3]
+\begin{enumerate}
+\item[]
+\item[(a)] Let $C\subset S$ be a regular curve on a surface $S$ with Gaussian curvature $K > 0$. Show that the curvature $\kappa$ of $C$ at $p$ satisfies \[ \kappa\ge \min(|\kappa_1|, |\kappa_2|),\] where $\kappa_1, \kappa_2$ are the principal curvatures of $S$ at $p$.
+\item[(b)] 為什麼上一小題需要 $K>0$ 的條件，$K\ge 0$ 不可以嗎？
+\end{enumerate}
+\end{problem}
+
+%第七題
+\setcounter{theProblemCounter}{6}
+\begin{problem}
+\begin{enumerate}
+\item[]
+\item[(a)] $T_\lambda$ 是縮放 $\lambda$ 倍的映射，$\lambda>0$。$\mathbb{X}:\Omega\to \mathbb{R}^3$ regular surface。討論 $T_\lambda\circ \mathbb{X}:\Omega\to\mathbb{R}^3$ 上對應點 $\kappa_n, H, K$ 的變化。
+\item[(b)] $\mathbb{X}:\begin{array}{c}\Omega\\(u,v)\end{array}\to \mathbb{R}^3$，若定義 $\overline{\mathbb{X}}(u, v)= \mathbb{X}(v, u)$(因此 $N$ 轉向)。討論 $\overline{\mathbb{X}}(\Omega)$ 上相對應點的 $K_n, H, K$ 變化。
+\end{enumerate}
+\end{problem}
+
+%第九題
+\setcounter{theProblemCounter}{8}
+\begin{problem}[旋轉面]
+$\mathbb{X}(u, v)=(f(u)\cos v, f(u)\sin v, g(u))$，$f>0$ \begin{enumerate}
+\item[(a)] 計算其 $e, f, g, H, K$
+\item[(b)] 討論其 principal direction 與 principal curvature $K_1, K_2$。
+\end{enumerate}
+\end{problem}
+
+%第十題
+\setcounter{theProblemCounter}{9}
+\begin{problem}[管面]
+$\mathbb{X}(s,\theta) = \gamma(s)+\cos\theta\vec{n}(s) + \sin\theta\vec{b}(s)$, $0<\kappa < 1$
+\begin{enumerate}
+\item[(a)] 計算其 $e, f, g, H, K$
+\item[(b)] 討論曲面上 $K$ 的分佈。
+\end{enumerate}
+\end{problem}
+\end{document}
