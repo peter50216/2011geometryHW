@@ -31,8 +31,8 @@
 \newtheorem{problem}[theProblemCounter]{Problem}
 
 \begin{document}
-\title{{\fontspec{Copperplate Gothic Bold}Geometry Homework 6}}
-%\title{{\fontspec{Copperplate}Geometry Homework 5}}
+%\title{{\fontspec{Copperplate Gothic Bold}Geometry Homework 6}}
+\title{{\fontspec{Copperplate}Geometry Homework 5}}
 \author{{\it{B96201044}} {\LiHei 黃上恩}, {\it{B98901182}} {\LiHei 時丕勳}, {\it{K0020100x}} {\LiHei 劉士瑋}}
 \date{\today}
 \maketitle
@@ -74,6 +74,36 @@ $\mathbb{X}(u, v)=(f(u)\cos v, f(u)\sin v, g(u))$，$f>0$ \begin{enumerate}
 \item[(b)] 討論其 principal direction 與 principal curvature $K_1, K_2$。
 \end{enumerate}
 \end{problem}
+\begin{proof}
+To avoid the notational ambiguity, let $\mathbb{X}(u, v)=(s(u)\cos v, s(u)\sin v, t(u))$,and that $s>0$. \begin{enumerate}
+\item[(a)] We have
+\begin{align*}
+\mathbb{X}_u =& (s'(u)\cos v, s'(u)\sin v, t'(u)); \\
+\mathbb{X}_v =& (-s(u)\sin v, s(u)\cos v, 0); \\
+E =& \langle \mathbb{X}_u, \mathbb{X}_u\rangle = s'(u)^2 + t'(u)^2 \\
+F =& \langle \mathbb{X}_u, \mathbb{X}_v\rangle = 0 \\
+G =& \langle \mathbb{X}_v, \mathbb{X}_v\rangle = s(u)^2 \\
+\mathbb{X}_{uu} =& (s''(u)\cos v, s''(u)\sin v, t''(u)); \\
+\mathbb{X}_{uv} =& (-s'(u)\sin v, s'(u)\cos v, 0); \\
+\mathbb{X}_{vv} =& (-s(u)\cos v, -s(u)\sin v, 0); \\
+N =& \frac{\mathbb{X}_u \times \mathbb{X}_v}{|\mathbb{X}_u \times \mathbb{X}_v|} = \frac{(-t'(u)s(u)\cos v, -t'(u)s(u)\sin v, s'(u)s(u))}{\sqrt{t'(u)^2s(u)^2 + s'(u)^2s(u)^2}} \\
+  =& \frac{(-t'(u)\cos v, -t'(u)\sin v, s'(u))}{\sqrt{t'(u)^2 + s'(u)^2}}; \\
+e =& \langle N, \mathbb{X}_{uu}\rangle = \frac{-s''(u)t'(u) + t''(u)s'(u)}{\sqrt{t'(u)^2 + s'(u)^2}} \\
+f =& \langle N, \mathbb{X}_{uv}\rangle = 0 \\
+g =& \langle N, \mathbb{X}_{vv}\rangle = \frac{s(u)t'(u)}{\sqrt{t'(u)^2 + s'(u)^2}} \\
+-dN =& \left[\begin{array}{cc}e & f \\ f & g\end{array}\right]\left[\begin{array}{cc}E & F \\ F & G\end{array}\right]^{-1} = \frac 1{EG - F^2}\left[\begin{array}{cc}e & f \\ f & g\end{array}\right]\left[\begin{array}{cc}G & -F \\ -F & E\end{array}\right] = \left[\begin{array}{cc}e/E & 0 \\ 0 & g/G\end{array}\right]\\
+K =& \det(-dN) = \frac{eg}{EG} \\
+H =& \frac 12\text{tr}(-dN) = \frac{eG + gE}{2EG}
+\end{align*}
+\item[(b)]
+Since $-dN$ is already a diagonal matrix, clearly, \begin{align*}
+K_1 =& e/E; \\
+K_2 =& g/G; \\
+V_1 =& \mathbb{X}_u; \\
+V_2 =& \mathbb{X}_v;
+\end{align*}
+\end{enumerate}
+\end{proof}
 
 %第十題
 \setcounter{theProblemCounter}{9}
