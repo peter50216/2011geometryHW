@@ -31,8 +31,8 @@
 \newtheorem{problem}[theProblemCounter]{Problem}
 
 \begin{document}
-\title{{\fontspec{Copperplate Gothic Bold}Geometry Homework 5}}
-%\title{{\fontspec{Copperplate}Geometry Homework 5}}
+%\title{{\fontspec{Copperplate Gothic Bold}Geometry Homework 5}}
+\title{{\fontspec{Copperplate}Geometry Homework 5}}
 \author{{\it{B96201044}} {\LiHei 黃上恩}, {\it{B98901182}} {\LiHei 時丕勳}, {\it{K0020100x}} {\LiHei 劉士瑋}}
 \date{\today}
 \maketitle
@@ -134,5 +134,30 @@ $\mathbb{X}(s,\theta) = \gamma(s)+\cos\theta\vec{n}(s) + \sin\theta\vec{b}(s)$, 
 \end{enumerate}
 \end{problem}
 \begin{proof}
+\begin{enumerate}
+\item[(a)] 
+Let $\vec{t}(s), \vec{n}(s), \vec{b}(s)$ be the basis, and $\gamma(0)$ be the origin.
+\begin{align*}
+\mathbb{X}_{s} =& (1 - \kappa\cos\theta, \tau\sin\theta, -\tau\cos\theta); \\
+\mathbb{X}_{\theta} =& (0, -\sin\theta, \cos\theta); \\
+N =& \frac{\mathbb{X}_{s} \times \mathbb{X}_{\theta}}{|\mathbb{X}_{s} \times \mathbb{X}_{\theta}|} = \frac{(0, (\kappa\cos\theta - 1)\cos\theta, (\kappa\cos\theta - 1)\sin\theta)}{|\kappa\cos\theta - 1|} \\
+  =& (0, -\cos\theta, -\sin\theta); \quad\text{(since $\kappa< 1$)} \\
+\mathbb{X}_{ss} =& (-\sin\theta\kappa\tau, \kappa + \cos\theta(-\kappa^2 - \tau^2), -\sin\theta\tau^2); \\
+\mathbb{X}_{s\theta} =& (1 + \kappa\sin\theta, \tau\cos\theta, \tau\sin\theta); \\
+\mathbb{X}_{\theta\theta} =& (0, -\cos\theta, -\sin\theta); \\
+e =& -\kappa\cos\theta + \cos^2\theta(\kappa^2 + \tau^2) + \tau^2\sin^2\theta = -\kappa\cos\theta + \kappa^2\cos^2\theta + \tau^2; \\
+f =& -\tau; \\
+g =& 1; 
+\end{align*}
+\item[(b)] 
+\begin{align*}
+dN(\mathbb{X}_{s}) =& N_{s} = (0, 0, 0) \\
+dN(\mathbb{X}_{\theta}) =& N_{\theta} = (0, \sin\theta, -\cos\theta) = -\mathbb{X}_{\theta} \\
+\kappa_1 =& 0 \\
+\kappa_2 =& -1 \\
+K =& 0 \\
+H =& -1/2 \\
+\end{align*}
+\end{enumerate}
 \end{proof}
 \end{document}
