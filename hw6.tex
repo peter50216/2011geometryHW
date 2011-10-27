@@ -31,8 +31,8 @@
 \newtheorem{problem}[theProblemCounter]{Problem}
 
 \begin{document}
-%\title{{\fontspec{Copperplate Gothic Bold}Geometry Homework 6}}
-\title{{\fontspec{Copperplate}Geometry Homework 5}}
+\title{{\fontspec{Copperplate Gothic Bold}Geometry Homework 5}}
+%\title{{\fontspec{Copperplate}Geometry Homework 5}}
 \author{{\it{B96201044}} {\LiHei 黃上恩}, {\it{B98901182}} {\LiHei 時丕勳}, {\it{K0020100x}} {\LiHei 劉士瑋}}
 \date{\today}
 \maketitle
@@ -44,6 +44,7 @@
 Show that if a surface is tangent to a plane along a curve, then the points of this curve are either parabolic or planar.
 \end{problem}
 \begin{proof}
+Assume that the curve is $\gamma(t)$, then along this curve, 
 \end{proof}
 
 %第三題
@@ -52,9 +53,23 @@ Show that if a surface is tangent to a plane along a curve, then the points of t
 \begin{enumerate}
 \item[]
 \item[(a)] Let $C\subset S$ be a regular curve on a surface $S$ with Gaussian curvature $K > 0$. Show that the curvature $\kappa$ of $C$ at $p$ satisfies \[ \kappa\ge \min(|\kappa_1|, |\kappa_2|),\] where $\kappa_1, \kappa_2$ are the principal curvatures of $S$ at $p$.
-\item[(b)] 為什麼上一小題需要 $K>0$ 的條件，$K\ge 0$ 不可以嗎？
+\item[(b)] 為什麼上一小題需要 $\kappa>0$ 的條件，$\kappa\ge 0$ 不可以嗎？ %好像的確是想說 \kappa 耶(?)
 \end{enumerate}
 \end{problem}
+\begin{proof}
+\begin{enumerate}
+\item[(a)]
+\begin{align*}
+\kappa&\ge |\kappa_n|\\
+&=|\kappa_1\cos^2\theta+\kappa_2\sin^2\theta|\\
+&=|\kappa_1|\cos^2\theta+|\kappa_2|\sin^2\theta (\because\kappa_1, \kappa_2\textrm{ has equal sign.})\\
+&\ge \min(|\kappa_1|, |\kappa_2|)(\cos^2\theta+\sin^2\theta)\\
+&=\min(|\kappa_1|, |\kappa_2|)
+\end{align*}
+\item[(b)]
+% 若 $K=0$, 則 $\kappa_1, \kappa_2$ 中必定要有一個為零, 則 $\min(|\kappa_1|, |\kappa_2|)=0$, 而 $\kappa\ge 0$ 顯然成立. 故條件亦可改為 $K\ge 0$.
+\end{enumerate}
+\end{proof}
 
 %第七題
 \setcounter{theProblemCounter}{6}
@@ -65,6 +80,8 @@ Show that if a surface is tangent to a plane along a curve, then the points of t
 \item[(b)] $\mathbb{X}:\begin{array}{c}\Omega\\(u,v)\end{array}\to \mathbb{R}^3$，若定義 $\overline{\mathbb{X}}(u, v)= \mathbb{X}(v, u)$(因此 $N$ 轉向)。討論 $\overline{\mathbb{X}}(\Omega)$ 上相對應點的 $K_n, H, K$ 變化。
 \end{enumerate}
 \end{problem}
+\begin{proof}
+\end{proof}
 
 %第九題
 \setcounter{theProblemCounter}{8}
@@ -75,7 +92,7 @@ $\mathbb{X}(u, v)=(f(u)\cos v, f(u)\sin v, g(u))$，$f>0$ \begin{enumerate}
 \end{enumerate}
 \end{problem}
 \begin{proof}
-To avoid the notational ambiguity, let $\mathbb{X}(u, v)=(s(u)\cos v, s(u)\sin v, t(u))$,and that $s>0$. \begin{enumerate}
+To avoid the notational ambiguity, let $\mathbb{X}(u, v)=(s(u)\cos v, s(u)\sin v, t(u))$, and that $s>0$. \begin{enumerate}
 \item[(a)] We have
 \begin{align*}
 \mathbb{X}_u =& (s'(u)\cos v, s'(u)\sin v, t'(u)); \\
@@ -114,4 +131,6 @@ $\mathbb{X}(s,\theta) = \gamma(s)+\cos\theta\vec{n}(s) + \sin\theta\vec{b}(s)$, 
 \item[(b)] 討論曲面上 $K$ 的分佈。
 \end{enumerate}
 \end{problem}
+\begin{proof}
+\end{proof}
 \end{document}
