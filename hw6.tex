@@ -148,16 +148,17 @@ N =& \frac{\mathbb{X}_{s} \times \mathbb{X}_{\theta}}{|\mathbb{X}_{s} \times \ma
 e =& -\kappa\cos\theta + \cos^2\theta(\kappa^2 + \tau^2) + \tau^2\sin^2\theta = -\kappa\cos\theta + \kappa^2\cos^2\theta + \tau^2; \\
 f =& -\tau; \\
 g =& 1; \\
-dN(\mathbb{X}_{s}) =& N_{s} = (0, 0, 0); \\
+dN(\mathbb{X}_{s}) =& N_{s} = (\kappa\cos\theta, -\tau\sin\theta, \tau\cos\theta) = \mathbb{X}_{s}\kappa/(1-\kappa) + \frac{\tau}{1-\kappa}\mathbb{X}_{\theta}; \\
 dN(\mathbb{X}_{\theta}) =& N_{\theta} = (0, \sin\theta, -\cos\theta) = -\mathbb{X}_{\theta}; \\
-\kappa_1 =& 0; \\
+[-dN] =& \left[\begin{array}{cc} \frac{-\kappa}{1-\kappa} & \frac{-\tau}{1-\kappa} \\ 0  & 1\end{array}\right] \\
+\kappa_1 =& \frac{\kappa}{1 - \kappa}; \\
 \kappa_2 =& 1; \\
-K =& 0; \\
-H =& 1/2.
+K =& \frac{\kappa}{1 - \kappa}; \\
+H =& \frac{1}{2 - 2\kappa}.
 \end{align*}
 \item[(b)] 
 \begin{align*}
-K = 0 \quad\text{everywhere}
+K =& \frac{\kappa}{1 - \kappa}; \quad\text{(how to discuss?)}\\
 \end{align*}
 \end{enumerate}
 \end{proof}
