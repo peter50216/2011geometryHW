@@ -70,6 +70,7 @@ So the gaussian curvature of the surface at $\gamma(s)$ is $K=0$, and this means
 \end{align*}
 \item[(b)]
 % 若 $K=0$, 則 $\kappa_1, \kappa_2$ 中必定要有一個為零, 則 $\min(|\kappa_1|, |\kappa_2|)=0$, 而 $\kappa\ge 0$ 顯然成立. 故條件亦可改為 $K\ge 0$.
+上一小題的證明中並沒有用到 $\kappa\neq 0$ 或是 $K\neq 0$.
 \end{enumerate}
 \end{proof}
 
@@ -79,10 +80,96 @@ So the gaussian curvature of the surface at $\gamma(s)$ is $K=0$, and this means
 \begin{enumerate}
 \item[]
 \item[(a)] $T_\lambda$ 是縮放 $\lambda$ 倍的映射，$\lambda>0$。$\mathbb{X}:\Omega\to \mathbb{R}^3$ regular surface。討論 $T_\lambda\circ \mathbb{X}:\Omega\to\mathbb{R}^3$ 上對應點 $\kappa_n, H, K$ 的變化。
-\item[(b)] $\mathbb{X}:\begin{array}{c}\Omega\\(u,v)\end{array}\to \mathbb{R}^3$，若定義 $\overline{\mathbb{X}}(u, v)= \mathbb{X}(v, u)$(因此 $N$ 轉向)。討論 $\overline{\mathbb{X}}(\Omega)$ 上相對應點的 $K_n, H, K$ 變化。
+\item[(b)] $\mathbb{X}:\begin{array}{c}\Omega\\(u,v)\end{array}\to \mathbb{R}^3$，若定義 $\overline{\mathbb{X}}(u, v)= \mathbb{X}(v, u)$(因此 $N$ 轉向)。討論 $\overline{\mathbb{X}}(\Omega)$ 上相對應點的 $\kappa_n, H, K$ 變化。 %這顯然是題目打錯
 \end{enumerate}
 \end{problem}
 \begin{proof}
+\begin{enumerate}
+\item[(a)]
+不妨設縮放中心為原點. 令 $\overline{\mathbb{X}}=T_\lambda\circ \mathbb{X}$, 所以 $\overline{\mathbb{X}}(u,v)=\lambda\mathbb{X}(u,v)$.\\
+\begin{align*}
+\overline{\mathbb{X}}_u&=\lambda\mathbb{X}_u\\
+\overline{\mathbb{X}}_v&=\lambda\mathbb{X}_v\\
+N_{\overline{\mathbb{X}}}&=\frac{\overline{\mathbb{X}}_u\times\overline{\mathbb{X}}_v}{|\overline{\mathbb{X}}_u\times\overline{\mathbb{X}}_v|}\\
+&=\frac{\lambda^2\mathbb{X}_u\times\mathbb{X}_v}{\lambda^2|\mathbb{X}_u\times\mathbb{X}_v|}\\
+&=\frac{\mathbb{X}_u\times\mathbb{X}_v}{|\mathbb{X}_u\times\mathbb{X}_v|}\\
+&=N_{\mathbb{X}}\\
+\end{align*}
+\begin{align*}
+E_{\overline{\mathbb{X}}} &= \langle \overline{\mathbb{X}}_u, \overline{\mathbb{X}}_u\rangle\\
+&= \lambda^2\langle \mathbb{X}_u, \mathbb{X}_u\rangle\\
+&= \lambda^2 E_{\mathbb{X}}\\
+F_{\overline{\mathbb{X}}} &= \langle \overline{\mathbb{X}}_u, \overline{\mathbb{X}}_v\rangle\\
+&= \lambda^2\langle \mathbb{X}_u, \mathbb{X}_v\rangle\\
+&= \lambda^2 F_{\mathbb{X}}\\
+G_{\overline{\mathbb{X}}} &= \langle \overline{\mathbb{X}}_v, \overline{\mathbb{X}}_v\rangle\\
+&= \lambda^2\langle \mathbb{X}_v, \mathbb{X}_v\rangle\\
+&= \lambda^2 G_{\mathbb{X}}\\
+\end{align*}
+\begin{align*}
+\overline{\mathbb{X}}_{uu}&=\lambda\mathbb{X}_{uu}\\
+\overline{\mathbb{X}}_{uv}&=\lambda\mathbb{X}_{uv}\\
+\overline{\mathbb{X}}_{vv}&=\lambda\mathbb{X}_{vv}\\
+e_{\overline{\mathbb{X}}} &= \langle N_{\overline{\mathbb{X}}}, \overline{\mathbb{X}}_{uu}\rangle\\
+&= \lambda \langle N_{\mathbb{X}}, \mathbb{X}_{uu}\rangle\\
+&= \lambda e_{\mathbb{X}}\\
+f_{\overline{\mathbb{X}}} &= \langle N_{\overline{\mathbb{X}}}, \overline{\mathbb{X}}_{uv}\rangle\\
+&= \lambda \langle N_{\mathbb{X}}, \mathbb{X}_{uv}\rangle\\
+&= \lambda f_{\mathbb{X}}\\
+g_{\overline{\mathbb{X}}} &= \langle N_{\overline{\mathbb{X}}}, \overline{\mathbb{X}}_{vv}\rangle\\
+&= \lambda \langle N_{\mathbb{X}}, \mathbb{X}_{vv}\rangle\\
+&= \lambda g_{\mathbb{X}}\\
+\end{align*}
+\begin{align*}
+[-dN]_{\overline{\mathbb{X}}} &= \left[\begin{array}{cc}E_{\overline{\mathbb{X}}} & F_{\overline{\mathbb{X}}} \\ F_{\overline{\mathbb{X}}} & G_{\overline{\mathbb{X}}}\end{array}\right]^{-1}\left[\begin{array}{cc}e_{\overline{\mathbb{X}}} & f_{\overline{\mathbb{X}}} \\ f_{\overline{\mathbb{X}}} & g_{\overline{\mathbb{X}}}\end{array}\right]\\
+&= \frac{1}{\lambda^2}\left[\begin{array}{cc}E_{\mathbb{X}} & F_{\mathbb{X}} \\ F_{\mathbb{X}} & G_{\mathbb{X}}\end{array}\right]^{-1}\left[\begin{array}{cc}e_{\mathbb{X}} & f_{\mathbb{X}} \\ f_{\mathbb{X}} & g_{\mathbb{X}}\end{array}\right]\\
+&=\frac{1}{\lambda^2}[-dN]_{\mathbb{X}}\\
+\rightarrow \kappa_{n\overline{\mathbb{X}}} &= \frac{1}{\lambda^2}\kappa_{n\mathbb{X}}\\
+K_{\overline{\mathbb{X}}} &= \frac{1}{\lambda^4}K_{\mathbb{X}}\\
+H_{\overline{\mathbb{X}}} &= \frac{1}{\lambda^2}H_{\mathbb{X}}\\
+\end{align*}
+\item[(b)]
+\begin{align*}
+\overline{\mathbb{X}}_u&=\mathbb{X}_v\\
+\overline{\mathbb{X}}_v&=\mathbb{X}_u\\
+N_{\overline{\mathbb{X}}}&=\frac{\overline{\mathbb{X}}_u\times\overline{\mathbb{X}}_v}{|\overline{\mathbb{X}}_u\times\overline{\mathbb{X}}_v|}\\
+&=\frac{\mathbb{X}_v\times\mathbb{X}_u}{|\mathbb{X}_u\times\mathbb{X}_v|}\\
+&=-N_{\mathbb{X}}\\
+\end{align*}
+\begin{align*}
+E_{\overline{\mathbb{X}}} &= \langle \overline{\mathbb{X}}_u, \overline{\mathbb{X}}_u\rangle\\
+&= \langle \mathbb{X}_v, \mathbb{X}_v\rangle\\
+&= G_{\mathbb{X}}\\
+F_{\overline{\mathbb{X}}} &= \langle \overline{\mathbb{X}}_u, \overline{\mathbb{X}}_v\rangle\\
+&= \langle \mathbb{X}_v, \mathbb{X}_u\rangle\\
+&= F_{\mathbb{X}}\\
+G_{\overline{\mathbb{X}}} &= \langle \overline{\mathbb{X}}_v, \overline{\mathbb{X}}_v\rangle\\
+&= \langle \mathbb{X}_u, \mathbb{X}_u\rangle\\
+&= E_{\mathbb{X}}\\
+\end{align*}
+\begin{align*}
+\overline{\mathbb{X}}_{uu}&=\mathbb{X}_{vv}\\
+\overline{\mathbb{X}}_{uv}&=\mathbb{X}_{uv}\\
+\overline{\mathbb{X}}_{vv}&=\mathbb{X}_{uu}\\
+e_{\overline{\mathbb{X}}} &= \langle N_{\overline{\mathbb{X}}}, \overline{\mathbb{X}}_{uu}\rangle\\
+&= \langle -N_{\mathbb{X}}, \mathbb{X}_{vv}\rangle\\
+&= -g_{\mathbb{X}}\\
+f_{\overline{\mathbb{X}}} &= \langle N_{\overline{\mathbb{X}}}, \overline{\mathbb{X}}_{uv}\rangle\\
+&= \langle -N_{\mathbb{X}}, \mathbb{X}_{uv}\rangle\\
+&= -f_{\mathbb{X}}\\
+g_{\overline{\mathbb{X}}} &= \langle N_{\overline{\mathbb{X}}}, \overline{\mathbb{X}}_{vv}\rangle\\
+&= \langle -N_{\mathbb{X}}, \mathbb{X}_{uu}\rangle\\
+&= -e_{\mathbb{X}}\\
+\end{align*}
+\begin{align*}
+[-dN]_{\overline{\mathbb{X}}} &= \left[\begin{array}{cc}E_{\overline{\mathbb{X}}} & F_{\overline{\mathbb{X}}} \\ F_{\overline{\mathbb{X}}} & G_{\overline{\mathbb{X}}}\end{array}\right]^{-1}\left[\begin{array}{cc}e_{\overline{\mathbb{X}}} & f_{\overline{\mathbb{X}}} \\ f_{\overline{\mathbb{X}}} & g_{\overline{\mathbb{X}}}\end{array}\right]\\
+&= -\left[\begin{array}{cc}G_{\mathbb{X}} & F_{\mathbb{X}} \\ F_{\mathbb{X}} & E_{\mathbb{X}}\end{array}\right]^{-1}\left[\begin{array}{cc}g_{\mathbb{X}} & f_{\mathbb{X}} \\ f_{\mathbb{X}} & e_{\mathbb{X}}\end{array}\right]\\
+&=-\begin{bmatrix}0&1\\1&0\end{bmatrix}[-dN]_{\mathbb{X}}\begin{bmatrix}0&1\\1&0\end{bmatrix}\\
+\rightarrow \kappa_{n\overline{\mathbb{X}}} &= -\kappa_{n\mathbb{X}}\\
+K_{\overline{\mathbb{X}}} &= K_{\mathbb{X}}\\
+H_{\overline{\mathbb{X}}} &= -H_{\mathbb{X}}\\
+\end{align*}
+\end{enumerate}
 \end{proof}
 
 %第九題
