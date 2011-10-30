@@ -1,0 +1,90 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{amsmath, amssymb, amsthm}
+%加這個就可以設定字體
+\usepackage{fontspec}
+\usepackage{xkeyval} %MikTeX 2.9 版本相容有誤, 以此修正
+%使用xeCJK，其他的還有CJK或是xCJK
+\usepackage{xeCJK}
+%設定英文字型，不設的話就會使用預設的字型
+%\setmainfont{Times New Roman}
+%設定中英文的字型
+%字型的設定可以使用系統內的字型，而不用像以前一樣另外安裝
+%\setCJKmainfont{文泉驛微米黑}
+\setCJKmainfont{WenQuanYi Micro Hei}
+\setCJKfamilyfont{lh}{LiHei Pro}
+\newcommand{\LiHei}{\CJKfamily{lh}}
+%中文自動換行
+\XeTeXlinebreaklocale "zh"
+%文字的彈性間距
+\XeTeXlinebreakskip = 0pt plus 1pt
+%設定段落之間的距離
+\setlength{\parskip}{0.3cm}
+%設定行距
+%\linespread{1.5}\selectfont
+
+%先暫時用水泥字型，如果任何人看不下去就改吧XD
+\usepackage[T1]{fontenc}
+\usepackage{concmath}
+%\usepackage{mathptmx} %Times
+
+\newcounter{theProblemCounter}
+\newtheorem{problem}[theProblemCounter]{Problem}
+
+\begin{document}
+\title{{\fontspec{Copperplate Gothic Bold}Geometry Homework 7}}
+%\title{{\fontspec{Copperplate}Geometry Homework 5}}
+\author{{\it{B96201044}} {\LiHei 黃上恩}, {\it{B98901182}} {\LiHei 時丕勳}, {\it{K0020100x}} {\LiHei 劉士瑋}}
+\date{\today}
+\maketitle
+
+\newcommand{\bx}{\mathbb{X}}
+%第二題
+\setcounter{theProblemCounter}{1}
+\begin{problem}
+若 $F(x, y, z)=0$ 定義一 surface，證明 $\nabla f\neq 0$ 的地方 Gauss curvature $K=\frac{\nabla F^t A\nabla f}{\|\nabla f\|^4}$。其中 $A$ 為 $\partial^2 F=\left(
+\begin{array}{ccc}
+F_{xx} & F_{xy} & F_{xz} \\
+F_{yx} & F_{yy} & F_{yz} \\
+F_{zx} & F_{zy} & F_{zz}\end{array}
+\right)$ 的 adjoint Matrix, i.e. $A=\det(\partial^2F)(\partial^2F)^{-1}$
+\end{problem}
+\begin{proof} \end{proof}
+
+%第三題
+\setcounter{theProblemCounter}{2}
+\begin{problem}[Ex P168 4]
+Determine the asymptotic curves and the lines of curvature of $z=xy$.
+\end{problem}
+
+%第四題
+\setcounter{theProblemCounter}{3}
+\begin{problem}
+已知 $\mathbb{X}(u, v)$ 為一 surface $\subset \mathbb{R}^3$ 且 $E=G=(1+u^2+v^2)^2, F=0$ 而且 $e=1, f=\sqrt{3}, g=-1$
+\begin{enumerate}
+\item[(a)] 求在 $\mathbb{X}(1, 1)$ 的 $K$ 與 $H$
+\item[(b)] 如何決定過 $\mathbb{X}(1, 1)$ 的 line of curvature 與 asymptotic curve（如果有的話）
+\end{enumerate}
+
+%第五題
+\setcounter{theProblemCounter}{4}
+\begin{problem}
+$\mathbb{X}(u, v) = (v\cos u, v\sin u, u)$，令 $\gamma(t)=\mathbb{X}(t, 1)$
+\begin{enumerate}
+\item[(a)] 求 $\gamma(t)$ 的 $\kappa_n, \kappa_g, \tau_g$
+\item[(b)] 與 $\gamma(t)$ 的 $\kappa, \tau$ 有何關係
+\end{enumerate}
+\end{problem}
+
+%第六題
+\setcounter{theProblemCounter}{5}
+\begin{problem}
+令 $(x(t), y(t)) = (t-\mathrm{tanh\ } t, \mathrm{sech\ } t)$ 這基本就是 p7(4) 的 tratrix
+\begin{enumerate}
+\item[(a)] 將此曲線化作長度參數
+\item[(b)] 利用上小題，求此曲線繞 $x$ 軸旋轉的旋轉體的 $K$
+\end{enumerate}
+\end{problem}
+
+\end{problem}
+
+\end{document}
