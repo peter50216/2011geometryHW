@@ -93,21 +93,36 @@ g&=\langle N, \bx_{yy}\rangle\\
 \begin{align*}
 \frac{\partial^2 F(x,y,z)}{\partial x^2}&=0\\
 &=\frac{\partial}{\partial x}(F_x(x,y,z)+F_z(x,y,z)z_x)\\
-&=F_{xx}(x,y,z)+2F_{xz}(x,y,z)z_x+F_{zz}(x,y,z)z_x+F_z(x,y,z)z_{xx}\\
-\rightarrow z_{xx}&=-\frac{F_{xx}-(2F_{xz}+F_{zz})\frac{F_x}{F_z}}{F_z}\\
+&=F_{xx}(x,y,z)+2F_{xz}(x,y,z)z_x+F_{zz}(x,y,z)z_x^2+F_z(x,y,z)z_{xx}\\
+\rightarrow z_{xx}&=-\frac{F_{xx}-2F_{xz}\frac{F_x}{F_z}+F_{zz}\left(\frac{F_x}{F_z}\right)^2}{F_z}\\
 \frac{\partial^2 F(x,y,z)}{\partial y^2}&=0\\
 &=\frac{\partial}{\partial y}(F_y(x,y,z)+F_z(x,y,z)z_y)\\
-&=F_{yy}(x,y,z)+2F_{yz}(x,y,z)z_y+F_{zz}(x,y,z)z_y+F_z(x,y,z)z_{yy}\\
-\rightarrow z_{yy}&=-\frac{F_{yy}-(2F_{yz}+F_{zz})\frac{F_y}{F_z}}{F_z}\\
+&=F_{yy}(x,y,z)+2F_{yz}(x,y,z)z_y+F_{zz}(x,y,z)z_y^2+F_z(x,y,z)z_{yy}\\
+\rightarrow z_{yy}&=-\frac{F_{yy}-2F_{yz}\frac{F_y}{F_z}+F_{zz}\left(\frac{F_y}{F_z}\right)^2}{F_z}\\
 \frac{\partial^2 F(x,y,z)}{\partial x\partial y}&=0\\
 &=\frac{\partial}{\partial x}(F_y(x,y,z)+F_z(x,y,z)z_y)\\
 &=F_{xy}(x,y,z)+F_{yz}(x,y,z)z_x+F_{xz}(x,y,z)z_y+F_{zz}(x,y,z)z_xz_y+F_z(x,y,z)z_{xy}\\
-\rightarrow z_{xy}&=-\frac{F_{xy}-F_{yz}\frac{F_x}{F_z}-F_{xz}\frac{F_y}{F_z}}{F_z}\\
+\rightarrow z_{xy}&=-\frac{F_{xy}-F_{yz}\frac{F_x}{F_z}-F_{xz}\frac{F_y}{F_z}+F_{zz}\frac{F_yF_x}{F_z^2}}{F_z}\\
 \end{align*}
 \begin{align*}
-\rightarrow K&=\frac{z_{xx}z_{yy}-z_{xy}^2}{(1+z_x^2+z_y^2)^2}\\
-&=\frac{\left(\frac{F_{xx}-(2F_{xz}+F_{zz})\frac{F_x}{F_z}}{F_z}\right)\left(\frac{F_{yy}-(2F_{yz}+F_{zz})\frac{F_y}{F_z}}{F_z}\right)-\left(\frac{F_{xy}-F_{yz}\frac{F_x}{F_z}-F_{xz}\frac{F_y}{F_z}}{F_z}\right)^2}{(1+\left(\frac{F_x}{F_z}\right)^2+\left(\frac{F_y}{F_z}\right)^2)^2}\\
-&=\frac{\left(F_{xx}F_z-(2F_{xz}+F_{zz})F_x\right)\left(F_{yy}F_z-(2F_{yz}+F_{zz})F_y\right)-\left(F_{xy}F_z-F_{yz}F_x-F_{xz}F_y\right)^2}{(F_z^2+F_x^2+F_y^2)^2}\\
+\rightarrow K=&\ \frac{z_{xx}z_{yy}-z_{xy}^2}{(1+z_x^2+z_y^2)^2}\\
+=&\ \frac{\left(\frac{F_{xx}-2F_{xz}\frac{F_x}{F_z}+F_{zz}\left(\frac{F_x}{F_z}\right)^2}{F_z}\right)\left(\frac{F_{yy}-2F_{yz}\frac{F_y}{F_z}+F_{zz}\left(\frac{F_y}{F_z}\right)^2}{F_z}\right)-\left(\frac{F_{xy}-F_{yz}\frac{F_x}{F_z}-F_{xz}\frac{F_y}{F_z}+F_{zz}\frac{F_yF_x}{F_z^2}}{F_z}\right)^2}{(1+\left(\frac{F_x}{F_z}\right)^2+\left(\frac{F_y}{F_z}\right)^2)^2}\\
+=&\ \frac{1}{F_z^2(F_x^2+F_y^2+F_z^2)^2}(\left(F_{xx}F_z^2-2F_{xz}F_xF_z+F_{zz}F_x^2\right)\left(F_{yy}F_z^2-2F_{yz}F_yF_z+F_{zz}F_y^2\right)\\
+&-\left(F_{xy}F_z^2-F_{yz}F_xF_z-F_{xz}F_yF_z+F_{zz}F_xF_y\right)^2)\\
+=&\ \frac{1}{F_z^2(F_x^2+F_y^2+F_z^2)^2}(
+F_{xx}F_{yy}F_z^4-2F_{xz}F_{yy}F_xF_z^3+F_{zz}F_{yy}F_z^2F_x^2-2F_{xx}F_{yz}F_yF_z^3\\
+&+4F_{xz}F_{yz}F_xF_yF_z^2-2F_{zz}F_{yz}F_yF_zF_x^2+F_{xx}F_{zz}F_y^2F_z^2-2F_{xz}F_{zz}F_y^2F_xF_z+F_{zz}^2F_y^2F_x^2\\
+&-F_{xy}^2F_z^4-F_{yz}^2F_x^2F_z^2-F_{xz}^2F_y^2F_z^2-F_{zz}^2F_x^2F_y^2+2F_{xy}F_{yz}F_xF_z^3+2F_{xy}F_{xz}F_yF_z^3\\
+&-2F_{xy}F_{zz}F_xF_yF_z^2-2F_{yz}F_{xz}F_yF_xF_z^2+2F_{yz}F_{zz}F_yF_x^2F_z+2F_{xz}F_{zz}F_xF_y^2F_z)\\
+=&\ \frac{1}{(F_x^2+F_y^2+F_z^2)^2}(
+F_{xx}F_{yy}F_z^2-2F_{xz}F_{yy}F_xF_z+F_{zz}F_{yy}F_x^2-2F_{xx}F_{yz}F_yF_z\\
+&+2F_{xz}F_{yz}F_xF_y+F_{xx}F_{zz}F_y^2-F_{xy}^2F_z^2-F_{yz}^2F_x^2-F_{xz}^2F_y^2+2F_{xy}F_{yz}F_xF_z\\
+&+2F_{xy}F_{xz}F_yF_z-2F_{xy}F_{zz}F_xF_y)\\
+=&\ \frac{1}{(F_x^2+F_y^2+F_z^2)^2}(
+(F_{zz}F_{yy}-F_{yz}^2)F_x^2+(F_{xx}F_{zz}-F_{xz}^2)F_y^2+(F_{xx}F_{yy}-F_{xy}^2)F_z^2\\
+&+2(F_{xy}F_{yz}-F_{xz}F_{yy})F_xF_z+2(F_{xy}F_{xz}-F_{xx}F_{yz})F_yF_z\\
+&+2(F_{xz}F_{yz}-F_{xy}F_{zz})F_xF_y)\\
+=&\ \frac{\nabla F^t A\nabla F}{\|\nabla F\|^4}
 \end{align*}
 \end{proof}
 %第三題
