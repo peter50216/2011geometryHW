@@ -21,6 +21,7 @@
 \setlength{\parskip}{0.3cm}
 %設定行距
 %\linespread{1.5}\selectfont
+\usepackage{enumerate}
 
 %先暫時用水泥字型，如果任何人看不下去就改吧XD
 \usepackage[T1]{fontenc}
@@ -48,43 +49,62 @@ F_{yx} & F_{yy} & F_{yz} \\
 F_{zx} & F_{zy} & F_{zz}\end{array}
 \right)$ 的 adjoint Matrix, i.e. $A=\det(\partial^2F)(\partial^2F)^{-1}$
 \end{problem}
-\begin{proof} \end{proof}
+\begin{proof}
+\end{proof}
 
 %第三題
 \setcounter{theProblemCounter}{2}
 \begin{problem}[Ex P168 4]
 Determine the asymptotic curves and the lines of curvature of $z=xy$.
 \end{problem}
+\begin{proof}
+\end{proof}
 
 %第四題
 \setcounter{theProblemCounter}{3}
 \begin{problem}
 已知 $\mathbb{X}(u, v)$ 為一 surface $\subset \mathbb{R}^3$ 且 $E=G=(1+u^2+v^2)^2, F=0$ 而且 $e=1, f=\sqrt{3}, g=-1$
-\begin{enumerate}
-\item[(a)] 求在 $\mathbb{X}(1, 1)$ 的 $K$ 與 $H$
-\item[(b)] 如何決定過 $\mathbb{X}(1, 1)$ 的 line of curvature 與 asymptotic curve（如果有的話）
+\begin{enumerate}[{ (}a{)}]
+\item 求在 $\mathbb{X}(1, 1)$ 的 $K$ 與 $H$
+\item 如何決定過 $\mathbb{X}(1, 1)$ 的 line of curvature 與 asymptotic curve（如果有的話）
 \end{enumerate}
+\end{problem}
+\begin{proof}
+\begin{enumerate}[{ (}a{)}]
+\item
+at $(1,1)$, $E=G=9, F=0$.\\
+\begin{align*}
+[-dN]&=\begin{bmatrix}E&F\\F&G\end{bmatrix}^{-1}\begin{bmatrix}e&f\\f&g\end{bmatrix}\\
+&=\begin{bmatrix}9&0\\0&9\end{bmatrix}^{-1}\begin{bmatrix}1&\sqrt{3}\\\sqrt{3}&-1\end{bmatrix}\\
+&=\begin{bmatrix}\frac{1}{9}&\frac{1}{3\sqrt{3}}\\\frac{1}{3\sqrt{3}}&-\frac{1}{9}\end{bmatrix}
+\end{align*}
+So $K=\det([-dN])=-\frac{4}{81}$, $H=\textrm{tr}([-dN])=0$.
+\end{enumerate}
+\end{proof}
 
 %第五題
 \setcounter{theProblemCounter}{4}
 \begin{problem}
 $\mathbb{X}(u, v) = (v\cos u, v\sin u, u)$，令 $\gamma(t)=\mathbb{X}(t, 1)$
-\begin{enumerate}
-\item[(a)] 求 $\gamma(t)$ 的 $\kappa_n, \kappa_g, \tau_g$
-\item[(b)] 與 $\gamma(t)$ 的 $\kappa, \tau$ 有何關係
+\begin{enumerate}[{ (}a{)}]
+\item 求 $\gamma(t)$ 的 $\kappa_n, \kappa_g, \tau_g$
+\item 與 $\gamma(t)$ 的 $\kappa, \tau$ 有何關係
 \end{enumerate}
 \end{problem}
+\begin{proof}
+\end{proof}
 
 %第六題
 \setcounter{theProblemCounter}{5}
 \begin{problem}
 令 $(x(t), y(t)) = (t-\mathrm{tanh\ } t, \mathrm{sech\ } t)$ 這基本就是 p7(4) 的 tratrix
-\begin{enumerate}
-\item[(a)] 將此曲線化作長度參數
-\item[(b)] 利用上小題，求此曲線繞 $x$ 軸旋轉的旋轉體的 $K$
+\begin{enumerate}[{ (}a{)}]
+\item 將此曲線化作長度參數
+\item 利用上小題，求此曲線繞 $x$ 軸旋轉的旋轉體的 $K$
 \end{enumerate}
 \end{problem}
 
-\end{problem}
+\begin{proof}
+\end{proof}
 
 \end{document}
