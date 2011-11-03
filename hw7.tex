@@ -222,6 +222,36 @@ $\mathbb{X}(u, v) = (v\cos u, v\sin u, u)$，令 $\gamma(t)=\mathbb{X}(t, 1)$
 \end{enumerate}
 \end{problem}
 \begin{proof}
+\begin{enumerate}[{ (}a{)}]
+\item
+\begin{align*}
+\gamma(t)&=(\cos t, \sin t, t)\\
+\rightarrow \gamma'(t)&=(-\sin t,\cos t,1)\\
+T(t)&=\frac{1}{2}(-\sin t,\cos t,1)\\
+T'(t)&=\frac{1}{2}(-\cos t,-\sin t,0)\\
+\rightarrow n(t)&=(-\cos t,-\sin t,0)\\
+\kappa = \frac{1}{2}\\
+\bx_u&=(-v\sin u,v\cos u,1)\\
+\bx_v&=(\cos u,\sin u,0)\\
+\rightarrow N&=\frac{1}{1+v^2}(-\sin u, \cos u,-v)\\
+\kappa_n&=\langle N,T'\rangle\\
+&=0\\
+\kappa_g&=\kappa = \frac{1}{2}\\
+A&=n\\
+A'&=(\sin t,-\cos t,0)\\
+\tau_g&=-\langle A',N\rangle\\
+&=-\frac{1}{2}
+\end{align*}
+\item
+\begin{align*}
+b&=T\times n\\
+&=\frac{1}{2}(\sin t,-\cos t, 1)\\
+\tau&=-\langle n', b\rangle\\
+&=-\frac{1}{2}\\
+\rightarrow \kappa_g&=\kappa\\
+\tau_g &= \tau
+\end{align*}
+\end{enumerate}
 \end{proof}
 
 %第六題
