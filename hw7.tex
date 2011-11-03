@@ -32,8 +32,8 @@
 \newtheorem{problem}[theProblemCounter]{Problem}
 
 \begin{document}
-\title{{\fontspec{Copperplate Gothic Bold}Geometry Homework 7}}
-%\title{{\fontspec{Copperplate}Geometry Homework 5}}
+%\title{{\fontspec{Copperplate Gothic Bold}Geometry Homework 7}}
+\title{{\fontspec{Copperplate}Geometry Homework 5}}
 \author{{\it{B96201044}} {\LiHei 黃上恩}, {\it{B98901182}} {\LiHei 時丕勳}, {\it{K0020100x}} {\LiHei 劉士瑋}}
 \date{\today}
 \maketitle
@@ -255,6 +255,8 @@ b&=T\times n\\
 \end{proof}
 
 %第六題
+\newcommand{\sech}{\mathrm{sech}}
+\newcommand{\arcosh}{\mathrm{arcosh}}
 \setcounter{theProblemCounter}{5}
 \begin{problem}
 令 $(x(t), y(t)) = (t-\mathrm{tanh\ } t, \mathrm{sech\ } t)$ 這基本就是 p7(4) 的 tratrix
@@ -266,5 +268,16 @@ b&=T\times n\\
 
 \begin{proof}
 \end{proof}
-
+\begin{enumerate}
+\item[(a)] 
+\begin{align*}
+\gamma(t) =& (x(s(t)), y(s(t))); \\
+\text{Set }s(t) =& \arcosh(e^t). \\
+\gamma'(t) =& (x'(s)s', y'(s)s'); \\
+|\gamma'(t)|^2 =& x'(s)^2s'^2 + y'(s)^2s'^2 = s'^2[(1 - \sech^2s)^2 + \sech^2s\tanh^2s]; \\
+	=& s'^2\tanh^2s = [(\pm 1) e^t/\sqrt{1-e^{2t}} \cdot \sqrt{e^{2t} - 1}/e^t]^2 = 1. \\
+\text{Thus in $\gamma$ $t$ is arc-length.}
+\end{align*}
+\item[(b)] 
+\end{enumerate}
 \end{document}
