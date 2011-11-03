@@ -189,10 +189,25 @@ at $(1,1)$, $E=G=9, F=0$.\\
 \end{align*}
 So $K=\det([-dN])=-\frac{4}{81}$, $H=\textrm{tr}([-dN])=0$.
 \item
+line of curvature:
+\begin{align*}
+\begin{vmatrix}
+v'^2 & -u'v' & u'^2\\
+(1+u^2+v^2)^2 & 0 & (1+u^2+v^2)^2\\
+1 & \sqrt{3} & -1\\
+\end{vmatrix}&=0\\
+\rightarrow (1+u^2+v^2)^2(-\sqrt{3}v'^2-2u'v'+\sqrt{3}u'^2)&=0\\
+\rightarrow (-\sqrt{3}v'+u')(v'+\sqrt{3}u')&=0\\
+\rightarrow -\sqrt{3}v+u&=\textrm{const or }v+\sqrt{3}u=\textrm{const}
+\rightarrow -\sqrt{3}v+u&=1-\sqrt{3}\textrm{ or }v+\sqrt{3}u=1+sqrt{3}
+\end{align*}
 asymptotic curve:
 \begin{align*}
 u'^2+2\sqrt{3}u'v'-v'^2&=0\\
-\rightarrow
+\rightarrow (u'+(\sqrt{3}-2)v')(u'+(\sqrt{3}+2)v')&=0\\
+\rightarrow u'+(\sqrt{3}-2)v'&=0\textrm{ or }u'+(\sqrt{3}+2)v'=0\\
+\rightarrow u+((\sqrt{3}-2)v&=\textrm{const or }u+(\sqrt{3}+2)v=\textrm{const}\\
+\rightarrow u+((\sqrt{3}-2)v&=\sqrt{3}-1\textrm{ or }u+(\sqrt{3}+2)v=\sqrt{3}+3\\
 \end{align*}
 \end{enumerate}
 \end{proof}
