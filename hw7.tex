@@ -39,6 +39,10 @@
 \maketitle
 
 \newcommand{\bx}{\mathbb{X}}
+\newcommand{\sech}{\mbox{sech}}
+%\newcommand{\cosh}{\mbox{cosh}\ }
+%\newcommand{\tanh}{\mbox{tanh}\ }
+%\newcommand{\sinh}{\mbox{sinh}\ }
 %第二題
 \setcounter{theProblemCounter}{1}
 \begin{problem}
@@ -265,6 +269,53 @@ b&=T\times n\\
 \end{problem}
 
 \begin{proof}
+\begin{enumerate}
+\item[]
+\item[(a)] Let $\alpha(t)=(x(t), y(t))$. Then 
+$\alpha'(t) = (1-\sech^2t, \sech\ \tanh t) = (\tanh^2t, \sech\ \tanh t)$. So the length of the curve $s$ when $t\ge 0$ is given by
+\begin{align*}
+s&=\int \|\alpha'(t)\| dt\\
+&=\int \tanh t\sqrt{\tanh^2t+\sech^2t}\ dt\\
+&=\int \tanh t dt\\
+&=\ln(\cosh t) + C_0
+\end{align*}
+We wish $s$ to be arc-length parameter according to $t=0$, so when $t=0$ we need $s=0$. This implies $C_0=0$.
+
+Therefore, we have the arc-length parameter $s\ge 0$ with $t = \cosh^{-1}(e^s)$. Bring it back and by symmetry we would get \[
+\alpha(s) = \left(sign(s)(\cosh^{-1}(e^{|s|})-\tanh(\cosh^{-1}(e^{|s|}))), \sech(\cosh^{-1}(e^{|s|}))\right)
+\]
+To check $s$ is the arc-length parameter we can simply check its derivatives.
+\item[(b)] Let $\bx(u, v) = (x(u), y(u)\cos v, y(u)\sin v)$, where $u\in\mathbb{R}$ and $0<v<2\pi$ and $u$ is exactly $s$, the arc-length parameter described in (a). Then,
+\begin{align*}
+\bx_u &= \left(x'(u), y'(u)\cos v, y'(u)\sin v\right)\\
+\bx_v &= \left(0, -y(u)\sin v, y(u)\cos v\right)\\
+E &= \left\langle \bx_u, \bx_u\right\rangle = x'^2(u)+y'^2(u)=1\\
+F &= \left\langle \bx_u, \bx_v\right\rangle = 0\\
+G &= \left\langle \bx_v, \bx_v\right\rangle = y^2(u)\\
+N &= \frac{\bx_u\times\bx_v}{\|\bx_u\times\bx_v\|} = \left(y'(u), -x'(u)\cos v, -x'(u)\sin v\right)\\
+\bx_{uu} &= \left(x''(u), y''(u)\cos v, y''(u)\sin v\right)\\
+\bx_{uv} &= \left(0, -y'(u)\sin v, y'(u)\cos v\right)\\
+\bx_{vv} &= \left(0, -y(u)\cos v, -y(u)\sin v\right)\\
+e &= \left\langle N, \bx_{uu}\right\rangle = x''(u)y'(u)-x'(u)y''(u)\\
+f &= \left\langle N, \bx_{uv}\right\rangle = 0\\
+g &= \left\langle N, \bx_{vv}\right\rangle = x'(u)y(u)
+\end{align*}
+Hence the Gaussian curvature $K$ equals
+\[
+K=\frac{eg-f^2}{EG-F^2} = \frac{x'(u)x''(u)y'(u)-x'^2(u)y''(u)}{y(u)}
+\]
+Now, we have when $u\ge 0$,
+\begin{align*}
+x'(u)&=(e^u-e^{-u}) / \sqrt{e^{2u}-1}\\
+x''(u)&=(e^u+\frac12 e^{-u}) / \sqrt{e^{2u}-1}\\
+y(u)&=\sech(\cosh^{-1}e^u) = e^{-u}\\
+y'(u)&=-e^{-u}
+\end{align*}
+Therefore, by symmetry, finally we get
+\[
+K=\frac{(x''(u)y'(u)-x'(u)y''(u))x'(u)}{y(u)} = 2-\frac12e^{-2|u|}
+\]
+\end{enumerate}
 \end{proof}
 
 \end{document}
