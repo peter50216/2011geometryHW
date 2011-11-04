@@ -54,7 +54,7 @@ F_{zx} & F_{zy} & F_{zz}\end{array}
 \right)$ 的 adjoint Matrix, i.e. $A=\det(\partial^2F)(\partial^2F)^{-1}$ % f 應該是打錯吧
 \end{problem}
 \begin{proof}
-因為 $K$ 為局部性質，而在 $\nabla F\neq 0$ 的地方我們可以使用隱函數定理將其中一維表示為另兩維的函數，WLOG 不妨設 $z=z(x,y)$ 在某點附近。\\ %由於Gaussian curvature 無關坐標的選擇, WLOG, 假設$\nabla F \parallel z-axis$ 始有$F_x(x, y, z) = F_y(x, y, z) = 0$.
+因為 $K$ 為局部性質，而在 $\nabla F\neq 0$ 的地方我們可以使用隱函數定理將其中一維表示為另兩維的函數，WLOG 不妨設 $z=z(x,y)$ 在某點附近。
 \begin{align*}
 F(x,y,z(x,y))&=0\\
 \bx(x,y)&=(x,y,z(x,y))\\
@@ -87,7 +87,7 @@ g&=\langle N, \bx_{yy}\rangle\\
 &=\frac{z_{xx}z_{yy}-z_{xy}^2}{(1+z_x^2+z_y^2)^2}
 \end{align*}
 \begin{align*}
-\frac{\partial F(x,y,z)}{\partial x}&=0\\
+\frac{\partial F(x,y,z)}{\partial x}&=0\\ %better add the parameters of z, that is \naba F(x, y, z(x, y)), to avoid being mistaken for \nabla F
 &=F_x(x,y,z)+F_z(x,y,z)z_x\\
 \rightarrow z_x&=-\frac{F_x}{F_z}\\
 \frac{\partial F(x,y,z)}{\partial y}&=0\\
