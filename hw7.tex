@@ -87,23 +87,23 @@ g&=\langle N, \bx_{yy}\rangle\\
 &=\frac{z_{xx}z_{yy}-z_{xy}^2}{(1+z_x^2+z_y^2)^2}
 \end{align*}
 \begin{align*}
-\frac{\partial F(x,y,z)}{\partial x}&=0\\
+\frac{\partial F(x,y,z(x,y))}{\partial x}&=0\\
 &=F_x(x,y,z)+F_z(x,y,z)z_x\\
 \rightarrow z_x&=-\frac{F_x}{F_z}\\
-\frac{\partial F(x,y,z)}{\partial y}&=0\\
+\frac{\partial F(x,y,z(x,y))}{\partial y}&=0\\
 &=F_y(x,y,z)+F_z(x,y,z)z_y\\
 \rightarrow z_y&=-\frac{F_y}{F_z}\\
-\end{align*}
-\begin{align*}
-\frac{\partial^2 F(x,y,z)}{\partial x^2}&=0\\
+\frac{\partial^2 F(x,y,z(x,y))}{\partial x^2}&=0\\
 &=\frac{\partial}{\partial x}(F_x(x,y,z)+F_z(x,y,z)z_x)\\
 &=F_{xx}(x,y,z)+2F_{xz}(x,y,z)z_x+F_{zz}(x,y,z)z_x^2+F_z(x,y,z)z_{xx}\\
 \rightarrow z_{xx}&=-\frac{F_{xx}-2F_{xz}\frac{F_x}{F_z}+F_{zz}\left(\frac{F_x}{F_z}\right)^2}{F_z}\\
-\frac{\partial^2 F(x,y,z)}{\partial y^2}&=0\\
+\end{align*}
+\begin{align*}
+\frac{\partial^2 F(x,y,z(x,y))}{\partial y^2}&=0\\
 &=\frac{\partial}{\partial y}(F_y(x,y,z)+F_z(x,y,z)z_y)\\
 &=F_{yy}(x,y,z)+2F_{yz}(x,y,z)z_y+F_{zz}(x,y,z)z_y^2+F_z(x,y,z)z_{yy}\\
 \rightarrow z_{yy}&=-\frac{F_{yy}-2F_{yz}\frac{F_y}{F_z}+F_{zz}\left(\frac{F_y}{F_z}\right)^2}{F_z}\\
-\frac{\partial^2 F(x,y,z)}{\partial x\partial y}&=0\\
+\frac{\partial^2 F(x,y,z(x,y))}{\partial x\partial y}&=0\\
 &=\frac{\partial}{\partial x}(F_y(x,y,z)+F_z(x,y,z)z_y)\\
 &=F_{xy}(x,y,z)+F_{yz}(x,y,z)z_x+F_{xz}(x,y,z)z_y+F_{zz}(x,y,z)z_xz_y+F_z(x,y,z)z_{xy}\\
 \rightarrow z_{xy}&=-\frac{F_{xy}-F_{yz}\frac{F_x}{F_z}-F_{xz}\frac{F_y}{F_z}+F_{zz}\frac{F_yF_x}{F_z^2}}{F_z}\\
@@ -231,33 +231,33 @@ $\mathbb{X}(u, v) = (v\cos u, v\sin u, u)$，令 $\gamma(t)=\mathbb{X}(t, 1)$
 \begin{align*}
 \gamma(t)&=(\cos t, \sin t, t)\\
 \rightarrow \gamma'(t)&=(-\sin t,\cos t,1)\\
-T(t)&=\frac{1}{2}(-\sin t,\cos t,1)\\
-T'(t)&=\frac{1}{2}(-\cos t,-\sin t,0)\\
+T(t)&=\frac{1}{\sqrt2}(-\sin t,\cos t,1)\\
+T'(t)&=\frac{1}{\sqrt2}(-\cos t,-\sin t,0)\\
 \rightarrow n(t)&=(-\cos t,-\sin t,0)\\
-\kappa = \frac{1}{2}\\
+\kappa = \frac{1}{\sqrt2}\\
 \bx_u&=(-v\sin u,v\cos u,1)\\
 \bx_v&=(\cos u,\sin u,0)\\
-\rightarrow N&=\frac{1}{1+v^2}(-\sin u, \cos u,-v)\\
+\rightarrow N&=\frac{1}{\sqrt{1+v^2}}(-\sin u, \cos u,-v)\\
 \kappa_n&=\langle N,T'\rangle\\
 &=0\\
-\kappa_g&=\kappa = \frac{1}{2}\\
+\kappa_g&=\kappa = \frac{1}{\sqrt2}\\
 A&=n\\
 A'&=(\sin t,-\cos t,0)\\
 \tau_g&=-\langle A',N\rangle\\
-&=-\frac{1}{2}
+&=-\frac{1}{\sqrt2}
 \end{align*}
 \item
 \begin{align*}
 b&=T\times n\\
-&=\frac{1}{2}(\sin t,-\cos t, 1)\\
+&=\frac{1}{\sqrt2}(\sin t,-\cos t, 1)\\
 \tau&=-\langle n', b\rangle\\
-&=-\frac{1}{2}\\
+&=-\frac{1}{\sqrt2}\\
 \rightarrow \kappa_g&=\kappa\\
 \tau_g &= \tau
 \end{align*}
 \end{enumerate}
 \end{proof}
-
+\newpage
 %第六題
 \setcounter{theProblemCounter}{5}
 \begin{problem}
