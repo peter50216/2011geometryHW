@@ -33,9 +33,9 @@
 
 \usepackage{lgreek}
 \begin{document}
-\title{{\fontspec{Copperplate Gothic Bold}Geometry Homework 8}}
-%\title{{\fontspec{Copperplate}Geometry Homework 8}}
-\author{{\it{B96201044}} {\LiHei 黃上恩}, {\it{B98901182}} {\LiHei 時}\rotatebox{180}{\raisebox{-1.0\height}{\begin{greek}Y\end{greek}}}{\LiHei 勳}, {\it{K0020100x}} {\LiHei 劉士瑋}}
+%\title{{\fontspec{Copperplate Gothic Bold}Geometry Homework 8}}
+\title{{\fontspec{Copperplate}Geometry Homework 8}}
+\author{{\it{B96201044}} {\LiHei 黃{\pounds}恩}, {\it{B98901182}} {\LiHei 時}\rotatebox{180}{\raisebox{-1.0\height}{\begin{greek}Y\end{greek}}}{\LiHei 勳}, {\it{K0020100x}} {\LiHei 劉士瑋}}
 \date{\today}
 \maketitle
 
@@ -70,6 +70,15 @@ be a developable surface. Prove that at a regular point we have
 =\left\langle N_v, \bfx_t\right\rangle=0.\]
 Conclude that \emph{the tangent plane of a developable surface is constant along} (the regular points of) \emph{a fixed ruling}.
 \end{problem}
+\begin{proof}
+\begin{align*}
+\bfx_{vv}=&0 \Rightarrow g=\langle N, \bfx_{vv}\rangle = 0; \\
+K=&\det(-dN)=0 \Rightarrow eg=f^2 \Rightarrow f = 0; \\
+N_v =& dN(\bfx_v) = \left[\begin{array}{cc}E&F\\F&G\end{array}\right]^{-1}\left[\begin{array}{cc}e&0\\0&0\end{array}\right]\left[\begin{array}{c}0\\1\end{array}\right]=\left[\begin{array}{c}0\\0\end{array}\right]; \\
+\Rightarrow \langle N_v, \bfx_v\rangle =& \langle N_v, \bfx_t\rangle = 0.
+\end{align*}
+Thus $N$, the normal vector of the tangent plane, is independent of $v$ and hence the conclusion follows.
+\end{proof}
 
 %第五題
 \setcounter{theProblemCounter}{4}
