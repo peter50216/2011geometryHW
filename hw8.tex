@@ -1,0 +1,79 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{amsmath, amssymb, amsthm}
+%加這個就可以設定字體
+\usepackage{fontspec}
+\usepackage{xkeyval} %MikTeX 2.9 版本相容有誤, 以此修正
+%使用xeCJK，其他的還有CJK或是xCJK
+\usepackage{xeCJK}
+%設定英文字型，不設的話就會使用預設的字型
+%\setmainfont{Times New Roman}
+%設定中英文的字型
+%字型的設定可以使用系統內的字型，而不用像以前一樣另外安裝
+%\setCJKmainfont{文泉驛微米黑}
+\setCJKmainfont{WenQuanYi Micro Hei}
+\setCJKfamilyfont{lh}{LiHei Pro}
+\newcommand{\LiHei}{\CJKfamily{lh}}
+%中文自動換行
+\XeTeXlinebreaklocale "zh"
+%文字的彈性間距
+\XeTeXlinebreakskip = 0pt plus 1pt
+%設定段落之間的距離
+\setlength{\parskip}{0.3cm}
+%設定行距
+%\linespread{1.5}\selectfont
+\usepackage{enumerate}
+
+%先暫時用水泥字型，如果任何人看不下去就改吧XD
+\usepackage[T1]{fontenc}
+\usepackage{concmath}
+%\usepackage{mathptmx} %Times
+
+\newcounter{theProblemCounter}
+\newtheorem{problem}[theProblemCounter]{Problem}
+
+\usepackage{lgreek}
+\begin{document}
+\title{{\fontspec{Copperplate Gothic Bold}Geometry Homework 8}}
+%\title{{\fontspec{Copperplate}Geometry Homework 8}}
+\author{{\it{B96201044}} {\LiHei 黃上恩}, {\it{B98901182}} {\LiHei 時}\rotatebox{180}{\raisebox{-1.0\height}{\begin{greek}Y\end{greek}}}{\LiHei 勳}, {\it{K0020100x}} {\LiHei 劉士瑋}}
+\date{\today}
+\maketitle
+
+\newcommand{\bx}{\mathbb{X}}
+\newcommand{\bfx}{\mathbf{X}}
+\newcommand{\sech}{\mbox{sech}}
+%\newcommand{\cosh}{\mbox{cosh}\ }
+%\newcommand{\tanh}{\mbox{tanh}\ }
+%\newcommand{\sinh}{\mbox{sinh}\ }
+%第二題
+\setcounter{theProblemCounter}{1}
+\begin{problem}
+考慮直線族 $L_\lambda: \frac{x}{\lambda} + \frac{y}{1-\lambda}=1$，令 ruled surface $\bx$ 為 $(L_\lambda, \lambda)\subset \mathbb{R}^2\times \mathbb{R}$
+\begin{enumerate}
+\item[(a)] 求出 line of striction(龍骨) $\beta(\lambda)\in\mathbb{R}^3$
+\item[(b)] 令 $\gamma(\lambda)$ 為 $\beta(\lambda)$ 在 $\mathbb{R}^2$ 上的投影，說明 $L_\lambda$ 為 $\gamma(\lambda)$ 的切線
+\item[(c)] $\gamma(\lambda)$ 是圓嗎？其方程式為何（以 $f(x,y)=c$ 的方式表示）?
+\end{enumerate}
+\end{problem}
+\begin{proof}
+\end{proof}
+
+%第四題
+\setcounter{theProblemCounter}{3}
+\begin{problem}[Ex p.210 6]
+Let \[
+\bfx(t, v)=\alpha(t)+vw(t)
+\]
+be a developable surface. Prove that at a regular point we have
+\[
+\left\langle N_v, \bfx_v\right\rangle
+=\left\langle N_v, \bfx_t\right\rangle=0.\]
+Conclude that \emph{the tangent plane of a developable surface is constant along} (the regular points of) \emph{a fixed ruling}.
+\end{problem}
+
+%第五題
+\setcounter{theProblemCounter}{4}
+\begin{problem}[Ex p.210 8]
+Show that if $C\subset S^2$ is a parallel of a unit sphere $S^2$, then the envelope of tangent planes of $S^2$ along $C$ is either a cylinder, if $C$ is an equator, or a cone, if $C$ is not an equator.
+\end{problem}
+\end{document}
