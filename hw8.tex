@@ -32,8 +32,8 @@
 \newtheorem{problem}[theProblemCounter]{Problem}
 
 \begin{document}
-%\title{{\fontspec{Copperplate Gothic Bold}Geometry Homework 8}}
-\title{{\fontspec{Copperplate}Geometry Homework 8}}
+\title{{\fontspec{Copperplate Gothic Bold}Geometry Homework 8}}
+%\title{{\fontspec{Copperplate}Geometry Homework 8}}
 \author{{\it{B96201044}} {\LiHei 黃上恩}, {\it{B98901182}} {\LiHei 時丕勳}, {\it{K0020100x}} {\LiHei 劉士瑋}}% 電波好皮呦~
 \date{\today}
 \maketitle
@@ -55,20 +55,24 @@
 \end{enumerate}
 \end{problem}
 \begin{proof}
-Let $\alpha(t) = (0, 0, t)$. Then $\bfx(t, u) = \alpha + uw(t)$, \par  where $w(t) = (\frac t{\sqrt{2t^2 - 2t + 1}}, \frac{1-t}{\sqrt{2t^2 - 2t + 1}}, 0)$.
+$\bfx(t, u) = \alpha + uw(t)$, \par  where $\alpha(t) = (t, 0, t)$, $w(t) = (\frac{t}{\sqrt{2t^2-2t+1}}, -\frac{1-t}{\sqrt{2t^2-2t+1}}, 0)$.
 \begin{align*}
-\alpha' =& (0, 0, 1); \\
-w' =& (-, -, 0); \\
-\frac{\langle \alpha', w'\rangle}{\langle w', w'\rangle} =& 0; \\
-\Rightarrow \alpha =& \beta.
+\alpha' &= (1, 0, 1); \\
+w' &= (\frac{\sqrt{2t^2-2t+1}-\frac{1}{2}\frac{t(4t-2)}{\sqrt{2t^2-2t+1}}}{2t^2-2t+1}, \frac{\sqrt{2t^2-2t+1}-\frac{1}{2}\frac{(t-1)(4t-2)}{\sqrt{2t^2-2t+1}}}{2t^2-2t+1}, 0); \\
+&= (\frac{-t+1}{(2t^2-2t+1)^{\frac{3}{2}}}, \frac{t}{(2t^2-2t+1)^{\frac{3}{2}}}, 0); \\
+\frac{\langle \alpha', w'\rangle}{\langle w', w'\rangle} =& (-t+1)\sqrt{2t^2-2t+1}; \\
+\Rightarrow \beta &= \alpha-(-t+1)\sqrt{2t^2-2t+1}w.\\
+&= (t^2,(1-t)^2,t)
 \end{align*}
 This yields (a).
 \begin{align*}
-\gamma(\lambda) = uw(\lambda) = u(\frac {\lambda}{\sqrt{2\lambda^2 - 2\lambda + 1}}, \frac{1-\lambda}{\sqrt{2\lambda^2 - 2\lambda + 1}}, 0) \\
-w(\lambda) \in L_{\lambda}
+\gamma(\lambda) &= (\lambda^2,(1-\lambda)^2,0)\\
+\frac{\lambda^2}{\lambda}+\frac{(1-\lambda)^2}{1-\lambda}&=1\\
+\rightarrow \gamma(\lambda) &\in L_{\lambda}\\
+\gamma'(\lambda) &=(2\lambda,2(1-\lambda),0)\parallel L_\lambda
 \end{align*}
-Since the tangent line of $\gamma(\lambda)$ is $w(\lambda)$, this yields (b). \par
-For (c), it's obvious that $f(x, y) = \frac{x}{\lambda} + \frac{y}{1-\lambda} = 1$ and thus not a circle.
+So the tangent line of $\gamma(\lambda)$ is $L_\lambda$, this yields (b). \par
+For (c), it's obvious that the equation is $f(x, y) = \sqrt{x}+\sqrt{y} = 1$ and thus not a circle.
 
 \end{proof}
 
