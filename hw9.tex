@@ -1,0 +1,109 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{amsmath, amssymb, amsthm}
+%加這個就可以設定字體
+\usepackage{fontspec}
+\usepackage{xkeyval} %MikTeX 2.9 版本相容有誤, 以此修正
+%使用xeCJK，其他的還有CJK或是xCJK
+\usepackage{xeCJK}
+%設定英文字型，不設的話就會使用預設的字型
+%\setmainfont{Times New Roman}
+%設定中英文的字型
+%字型的設定可以使用系統內的字型，而不用像以前一樣另外安裝
+%\setCJKmainfont{文泉驛微米黑}
+\setCJKmainfont{WenQuanYi Micro Hei}
+\setCJKfamilyfont{lh}{LiHei Pro}
+\newcommand{\LiHei}{\CJKfamily{lh}}
+%中文自動換行
+\XeTeXlinebreaklocale "zh"
+%文字的彈性間距
+\XeTeXlinebreakskip = 0pt plus 1pt
+%設定段落之間的距離
+\setlength{\parskip}{0.3cm}
+%設定行距
+%\linespread{1.5}\selectfont
+\usepackage{enumerate}
+
+%先暫時用水泥字型，如果任何人看不下去就改吧XD
+\usepackage[T1]{fontenc}
+\usepackage{concmath}
+%\usepackage{mathptmx} %Times
+
+\newcounter{theProblemCounter}
+\newtheorem{problem}[theProblemCounter]{Problem}
+
+\begin{document}
+\title{{\fontspec{Copperplate Gothic Bold}Geometry Homework 8}}
+%\title{{\fontspec{Copperplate}Geometry Homework 8}}
+\author{{\it{B96201044}} {\LiHei 黃上恩}, {\it{B98901182}} {\LiHei 時丕勳}, {\it{K0020100x}} {\LiHei 劉士瑋}}
+\date{\today}
+\maketitle
+
+\newcommand{\bx}{\mathbb{X}}
+\newcommand{\bfx}{\mathbf{X}}
+\newcommand{\sech}{\mbox{sech}}
+%\newcommand{\cosh}{\mbox{cosh}\ }
+%\newcommand{\tanh}{\mbox{tanh}\ }
+%\newcommand{\sinh}{\mbox{sinh}\ }
+%第四題
+\setcounter{theProblemCounter}{3}
+\begin{problem}[Ex p.101 14]
+\begin{enumerate}
+(Gradient on Surfaces.) The gradient of a differentiable function $f: S\mapsto \mathbb{R}$ is a differentiable map $\textrm{grad }f: S\mapsto\mathbb{R}^3$ which assigns to each point $p\in S$ a vector $\textrm{grad }f(p)\in T_p(S)\subset \mathbb{R}^3$ such that
+\[
+\langle \textrm{grad }f(p), v\rangle_p=df_p(v)\hspace{2em}\textrm{ for all }v\in T_p(S)    
+\]
+Show that
+\item[(a)]
+If $E, F, G$ are the coefficients of the first fundamental form in a parametrization $\bfx: U\subset\mathbb{R}^2\mapsto S$, then $\textrm{grad }f$ on $\bfx(U)$ is given by
+\[
+\textrm{grad }f=\frac{f_uG-f_vF}{EG-F^2}\bfx_u+\frac{f_vE-f_uF}{EG-F^2}\bfx_v
+\]
+In particular, if $S=\mathbb{R}^2$ with coordinates $x, y$,
+\[
+\textrm{grad }f=f_xe_1+f_ye_2
+\]
+where $\{e_1, e_2\}$ is the canonical basis of $\mathbb{R}^2$ (thus, the definition agrees with the usual definition of gradient in the plane)
+\item[(b)]
+為什麼不直接將 $\textrm{gradient }f$ 定義成 $f_u\bx_u+f_v\bx_v$，這有什麼缺點(例如座標變換)
+\end{enumerate}
+\end{problem}
+\begin{proof}
+\end{proof}
+
+%第七題
+\setcounter{theProblemCounter}{6}
+\begin{problem}
+計算下列 surface 的 $\Gamma_{ij}^k$ (共有六項)
+\begin{enumerate}
+\item[(b)]
+$(x(t),y(t)\cos\theta,y(t)\sin\theta)$
+\item[(c)]
+$E=G=\lambda^2, F=0$
+\end{enumerate}
+\end{problem}
+\begin{proof}
+\end{proof}
+
+%第八題
+\setcounter{theProblemCounter}{7}
+\begin{problem}[Ex p.237 1, 2]
+\begin{enumerate}
+\item[(a)]
+Show that if $\bfx$ is an orthogonal parametrization, that is, $F=0$, then
+\[
+K=-\frac{1}{2\sqrt{EG}}\left\{\left(\frac{E_v}{\sqrt{EG}}\right)_v+\left(\frac{G_u}{\sqrt{EG}}\right)_u\right\}
+\]
+\item[(b)]
+Show that if $\bfx$ is an isothermal parametrization, that is, $E=G=\lambda(u,v)$ and $F=0$, then
+\[
+K=-\frac{1}{2\lambda}\Delta(\log\lambda)
+\]
+where $\Delta\phi$ denotes the Laplacian $(\partial^2\phi/\partial u^2)+(\partial^2\phi/\partial v^2)$ of the function $\phi$. Conclude that when $E=G=(u^2+v^2+c)^{-2}$ and $F=0$, then $K=\textrm{const}.=4c$.
+\end{enumerate}
+
+\end{problem}
+\begin{proof}
+\begin{align*}
+\end{align*}
+\end{proof}
+\end{document}
