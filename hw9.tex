@@ -32,8 +32,8 @@
 \newtheorem{problem}[theProblemCounter]{Problem}
 
 \begin{document}
-%\title{{\fontspec{Copperplate Gothic Bold}Geometry Homework 9}}
-\title{{\fontspec{Copperplate}Geometry Homework 9}}
+\title{{\fontspec{Copperplate Gothic Bold}Geometry Homework 9}}
+%\title{{\fontspec{Copperplate}Geometry Homework 9}}
 \author{{\it{B96201044}} {\LiHei 黃上恩}, {\it{B98901182}} {\LiHei 時丕勳}, {\it{K0020100x}} {\LiHei 劉士瑋}}
 \date{\today}
 \maketitle
@@ -108,57 +108,28 @@ $E=G=\lambda^2, F=0$
 \item[(b)]
 Let $u=t, v=\theta$.
 \begin{align*}
-\bx_u&=(x_u,y_u\cos v,y_u\sin v)\\
-\bx_v&=(0,-y\sin v,y\cos v)\\
-\rightarrow E&=x_u^2+y_u^2\\
-F&=0\\
-G&=y^2\\
-\end{align*}
-\begin{align*}
-[1,1,1]&=\frac{E_u}{2}\\
-[1,1,2]&=-\frac{E_v}{2}\\
-[1,2,1]&=\frac{E_v}{2}\\
-[1,2,2]&=\frac{G_u}{2}\\
-[2,2,1]&=-\frac{G_u}{2}\\
-[2,2,2]&=\frac{G_v}{2}\\
-\Gamma_{11}^1&=\frac{E_u}{2E}\\
-&=\frac{x_ux_{uu}+y_uy_{uu}}{x_u^2+y_u^2}\\
-\Gamma_{11}^2&=-\frac{E_v}{2G}\\
-&=0\\
-\Gamma_{12}^1&=\frac{E_v}{2E}\\
-&=0\\
-\Gamma_{12}^2&=\frac{G_u}{2G}\\
-&=\frac{y_u}{y}\\
-\Gamma_{22}^1&=-\frac{G_u}{2E}\\
-&=\frac{yy_u}{x_u^2+y_u^2}\\
-\Gamma_{22}^2&=\frac{G_v}{2G}\\
-&=0
+&\bx_u=(x_u,y_u\cos v,y_u\sin v), \bx_v=(0,-y\sin v,y\cos v)\\
+&\rightarrow E=x_u^2+y_u^2, F=0, G=y^2\\
+&{[}1,1,1]=\frac{E_u}{2}, {[}1,1,2]=-\frac{E_v}{2}, {[}1,2,1]=\frac{E_v}{2}\\
+&{[}1,2,2]=\frac{G_u}{2}, {[}2,2,1]=-\frac{G_u}{2}, {[}2,2,2]=\frac{G_v}{2}\\
+&\Gamma_{11}^1=\frac{E_u}{2E}=\frac{x_ux_{uu}+y_uy_{uu}}{x_u^2+y_u^2}\\
+&\Gamma_{11}^2=-\frac{E_v}{2G}=0\\
+&\Gamma_{12}^1=\frac{E_v}{2E}=0\\
+&\Gamma_{12}^2=\frac{G_u}{2G}=\frac{y_u}{y}\\
+&\Gamma_{22}^1=-\frac{G_u}{2E}=\frac{yy_u}{x_u^2+y_u^2}\\
+&\Gamma_{22}^2=\frac{G_v}{2G}=0
 \end{align*}
 \item[(c)]
 \begin{align*}
-g^{11}&=\frac{1}{\lambda^2}\\
-g^{22}&=\frac{1}{\lambda^2}\\
-g^{12}=g^{21}&=0
-\end{align*}
-\begin{align*}
-[1,1,1]&=\frac{E_u}{2}\\
-[1,1,2]&=-\frac{E_v}{2}\\
-[1,2,1]&=\frac{E_v}{2}\\
-[1,2,2]&=\frac{G_u}{2}\\
-[2,2,1]&=-\frac{G_u}{2}\\
-[2,2,2]&=\frac{G_v}{2}\\
-\Gamma_{11}^1&=\frac{E_u}{2E}\\
-&=\frac{\lambda_u}{\lambda}\\
-\Gamma_{11}^2&=-\frac{E_v}{2G}\\
-&=\frac{\lambda_v}{\lambda}\\
-\Gamma_{12}^1&=\frac{E_v}{2E}\\
-&=\frac{\lambda_v}{\lambda}\\
-\Gamma_{12}^2&=\frac{G_u}{2G}\\
-&=\frac{\lambda_u}{\lambda}\\
-\Gamma_{22}^1&=-\frac{G_u}{2E}\\
-&=\frac{\lambda_u}{\lambda}\\
-\Gamma_{22}^2&=\frac{G_v}{2G}\\
-&=\frac{\lambda_v}{\lambda}
+&g^{11}=\frac{1}{\lambda^2}, g^{22}=\frac{1}{\lambda^2}, g^{12}=g^{21}=0\\
+&[1,1,1]=\frac{E_u}{2}, [1,1,2]=-\frac{E_v}{2}, [1,2,1]=\frac{E_v}{2}\\
+&[1,2,2]=\frac{G_u}{2}, [2,2,1]=-\frac{G_u}{2}, [2,2,2]=\frac{G_v}{2}\\
+&\Gamma_{11}^1=\frac{E_u}{2E}=\frac{\lambda_u}{\lambda}\\
+&\Gamma_{11}^2=-\frac{E_v}{2G}=\frac{\lambda_v}{\lambda}\\
+&\Gamma_{12}^1=\frac{E_v}{2E}=\frac{\lambda_v}{\lambda}\\
+&\Gamma_{12}^2=\frac{G_u}{2G}=\frac{\lambda_u}{\lambda}\\
+&\Gamma_{22}^1=-\frac{G_u}{2E}=\frac{\lambda_u}{\lambda}\\
+&\Gamma_{22}^2=\frac{G_v}{2G}=\frac{\lambda_v}{\lambda}
 \end{align*}
 \end{enumerate}
 \end{proof}
@@ -184,23 +155,12 @@ where $\Delta\phi$ denotes the Laplacian $(\partial^2\phi/\partial u^2)+(\partia
 \begin{enumerate}
 \item[(a)]
 \begin{align*}
-g^{11}&=\frac{1}{E}\\
-g^{22}&=\frac{1}{G}\\
-g^{12}=g^{21}&=0
-\end{align*}
-\begin{align*}
-[1,1,1]&=\frac{E_u}{2}\\
-[1,1,2]&=-\frac{E_v}{2}\\
-[1,2,1]&=\frac{E_v}{2}\\
-[1,2,2]&=\frac{G_u}{2}\\
-[2,2,1]&=-\frac{G_u}{2}\\
-[2,2,2]&=\frac{G_v}{2}\\
-\Gamma_{11}^1&=\frac{E_u}{2E}\\
-\Gamma_{11}^2&=-\frac{E_v}{2G}\\
-\Gamma_{12}^1&=\frac{E_v}{2E}\\
-\Gamma_{12}^2&=\frac{G_u}{2G}\\
-\Gamma_{22}^1&=-\frac{G_u}{2E}\\
-\Gamma_{22}^2&=\frac{G_v}{2G}
+&g^{11}=\frac{1}{E}, g^{22}=\frac{1}{G}, g^{12}=g^{21}=0\\
+&[1,1,1]=\frac{E_u}{2}, [1,1,2]=-\frac{E_v}{2}, [1,2,1]=\frac{E_v}{2}\\
+&[1,2,2]=\frac{G_u}{2}, [2,2,1]=-\frac{G_u}{2}, [2,2,2]=\frac{G_v}{2}\\
+&\Gamma_{11}^1=\frac{E_u}{2E}, \Gamma_{11}^2=-\frac{E_v}{2G}\\
+&\Gamma_{12}^1=\frac{E_v}{2E}, \Gamma_{12}^2=\frac{G_u}{2G}\\
+&\Gamma_{22}^1=-\frac{G_u}{2E}, \Gamma_{22}^2=\frac{G_v}{2G}
 \end{align*}
 \begin{align*}
 R_{112}^2&=\Gamma_{11,2}^2-\Gamma_{12,1}^2+\Gamma_{11}^1\Gamma_{21}^2+\Gamma_{11}^2\Gamma_{22}^2-\Gamma_{12}^1\Gamma_{11}^2-\Gamma_{12}^2\Gamma_{12}^2\\
@@ -210,7 +170,6 @@ R_{112}^2&=\Gamma_{11,2}^2-\Gamma_{12,1}^2+\Gamma_{11}^1\Gamma_{21}^2+\Gamma_{11
 \frac{E_u}{2E}\frac{G_u}{2G}-\frac{E_v}{2G}\frac{G_v}{2G}+\frac{E_v}{2E}\frac{E_v}{2G}-\frac{G_u}{2G}\frac{G_u}{2G}\\
 &=\frac{1}{4G^2}\left(-2GE_{vv}+G_vE_v-2GG_{uu}+G_uG_u+\frac{GE_u}{E}G_u+\frac{GE_v}{E}E_v\right)\\
 K&=\frac{R_{1212}}{EG}\\
-&=\frac{GR_{112}^2}{EG}\\
 &=\frac{R_{112}^2}{E}\\
 &=\frac{1}{4EG^2}\left(-2GE_{vv}+G_vE_v-2GG_{uu}+G_uG_u+\frac{GE_u}{E}G_u+\frac{GE_v}{E}E_v\right)\\
 &=\frac{1}{4}\left(-2\frac{E_{vv}}{EG}-2\frac{G_{uu}}{EG}+\frac{E_vG_v}{EG^2}+\frac{E_uG_u}{E^2G}+\frac{G_uG_u}{EG^2}+\frac{E_vE_v}{E^2G}\right)
