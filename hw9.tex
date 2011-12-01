@@ -82,6 +82,63 @@ $E=G=\lambda^2, F=0$
 \end{enumerate}
 \end{problem}
 \begin{proof}
+\begin{enumerate}
+\item[(b)]
+Let $u=t, v=\theta$.
+\begin{align*}
+\bx_u&=(x_u,y_u\cos v,y_u\sin v)\\
+\bx_v&=(0,-y\sin v,y\cos v)\\
+\rightarrow E&=x_u^2+y_u^2\\
+F&=0\\
+G&=y^2\\
+\end{align*}
+\begin{align*}
+[1,1,1]&=\frac{E_u}{2}\\
+[1,1,2]&=-\frac{E_v}{2}\\
+[1,2,1]&=\frac{E_v}{2}\\
+[1,2,2]&=\frac{G_u}{2}\\
+[2,2,1]&=-\frac{G_u}{2}\\
+[2,2,2]&=\frac{G_v}{2}\\
+\Gamma_{11}^1&=\frac{E_u}{2E}\\
+&=\frac{x_ux_{uu}+y_uy_{uu}}{x_u^2+y_u^2}\\
+\Gamma_{11}^2&=-\frac{E_v}{2G}\\
+&=0\\
+\Gamma_{12}^1&=\frac{E_v}{2E}\\
+&=0\\
+\Gamma_{12}^2&=\frac{G_u}{2G}\\
+&=\frac{y_u}{y}\\
+\Gamma_{22}^1&=-\frac{G_u}{2E}\\
+&=\frac{yy_u}{x_u^2+y_u^2}\\
+\Gamma_{22}^2&=\frac{G_v}{2G}\\
+&=0
+\end{align*}
+\item[(c)]
+\begin{align*}
+g^{11}&=\frac{1}{\lambda^2}\\
+g^{22}&=\frac{1}{\lambda^2}\\
+g^{12}=g^{21}&=0
+\end{align*}
+\begin{align*}
+[1,1,1]&=\frac{E_u}{2}\\
+[1,1,2]&=-\frac{E_v}{2}\\
+[1,2,1]&=\frac{E_v}{2}\\
+[1,2,2]&=\frac{G_u}{2}\\
+[2,2,1]&=-\frac{G_u}{2}\\
+[2,2,2]&=\frac{G_v}{2}\\
+\Gamma_{11}^1&=\frac{E_u}{2E}\\
+&=\frac{\lambda_u}{\lambda}\\
+\Gamma_{11}^2&=-\frac{E_v}{2G}\\
+&=\frac{\lambda_v}{\lambda}\\
+\Gamma_{12}^1&=\frac{E_v}{2E}\\
+&=\frac{\lambda_v}{\lambda}\\
+\Gamma_{12}^2&=\frac{G_u}{2G}\\
+&=\frac{\lambda_u}{\lambda}\\
+\Gamma_{22}^1&=-\frac{G_u}{2E}\\
+&=\frac{\lambda_u}{\lambda}\\
+\Gamma_{22}^2&=\frac{G_v}{2G}\\
+&=\frac{\lambda_v}{\lambda}
+\end{align*}
+\end{enumerate}
 \end{proof}
 
 %第八題
