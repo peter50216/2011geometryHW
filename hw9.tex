@@ -32,14 +32,15 @@
 \newtheorem{problem}[theProblemCounter]{Problem}
 
 \begin{document}
-\title{{\fontspec{Copperplate Gothic Bold}Geometry Homework 8}}
-%\title{{\fontspec{Copperplate}Geometry Homework 8}}
+%\title{{\fontspec{Copperplate Gothic Bold}Geometry Homework 9}}
+\title{{\fontspec{Copperplate}Geometry Homework 9}}
 \author{{\it{B96201044}} {\LiHei 黃上恩}, {\it{B98901182}} {\LiHei 時丕勳}, {\it{K0020100x}} {\LiHei 劉士瑋}}
 \date{\today}
 \maketitle
 
 \newcommand{\bx}{\mathbb{X}}
 \newcommand{\bfx}{\mathbf{X}}
+\newcommand{\grad}{\textrm{grad }}
 \newcommand{\sech}{\mbox{sech}}
 %\newcommand{\cosh}{\mbox{cosh}\ }
 %\newcommand{\tanh}{\mbox{tanh}\ }
@@ -68,6 +69,27 @@ where $\{e_1, e_2\}$ is the canonical basis of $\mathbb{R}^2$ (thus, the definit
 \end{enumerate}
 \end{problem}
 \begin{proof}
+\begin{enumerate}
+\item[(a)]
+First, 
+\begin{align*}
+\langle \grad f(p), \bfx_u\rangle_p = df_p(\bfx_u) = f_u\\
+\langle \grad f(p), \bfx_v\rangle_p = df_p(\bfx_v) = f_v
+\end{align*}
+Let $\grad f = q\bfx_u + r\bfx_v$. Then
+\begin{align*}
+\langle \grad f(p), \bfx_u\rangle = Eq + Fr = f_u\\
+\langle \grad f(p), \bfx_v\rangle = Fq + Gr = f_v
+\end{align*}
+Therefore, solve the linear equations and get
+\begin{align*}
+q = \frac{f_uG - f_uF}{EG - F^2};\\
+r = \frac{f_vE - f_uF}{EG - F^2}
+\end{align*}
+Then the two results follow immediately.
+\item[(b)]
+If we define the gradient in that way, let $S = \mathbb{R}^2$ be the surface and $\mathbf{X}(u, v) = (u, v)$, $\mathbf{Y}(s, t) = (s, s+t)$ be its two parametrizations. If $f(u, v) = v$, then $f(s, t) = s+t$ and therefore $\grad f = \bfx_v = \mathbf{Y}_s + \mathbf{Y}_t$. But clearly $\bfx_v = (0, 1) \neq (1, 2) = \mathbf{Y}_s + \mathbf{Y}_t$, which is a contradiction.
+\end{enumerate}
 \end{proof}
 
 %第七題
