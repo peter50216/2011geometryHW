@@ -1,0 +1,88 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{amsmath, amssymb, amsthm}
+%加這個就可以設定字體
+\usepackage{fontspec}
+\usepackage{xkeyval} %MikTeX 2.9 版本相容有誤, 以此修正
+%使用xeCJK，其他的還有CJK或是xCJK
+\usepackage{xeCJK}
+%設定英文字型，不設的話就會使用預設的字型
+%\setmainfont{Times New Roman}
+%設定中英文的字型
+%字型的設定可以使用系統內的字型，而不用像以前一樣另外安裝
+%\setCJKmainfont{文泉驛微米黑}
+\setCJKmainfont{WenQuanYi Micro Hei}
+\setCJKfamilyfont{lh}{LiHei Pro}
+\newcommand{\LiHei}{\CJKfamily{lh}}
+%中文自動換行
+\XeTeXlinebreaklocale "zh"
+%文字的彈性間距
+\XeTeXlinebreakskip = 0pt plus 1pt
+%設定段落之間的距離
+\setlength{\parskip}{0.3cm}
+%設定行距
+%\linespread{1.5}\selectfont
+\usepackage{enumerate}
+
+%先暫時用水泥字型，如果任何人看不下去就改吧XD
+\usepackage[T1]{fontenc}
+\usepackage{concmath}
+%\usepackage{mathptmx} %Times
+
+\newcounter{theProblemCounter}
+\newtheorem{problem}[theProblemCounter]{Problem}
+
+\begin{document}
+\title{{\fontspec{Copperplate Gothic Bold}Geometry Homework 10}}
+%\title{{\fontspec{Copperplate}Geometry Homework 9}}
+\author{{\it{B96201044}} {\LiHei 黃上恩}, {\it{B98901182}} {\LiHei 時丕勳}, {\it{K0020100x}} {\LiHei 劉士瑋}}
+\date{\today}
+\maketitle
+
+\newcommand{\bx}{\mathbb{X}}
+\newcommand{\bfx}{\mathbf{X}}
+\newcommand{\grad}{\textrm{grad }}
+\newcommand{\sech}{\mbox{sech}}
+%\newcommand{\cosh}{\mbox{cosh}\ }
+%\newcommand{\tanh}{\mbox{tanh}\ }
+%\newcommand{\sinh}{\mbox{sinh}\ }
+
+%第二題
+\setcounter{theProblemCounter}{1}
+\begin{problem} 若 $E=1, F=0, G=1, f=0$，假設再加入函數 $e, g$ 後是某 surface 的 1st\&2nd fundamental form。
+\begin{enumerate}
+\item[(a)] 說明 $e, g$ 中至少有一為 0
+\item[(b)] 說明若 $e=g=0$ 則此曲面為平面
+\item[(c)] 說明若 $e\ne 0$，則此曲面為特別的 ruled surface，並討論 $e$ 的意義。
+\end{enumerate}
+\end{problem}
+
+\begin{proof}
+\end{proof}
+
+%第四題
+\setcounter{theProblemCounter}{3}
+\begin{problem}[Ex p237 8.]
+Compute the Cristoffel symbols for an open set of the plane
+\begin{enumerate}
+\item[(a)] In cartesian coordinates.
+\item[(b)] In polar coordinates.
+\end{enumerate}
+Use the Gauss formula to compute $K$ in both cases.
+\end{problem}
+
+%第六題
+\setcounter{theProblemCounter}{5}
+\begin{problem}
+有一 surface $\bfx(u, v)$，令 $\hat{\bfx}(u, v)=\lambda \bfx(u,v), \lambda > 0$。
+\begin{enumerate}
+\item[(a)] 討論 $\hat{\Gamma}^k_{ij}$ 和 $\Gamma^k_{ij}$ 的關係
+\item[(b)] 從 Gauss equation(GTE) 討論 $\hat{K}$ 和 $K$ 的關係
+\end{enumerate}
+\end{problem}
+
+%第九題
+\setcounter{theProblemCounter}{8}
+\begin{problem}
+舉一個例子說明有可能 $F:M\to N$ 是 conformal map，且相應點 $K_M>0, K_N=0$ (想想曾經討論的例子)
+\end{problem}
+\end{document}
