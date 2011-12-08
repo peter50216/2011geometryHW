@@ -134,7 +134,32 @@ R_{112}^2&=\Gamma_{11,2}^2-\Gamma_{12,1}^2+\Gamma_{11}^1\Gamma_{21}^2+\Gamma_{11
 \item[(b)] 從 Gauss equation(GTE) 討論 $\hat{K}$ 和 $K$ 的關係
 \end{enumerate}
 \end{problem}
-
+\begin{proof}
+\begin{enumerate}
+\item[(a)]
+\begin{align*}
+\hat{g}_{ij}&=\langle\hat{\Gamma}_i,\hat{\Gamma}_j\rangle\\
+&=\lambda^2\langle\Gamma_i,\Gamma_j\rangle\\
+&=\lambda^2 g_{ij}\\
+\rightarrow \hat{g}^{ij}=\frac{1}{\lambda^2}g^{ij}\\
+\langle\hat{\bfx}_{ij},\hat{\bfx}_k\rangle&=\langle\lambda\bfx_{ij},\lambda \bfx_k\rangle\\
+&=\lambda^2\langle\bfx_{ij},\bfx_k\rangle\\
+\rightarrow \hat{\Gamma}_{ij}^k&=\hat{g}^{kl}\langle\hat{\bfx}_{ij},\hat{\bfx}_l\rangle\\
+&=g^{kl}\langle\bfx_{ij},\bfx_l\rangle\\
+&=\Gamma_{ij}^k
+\end{align*}
+\item[(b)]
+\end{enumerate}
+Since $\hat{\Gamma}_{ij}^k=\Gamma_{ij}^k$, $\hat{R}_{ijk}^l=R_{ijk}^l$.\\
+\begin{align*}
+\hat{R}_{imjk}&=\hat{g}_{ml}\hat{R}_{ijk}^l\\
+&=\lambda^2 g_{ml}R_{ijk}^l\\
+&=\lambda^2 R_{imjk}\\
+\rightarrow \hat{K}&=\frac{\hat{R}_{1212}}{\hat{E}\hat{G}-\hat{F}^2}\\
+&=\frac{1}{\lambda^2}\frac{R_{1212}}{EG-F^2}\\
+&=\frac{1}{\lambda^2}K
+\end{align*}
+\end{proof}
 %第九題
 \setcounter{theProblemCounter}{8}
 \begin{problem}
