@@ -55,8 +55,24 @@
 \item[(c)] 說明若 $e\ne 0$，則此曲面為特別的 ruled surface，並討論 $e$ 的意義。
 \end{enumerate}
 \end{problem}
-
 \begin{proof}
+\begin{enumerate}
+\item[(a)]
+Since $E=1, F=0, G=1$, we know that the surface has $K=0$, so $eg-f^2=0$. So $eg=0$, and one of $e$ and $g$ is zero.
+\item[(b)]
+If $e=g=0$, then
+\begin{align*}
+\bx_{uu}&=[1,1,1]\bx_u+[1,1,2]\bx_v+eN=0\\
+\bx_{uv}&=[1,2,1]\bx_u+[1,2,2]\bx_v+fN=0\\
+\bx_{vv}&=[2,2,1]\bx_u+[2,2,2]\bx_v+gN=0
+\end{align*}
+So $\bx_u$ and $\bx_v$ are constant, and the surface is a plane.
+\item[(c)]
+if $e\ne 0$, then $g=0$, and $\bx_{vu}=\bx_{vv}=0$, so $\bx_v$ is constant.\\
+So $\bx(u,v)$ is a line when we fix $u$, thus $\bx$ is a ruled surface.\\
+Let $\gamma(u)=\bx(u,0)$, then $\|\gamma'(u)\|=\|\bx_u\|=1$, so $u$ is arc-length parameter for $\gamma$.\\
+$\gamma''(u)=\bx_{uu}(u,0)=eN$, so $\textrm{sign}(e)N$ is also the $n$ for $\gamma$, and $\gamma$ has curvature $|e|$.
+\end{enumerate}
 \end{proof}
 
 %第四題
@@ -85,4 +101,17 @@ Use the Gauss formula to compute $K$ in both cases.
 \begin{problem}
 舉一個例子說明有可能 $F:M\to N$ 是 conformal map，且相應點 $K_M>0, K_N=0$ (想想曾經討論的例子)
 \end{problem}
+\begin{proof}
+取 $M$ 為單位球 $x^2+y^2+z^2=1$, $N$ 為平面 $z=0$, 則顯然 $K_M>0, K_N=0$.\\
+取 map $f: M\mapsto N$, $f(x,y,z)=(\frac{x}{1-z},\frac{y}{1-z},0)$ 為 stereographic projection.\\
+因為若 $f(x,y,z)=(u,v,w)$, 則
+\begin{align*}
+du^2+dv^2+dw^2&=\left(\frac{(1-z)dx+x dz}{(1-z)^2}\right)^2+\left(\frac{(1-z)dy+y dz}{(1-z)^2}\right)^2\\
+&=\frac{1}{(1-z)^4}\left((1-z)^2dx^2+(1-z)^2dy^2+(x^2+y^2)dz^2+2(xdx+ydy)(1-z)dz\right)\\
+&=\frac{1}{(1-z)^4}\left((1-z)^2dx^2+(1-z)^2dy^2+(-z^2+1)dz^2+(-2zdz)(1-z)dz\right)\\
+&=\frac{1}{(1-z)^4}\left((1-z)^2dx^2+(1-z)^2dy^2+(1-z)^2dz^2\right)\\
+&=\frac{1}{(1-z)^2}\left(dx^2+dy^2+dz^2\right)\\
+\end{align*}
+So $f$ is a conformal mapping, but $K_M>0, K_N=0$.
+\end{proof}
 \end{document}
