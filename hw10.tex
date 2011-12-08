@@ -85,6 +85,45 @@ Compute the Cristoffel symbols for an open set of the plane
 \end{enumerate}
 Use the Gauss formula to compute $K$ in both cases.
 \end{problem}
+\begin{proof}
+\begin{enumerate}
+\item[(a)]
+Let $\bx(u,v)=(u,v,0)$, then $\bx_{uu}=\bx_{uv}=\bx_{vv}=0$, so $\Gamma_{ij}^k=0 \forall i,j,k=1,2$.\\
+So $R_{1212}=0$ and $K=0$.
+\item[(b)]
+Let $\bx(u,v)=(u\cos v,u\sin v,0)$, then:
+\begin{align*}
+\bx_u&=(\cos v,\sin v,0)\\
+\bx_v&=(-u\sin v,u\cos v,0)\\
+N&=(0,0,1)\\
+E=1, F&=0, G=u^2\\
+\bx_{uu}&=(0,0,0)\\
+\bx_{uv}&=(-\sin v,\cos v,0)\\
+\bx_{vv}&=(-u\cos v,-u\sin v,0)\\
+\begin{bmatrix}
+\Gamma_{11}^1 & \Gamma_{12}^1 & \Gamma_{22}^1\\
+\Gamma_{11}^2 & \Gamma_{12}^2 & \Gamma_{22}^2\\
+\end{bmatrix}&=
+\begin{bmatrix}
+1 & 0\\0 & u^2
+\end{bmatrix}^{-1}
+\begin{bmatrix}
+0 & 0 & -u\\
+0 & -u & 0\\
+\end{bmatrix}\\
+&=\begin{bmatrix}
+0 & 0 & -u\\
+0 & -\frac{1}{u} & 0\\
+\end{bmatrix}
+\end{align*}
+\begin{align*}
+R_{112}^2&=\Gamma_{11,2}^2-\Gamma_{12,1}^2+\Gamma_{11}^1\Gamma_{21}^2+\Gamma_{11}^2\Gamma_{22}^2-\Gamma_{12}^1\Gamma_{11}^2-\Gamma_{12}^2\Gamma_{12}^2\\
+&=\frac{1}{u^2}-\frac{1}{u^2}=0\\
+\rightarrow K&=\frac{R_{1212}}{EG}\\
+&=\frac{R_{112}^2}{E}=0
+\end{align*}
+\end{enumerate}
+\end{proof}
 
 %第六題
 \setcounter{theProblemCounter}{5}
