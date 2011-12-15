@@ -51,7 +51,11 @@
 Show that if all the geodesics of a connected surface are plane curves, then the surface is contained in a plane or a sphere.
 \end{problem}
 \begin{proof}
-
+Assume that the surface is $\bx(u,v)$, and $p\in\bx$ is a point, $v\subset T_p\bx$ is an unit vector. By solving the geodesic equation we can get an geodesic $\gamma(s)$ such that $\gamma(0)=p, \gamma'(0)=v$, and $s$ is arc-length parameter. Since all geodesics are plane curves, assume that the plane which contains $\gamma$ is $P$. So $\gamma''$ is in $P$. Since $\gamma$ is geodesic, $\gamma''$ is parallel to $N$ of the surface along $\gamma$, so $N$ is also in $P$ along $\gamma$. So $\frac{\partial N(\gamma(s))}{\partial s}$ is in $P$ too.\\
+But since $\frac{\partial N(\gamma(s))}{\partial s}\perp N(s)$, and $\gamma'(s)\perp N(s)$, $\gamma'(s)\parallel \frac{\partial N(\gamma(s))}{\partial s}$. So $v\parallel \frac{\partial N(\gamma(s))}{\partial s}\Big|_{s=0}$, and $v$ is an eigenvector of $dN_p$. Since this is true for every $v$, we know that $p$ is an umbilical point. So every point on the surface is an umbilical point.\\
+Assume that the gaussian curvature of $\bx(u,v)$ is $\kappa(u,v)^2$ with $\kappa(u,v)\ge 0$ (Since every point is an umbilical point, $K\ge 0$ at every point). So $[-dN](u,v)=\begin{bmatrix}\kappa(u,v) & 0\\0 & \kappa(u,v)\end{bmatrix}$, and $N_u=\kappa(u,v)\bx_u$, $N_v=\kappa(u,v)\bx_v$. So $N_{uv}=\kappa_v\bx_u+\kappa\bx_{uv}=N_{vu}=\kappa_u\bx_v+\kappa\bx_{uv}$, so $\kappa_v\bx_u=\kappa_u\bx_v$. But since $\bx_u$ and $\bx_v$ are linearly independent, $\kappa_u=\kappa_v=0$, thus $\kappa$ is constant on the surface, and $K=\kappa^2$ is also constant on the surface.\\
+If $K>0$, then by Liebmann's theorem, the surface is contained in a sphere.\\
+If $K=0$, then since $N_u=\kappa(u,v)\bx_u$, $N_v=\kappa(u,v)\bx_v$, and $\kappa=0$, $N$ is constant on the surface, so the surface is contained in a plane.
 \end{proof}
 
 %第五題
