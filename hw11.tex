@@ -44,9 +44,6 @@
 \newcommand{\bfx}{\mathbf{x}}
 \newcommand{\grad}{\textrm{grad }}
 \newcommand{\sech}{\mbox{sech}}
-%\newcommand{\cosh}{\mbox{cosh}\ }
-%\newcommand{\tanh}{\mbox{tanh}\ }
-%\newcommand{\sinh}{\mbox{sinh}\ }
 
 %第四題
 \setcounter{theProblemCounter}{3}
@@ -80,9 +77,9 @@ Since $\alpha''(s)=n(s)$, and at $v=0$, $N\parallel \bfx_s\times\bfx_v=-n(s)$. S
 \cline{2-7}
  & line of curvature & geodesic & asymptotic curve & $\Gamma^{k}_{ij}$ & $H$ & $K$ \\
 \cline{2-7}
-(A) & & & & & & \\
+(A) & Yes & Yes & Yes & No & Yes & Yes\\
 \cline{2-7}
-(B) & & & & & & \\
+(B) & (2) & Yes & (6) & Yes & (10) & Yes\\
 \cline{2-7}
 \end{tabular}
 \end{problem}
@@ -90,11 +87,18 @@ Since $\alpha''(s)=n(s)$, and at $v=0$, $N\parallel \bfx_s\times\bfx_v=-n(s)$. S
 %第九題
 \setcounter{theProblemCounter}{8}
 \begin{problem}
-考慮 p221, p222 中 helicoid $Y$ 和 catenoid $X$ 的 parametrization。
+考慮 p221, p222 中 helicoid $Y$ 和 catenoid $X$ 的 parametrization。\\
+$X(u,v)=(a\cosh{v}\cos{u},a\cosh{v}\sin{u},av)$, $Y(u,v)=(a\sinh{v}\cos{u},a\sinh{v}\sin{u},au)$
 \begin{enumerate}
 \item[(a)] $X$ 中的 geodesics 相對應映到 $Y$ 中也是 geodesics 嗎？
 \item[(b)] 已知 $X$ 的經線 ($u = $ const) 與 $v=0$ 都是 geodesics。描述他們在 $Y$ 中的對應曲線？他們都是 geodesics 嗎？
 \end{enumerate}
 \end{problem}
-
+\begin{proof}
+\begin{enumerate}
+\item[(a)]
+Since $X$ and $Y$ are isometry, they have the same $\Gamma^{k}_{ij}$, and have the same geodesic equation. So geodesic in $X$ is also geodesic in $Y$.
+\item[(b)]
+\end{enumerate}
+\end{proof}
 \end{document}
