@@ -1,0 +1,80 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{amsmath, amssymb, amsthm}
+%加這個就可以設定字體
+\usepackage{fontspec}
+\usepackage{xkeyval} %MikTeX 2.9 版本相容有誤, 以此修正
+%使用xeCJK，其他的還有CJK或是xCJK
+\usepackage{xeCJK}
+%設定英文字型，不設的話就會使用預設的字型
+%\setmainfont{Times New Roman}
+%設定中英文的字型
+%字型的設定可以使用系統內的字型，而不用像以前一樣另外安裝
+%\setCJKmainfont{文泉驛微米黑}
+\setCJKmainfont{WenQuanYi Micro Hei}
+\setCJKfamilyfont{lh}{LiHei Pro}
+\newcommand{\LiHei}{\CJKfamily{lh}}
+%中文自動換行
+\XeTeXlinebreaklocale "zh"
+%文字的彈性間距
+\XeTeXlinebreakskip = 0pt plus 1pt
+%設定段落之間的距離
+\setlength{\parskip}{0.3cm}
+%設定行距
+%\linespread{1.5}\selectfont
+\usepackage{enumerate}
+
+%先暫時用水泥字型，如果任何人看不下去就改吧XD
+\usepackage[T1]{fontenc}
+\usepackage{concmath}
+%\usepackage{mathptmx} %Times
+
+\usepackage{tabularx}
+
+\newcounter{theProblemCounter}
+\newtheorem{problem}[theProblemCounter]{Problem}
+
+\begin{document}
+%\title{{\fontspec{Copperplate Gothic Bold}Geometry Homework Bonus}}
+\title{{\fontspec{Copperplate}Geometry Homework Bonus}}
+\author{{\it{B96201044}} {\LiHei 黃上恩}, {\it{B98901182}} {\LiHei 時丕勳}, {\it{K0020100x}} {\LiHei 劉士瑋}}
+\date{\today}
+\maketitle
+
+\newcommand{\bx}{\mathbb{X}}
+\newcommand{\bfx}{\mathbf{x}}
+\newcommand{\grad}{\textrm{grad }}
+\newcommand{\sech}{\mbox{sech}}
+\newcommand{\pr}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\prr}[3]{\frac{\partial^2 #1}{\partial #2\partial #3}}
+\newcommand{\ip}[2]{\langle#1, #2\rangle}
+
+%第四題
+\setcounter{theProblemCounter}{3}
+\begin{problem}
+給定一 simple close curve $\gamma(s)$,考慮$\gamma(s)$沿著$N$方向以$|\kappa|$的變化率變動的情形。 Formulation: 令 $F(s, t) = (x(s, t), y(s, t))$\\ $F(s,t)$ 可想成 $\gamma_t(s)$,是在時間$t$時的曲線。其中$\gamma_0(s) = \gamma(s)$,此時不妨假設$s$為長度參數。但當$t \neq 0$, $s$並非$\gamma_t(s)$之長度參數。\begin{enumerate}
+\item $\gamma_0(s) = (\cos s, \sin s)$ 時,說明$\gamma_t(s)$的變化
+\item 令$\Delta=\sqrt{\left(\frac{dx}{ds}\right)^2 + \left(\frac{dy}{ds}\right)^2}$, 證明$\frac{\partial\Delta}{\partial t}=-\kappa_t^2(s)\Delta$ \par
+(其實$\frac{dx}{ds}, \frac{dy}{ds}$是$\frac{\partial x}{\partial s}, \frac{\partial y}{\partial s}$)
+\item 說明 $\gamma_t$的長度會越來越短。
+\item 給出一個想法,說明若$\gamma_1, \gamma_2$一開始不相交,則$\gamma_{1t}, \gamma_{2t}$就永遠不會相交。
+\end{enumerate}
+\end{problem}
+\begin{proof}
+\begin{enumerate}
+\item 
+$$
+F = (\sin s, \cos s)
+F_s &= \Delta T \\
+F_t &= \kappa N \\
+$$
+\item 
+\begin{align*}
+F_s &= \Delta T \\
+F_t &= \kappa N \\
+F_{ss} &= \Delta^2\kappa N + \Delta_sT\\
+\pr{\Delta}{t}&=\frac{\ip{F_s}{F_s}_t}{2\Delta}=\frac{\ip{F_{st}}{F_s}}{\Delta}=\frac{\ip{F_t}{F_s}_s-\ip{F_{t}}{F_{ss}}}{\Delta}=-\frac{\ip{F_t}{F_{ss}}}{\Delta}=-\kappa^2\Delta
+\end{align*}
+\item Denote the length of $\gamma_t$ by $|\gamma_t|$ and let $|\gamma_0|=\lambda$. Then by 2., $$\pr{|\gamma_t|}{t} =\int_0^{\lambda}\pr{\Delta}{t}\Delta ds = \int_0^{\lambda}-\kappa_t^2(s)\Delta^2 ds \leq 0.$$
+\end{enumerate}
+\end{proof}
+\end{document}
