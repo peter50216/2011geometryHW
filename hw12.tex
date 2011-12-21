@@ -1,0 +1,79 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{amsmath, amssymb, amsthm}
+%加這個就可以設定字體
+\usepackage{fontspec}
+\usepackage{xkeyval} %MikTeX 2.9 版本相容有誤, 以此修正
+%使用xeCJK，其他的還有CJK或是xCJK
+\usepackage{xeCJK}
+%設定英文字型，不設的話就會使用預設的字型
+%\setmainfont{Times New Roman}
+%設定中英文的字型
+%字型的設定可以使用系統內的字型，而不用像以前一樣另外安裝
+%\setCJKmainfont{文泉驛微米黑}
+\setCJKmainfont{WenQuanYi Micro Hei}
+\setCJKfamilyfont{lh}{LiHei Pro}
+\newcommand{\LiHei}{\CJKfamily{lh}}
+%中文自動換行
+\XeTeXlinebreaklocale "zh"
+%文字的彈性間距
+\XeTeXlinebreakskip = 0pt plus 1pt
+%設定段落之間的距離
+\setlength{\parskip}{0.3cm}
+%設定行距
+%\linespread{1.5}\selectfont
+\usepackage{enumerate}
+
+%先暫時用水泥字型，如果任何人看不下去就改吧XD
+\usepackage[T1]{fontenc}
+\usepackage{concmath}
+%\usepackage{mathptmx} %Times
+
+\usepackage{tabularx}
+
+\newcounter{theProblemCounter}
+\newtheorem{problem}[theProblemCounter]{Problem}
+
+\begin{document}
+\title{{\fontspec{Copperplate Gothic Bold}Geometry Homework 12}}
+%\title{{\fontspec{Copperplate}Geometry Homework 11}}
+\author{{\it{B96201044}} {\LiHei 黃上恩}, {\it{B98901182}} {\LiHei 時丕勳}, {\it{K0020100x}} {\LiHei 劉士瑋}}
+\date{\today}
+\maketitle
+
+\newcommand{\bx}{\mathbb{X}}
+\newcommand{\bfx}{\mathbf{x}}
+\newcommand{\grad}{\textrm{grad }}
+\newcommand{\sech}{\mbox{sech}}
+
+%第三題
+\setcounter{theProblemCounter}{2}
+\begin{problem}[Ex p294 3.]
+If $p$ is a point of a regular surface $S$, prove that \[ K(p) = \lim_{r\to 0}\frac{12}{\pi}\frac{\pi r^2-A}{r^4}, \] where $K(p)$ is the Gaussian curvature of $S$ at $p$, $r$ is the radius of a geodesic circle $S_r(p)$ centered in $p$, and $A$ is the area of the region bounded by $S_r(p)$.
+\end{problem}
+
+%第四題
+\setcounter{theProblemCounter}{3}
+\begin{problem}[Ex p295 4.]
+Show that in a system of normal coordinates centered in $p$, all the Christoffel symbols are zero at $p$.
+\end{problem}
+
+%第五題
+\setcounter{theProblemCounter}{4}
+\begin{problem}[Ex p295 5.]
+For which of the pair of surfaces given below does there exist a local isometry?
+\begin{enumerate}
+\item[(a)] Torus of revolution and cone.
+\item[(b)] Cone and sphere.
+\item[(c)] Cone and cylinder.
+\end{enumerate}
+\end{problem}
+
+%第八題
+\setcounter{theProblemCounter}{7}
+\begin{problem}\hspace*{1em}
+\begin{enumerate}
+\item[(a)] 在半徑 $R$ 的球面上，計算 geodesic circle 的長度，並驗證 P292 課文中間 $K(p)$ 的公式。
+\item[(b)] 用一樣的精神，檢驗 P294 3. 的公式。
+\end{enumerate}
+\end{problem}
+\end{document}
