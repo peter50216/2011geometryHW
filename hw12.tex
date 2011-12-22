@@ -50,6 +50,18 @@
 \begin{problem}[Ex p294 3.]
 If $p$ is a point of a regular surface $S$, prove that \[ K(p) = \lim_{r\to 0}\frac{12}{\pi}\frac{\pi r^2-A}{r^4}, \] where $K(p)$ is the Gaussian curvature of $S$ at $p$, $r$ is the radius of a geodesic circle $S_r(p)$ centered in $p$, and $A$ is the area of the region bounded by $S_r(p)$.
 \end{problem}
+\begin{proof}
+\begin{align*}
+A_R&=\int_{0}^{R}\int_0^{2\pi}\sqrt{EG-F^2}d\theta dr\\
+&=\int_{0}^{R}\int_0^{2\pi}\sqrt{G}d\theta dr\\
+&\approx \int_{0}^{R}\int_0^{2\pi} r-\frac{K}{6}r^3 d\theta dr\\
+&=\int_0^{2\pi}\frac{1}{2}R^2-\frac{K}{24}R^4 d\theta\\
+&=\pi R^2-\frac{R^4}{24}\int_0^{2\pi}K d\theta\\
+\rightarrow \frac{1}{2\pi}\int_0^{2\pi}K d\theta &=\frac{12}{r^4}(r^2-\frac{1}{\pi}A_r)\\
+\rightarrow K(p)&=\lim_{r\to 0}\frac{12}{r^4}(r^2-\frac{1}{\pi}A_r)\\
+&=\lim_{r\to 0}\frac{12}{\pi}\frac{\pi r^2-A_r}{r^4}\\
+\end{align*}
+\end{proof}
 
 %第四題
 \setcounter{theProblemCounter}{3}
