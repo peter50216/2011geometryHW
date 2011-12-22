@@ -34,8 +34,8 @@
 \newtheorem{problem}[theProblemCounter]{Problem}
 
 \begin{document}
-\title{{\fontspec{Copperplate Gothic Bold}Geometry Homework 12}}
-%\title{{\fontspec{Copperplate}Geometry Homework 11}}
+%\title{{\fontspec{Copperplate Gothic Bold}Geometry Homework 12}}
+\title{{\fontspec{Copperplate}Geometry Homework 12}}
 \author{{\it{B96201044}} {\LiHei 黃上恩}, {\it{B98901182}} {\LiHei 時丕勳}, {\it{K0020100x}} {\LiHei 劉士瑋}}
 \date{\today}
 \maketitle
@@ -44,6 +44,9 @@
 \newcommand{\bfx}{\mathbf{x}}
 \newcommand{\grad}{\textrm{grad }}
 \newcommand{\sech}{\mbox{sech}}
+\newcommand{\pr}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\prr}[3]{\frac{\partial^2 #1}{\partial #2\partial #3}}
+\newcommand{\ip}[2]{\left\langle#1, #2\right\rangle}
 
 %第三題
 \setcounter{theProblemCounter}{2}
@@ -88,4 +91,37 @@ For which of the pair of surfaces given below does there exist a local isometry?
 \item[(b)] 用一樣的精神，檢驗 P294 3. 的公式。
 \end{enumerate}
 \end{problem}
+\begin{proof}
+\begin{enumerate}
+\item[(a)]
+WLOG, let $p = (0, 0, R)$, If $q\in T_p$ with $q = (l, \theta)$, then
+$$
+\exp(q) = \left(R\sin\frac{l}{R}\cos\theta, R\sin\frac{l}{R}\sin\theta, R\cos\frac{l}{R}\right),
+$$
+and thus the length of the image of the circle $\{q\in T_p : d(q, p) = l\}$ is
+$$
+2\pi\ip{\pr{\exp(q)}{\theta}}{\pr{\exp(q)}{\theta}}^{1/2} = 2\pi\left|R\sin\frac{l}{R}\right|
+$$
+. When $l\rightarrow 0$, it is $$2\pi R\sin\frac{l}{R}.$$
+
+, which is the length of the geodesic circle. By the formula,
+\begin{align*}
+K(p) &= \lim_{r\rightarrow 0}\frac{3}{\pi}\frac{2\pi r - L}{r^3} = \lim_{r\rightarrow 0}\frac{3}{\pi}\frac{2\pi r - 2\pi R\sin\frac{l}{R}}{r^3}\\ &\approx \lim_{r\rightarrow 0}\frac{3}{\pi}\frac{2\pi r - 2\pi R\left(r/R - \left(\frac rR\right)^3/6\right)}{r^3} \\ &=
+\lim_{r\rightarrow 0}\frac{3}{\pi}\frac{2\pi r\left(\frac rR\right)^3/6}{r^3} = \frac{1}{R^2}.
+\end{align*}
+
+\item[(b)]
+The area bounded by the geodesic circle is
+$$
+2\pi R\int^l_0 \left|\sin\frac{r}{R}\right| dr.
+$$
+When $l\rightarrow 0$, it is $$2\pi R^2 - 2\pi R^2\cos\frac lR.$$
+
+By the formula, 
+\begin{align*}
+K(p) &= \lim_{r\rightarrow 0}\frac{12}{\pi}\frac{\pi r^2 - A}{r^4} = \lim_{r\rightarrow 0}\frac{12}{\pi}\frac{\pi r^2 + 2\pi R^2\cos\frac rR - 2\pi R^2}{r^4}\\ &\approx \lim_{r\rightarrow 0}\frac{12}{\pi}\frac{\pi r^2 + 2\pi R^2\left(1 - \left(\frac rR\right)^2/2 + \left(\frac rR\right)^4/24\right) - 2\pi R^2}{r^4} \\ &=
+\lim_{r\rightarrow 0}\frac{12}{\pi}\frac{\pi R^2\left(\frac rR\right)^4/12}{r^4} = \frac{1}{R^2}
+\end{align*}
+\end{enumerate}
+\end{proof}
 \end{document}
