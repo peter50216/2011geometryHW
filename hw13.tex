@@ -1,0 +1,90 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage{amsmath, amssymb, amsthm}
+%加這個就可以設定字體
+\usepackage{fontspec}
+\usepackage{xkeyval} %MikTeX 2.9 版本相容有誤, 以此修正
+%使用xeCJK，其他的還有CJK或是xCJK
+\usepackage{xeCJK}
+%設定英文字型，不設的話就會使用預設的字型
+%\setmainfont{Times New Roman}
+%設定中英文的字型
+%字型的設定可以使用系統內的字型，而不用像以前一樣另外安裝
+%\setCJKmainfont{文泉驛微米黑}
+\setCJKmainfont{WenQuanYi Micro Hei}
+\setCJKfamilyfont{lh}{LiHei Pro}
+\newcommand{\LiHei}{\CJKfamily{lh}}
+%中文自動換行
+\XeTeXlinebreaklocale "zh"
+%文字的彈性間距
+\XeTeXlinebreakskip = 0pt plus 1pt
+%設定段落之間的距離
+\setlength{\parskip}{0.3cm}
+%設定行距
+%\linespread{1.5}\selectfont
+\usepackage{enumerate}
+
+%先暫時用水泥字型，如果任何人看不下去就改吧XD
+\usepackage[T1]{fontenc}
+\usepackage{concmath}
+%\usepackage{mathptmx} %Times
+
+\usepackage{tabularx}
+
+\newcounter{theProblemCounter}
+\newtheorem{problem}[theProblemCounter]{Problem}
+
+\begin{document}
+\title{{\fontspec{Copperplate Gothic Bold}Geometry Homework 13}}
+%\title{{\fontspec{Copperplate}Geometry Homework 13}}
+\author{{\it{B96201044}} {\LiHei 黃上恩}, {\it{B98901182}} {\LiHei 時丕勳}, {\it{K0020100x}} {\LiHei 劉士瑋}}
+\date{\today}
+\maketitle
+
+\newcommand{\bx}{\mathbb{X}}
+\newcommand{\bfx}{\mathbf{x}}
+\newcommand{\grad}{\textrm{grad }}
+\newcommand{\sech}{\mbox{sech}}
+\newcommand{\pr}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\prr}[3]{\frac{\partial^2 #1}{\partial #2\partial #3}}
+\newcommand{\ip}[2]{\left\langle#1, #2\right\rangle}
+
+%第四題
+\setcounter{theProblemCounter}{3}
+\begin{problem}
+Helicoid $\bx(u, v)=(v\cos u, v\sin u, u)$, $\gamma(t)=\bx(t, 1)$, $p=\bx(0, 1)=(1,0,0)$, $V(0)=\gamma'(0)$ 求解平行向量場 $V(t)$ along $\gamma(t)$
+\end{problem}
+
+%第六題
+\setcounter{theProblemCounter}{5}
+\begin{problem}
+如圖考慮一旋轉體上的緯圈 $\gamma$，已知其 generating curve(經線) 切線與中心軸夾角為 $\theta$。
+\begin{enumerate}
+\item[(a)] 求一向量沿 $\gamma$ 平行移動，繞一圈後與原向量的夾角 (不妨假設起始向量與緯圈同向)
+\item[(b)] 將該 surface 放大或縮小，相對應問題的夾角有何變化
+\item[(c)] 計算此緯圈之 $\oint_\gamma \kappa_g \mathrm{d}s$，值與 surface 的縮放有關嗎？
+\end{enumerate}
+\end{problem}
+
+%第十題
+\setcounter{theProblemCounter}{9}
+\begin{problem}[Ex P282 4.]\hspace*{0em}
+\begin{enumerate}
+\item[(a)] Compute the Euler-Poincar\'e characteristic of (1) An ellipsoid. (2) The surface $S=\{(x, y, z)\in \mathbb{R}^3; x^2+y^10+z^6=1\}$.
+\item[(b)] 如圖，將一圓盤的邊界如圖「黏」起來(也可以想成將對稱點「黏」起來)，找一個三角分割，計算此 projective space 的 Euler characteristic。
+\end{enumerate}
+\end{problem}
+
+%第十二題
+\setcounter{theProblemCounter}{11}
+\begin{problem}[Ex P283 6.]
+Show that $(0,0)$ is an isolated singular point and compute the index at $(0,0)$ of the following vector fields in the plane:
+\begin{enumerate}
+\item[(a)] $v=(x, y)$.
+\item[(b)] $v=(-x,y)$.
+\item[(c)] $v=(x,-y)$.
+\item[(d)] $v=(x^2-y^2,-2xy)$.
+\item[(e)] $v=(x^3-3xy^2,y^3-3x^2y)$.
+\end{enumerate}
+\end{problem}
+
+\end{document}
