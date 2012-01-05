@@ -62,10 +62,12 @@
 \begin{proof}
 \begin{enumerate}
 \item 
+由對稱性顯然可知，$\gamma_t(s)$ 仍然會是個圓, 設 $\gamma_t(s)=(r(t)\cos s, r(t)\sin s)$.\\
 \begin{align*}
-F &= (\sin s, \cos s)\\
-F_s &= \Delta T \\
-F_t &= \kappa N \\
+\rightarrow r'(t)&=-\frac{1}{r(t)}\\
+\rightarrow r(t)=\sqrt{2(C-t)}\\
+r(0)&=1 \rightarrow r(t)=\sqrt{1-2t}\\
+\rightarrow \gamma_t(s)&=(\sqrt{1-2t}\cos s, \sqrt{1-2t}\sin s)
 \end{align*}
 \item 
 \begin{align*}
@@ -75,6 +77,10 @@ F_{ss} &= \Delta^2\kappa N + \Delta_sT\\
 \pr{\Delta}{t}&=\frac{\ip{F_s}{F_s}_t}{2\Delta}=\frac{\ip{F_{st}}{F_s}}{\Delta}=\frac{\ip{F_t}{F_s}_s-\ip{F_{t}}{F_{ss}}}{\Delta}=-\frac{\ip{F_t}{F_{ss}}}{\Delta}=-\kappa^2\Delta
 \end{align*}
 \item Denote the length of $\gamma_t$ by $|\gamma_t|$ and let $|\gamma_0|=\lambda$. Then by 2., $$\pr{|\gamma_t|}{t} =\int_0^{\lambda}\pr{\Delta}{t}\Delta ds = \int_0^{\lambda}-\kappa_t^2(s)\Delta^2 ds \leq 0.$$
+\item
+顯然若 $\gamma_{1t}$ 和 $\gamma_{2t}$ 會相交的話, 則他們在某個時間點會是相切的, 不妨假設這時間點就是兩條曲線第一次相交的時間點.\\
+若在切點處兩曲線的曲率不一樣大, 則在較裡面那條曲線的曲率會比較大, 故在 $t$ 往回一點時他會往外長得比較快, 所以兩曲線仍然是相交的.\\
+故在切點處兩條曲線的曲率是一樣大的, 
 \end{enumerate}
 \end{proof}
 \end{document}
