@@ -34,13 +34,8 @@
 \newtheorem{problem}[theProblemCounter]{Problem}
 
 \begin{document}
-<<<<<<< HEAD
 \title{{\fontspec{Copperplate Gothic Bold}Geometry Homework Bonus}}
 %\title{{\fontspec{Copperplate}Geometry Homework Bonus}}
-=======
-%\title{{\fontspec{Copperplate Gothic Bold}Geometry Homework Bonus}}
-\title{{\fontspec{Copperplate}Geometry Homework Bonus}}
->>>>>>> a7c00a1ad86aa98b651be2ba77dc50cf3d8e46d1
 \author{{\it{B96201044}} {\LiHei 黃上恩}, {\it{B98901182}} {\LiHei 時丕勳}, {\it{K0020100x}} {\LiHei 劉士瑋}}
 \date{\today}
 \maketitle
@@ -53,13 +48,8 @@
 \newcommand{\prr}[3]{\frac{\partial^2 #1}{\partial #2\partial #3}}
 \newcommand{\ip}[2]{\langle#1, #2\rangle}
 
-<<<<<<< HEAD
 %第?題
 %\setcounter{theProblemCounter}{3}
-=======
-%第四題
-\setcounter{theProblemCounter}{3}
->>>>>>> a7c00a1ad86aa98b651be2ba77dc50cf3d8e46d1
 \begin{problem}
 給定一 simple close curve $\gamma(s)$,考慮$\gamma(s)$沿著$N$方向以$|\kappa|$的變化率變動的情形。 Formulation: 令 $F(s, t) = (x(s, t), y(s, t))$\\ $F(s,t)$ 可想成 $\gamma_t(s)$,是在時間$t$時的曲線。其中$\gamma_0(s) = \gamma(s)$,此時不妨假設$s$為長度參數。但當$t \neq 0$, $s$並非$\gamma_t(s)$之長度參數。\begin{enumerate}
 \item $\gamma_0(s) = (\cos s, \sin s)$ 時,說明$\gamma_t(s)$的變化
@@ -72,19 +62,13 @@
 \begin{proof}
 \begin{enumerate}
 \item 
-<<<<<<< HEAD
+由對稱性顯然可知，$\gamma_t(s)$ 仍然會是個圓, 設 $\gamma_t(s)=(r(t)\cos s, r(t)\sin s)$.\\
 \begin{align*}
-F &= (\sin s, \cos s)\\
-F_s &= \Delta T \\
-F_t &= \kappa N \\
+\rightarrow r'(t)&=-\frac{1}{r(t)}\\
+\rightarrow r(t)=\sqrt{2(C-t)}\\
+r(0)&=1 \rightarrow r(t)=\sqrt{1-2t}\\
+\rightarrow \gamma_t(s)&=(\sqrt{1-2t}\cos s, \sqrt{1-2t}\sin s)
 \end{align*}
-=======
-$$
-F = (\sin s, \cos s)
-F_s &= \Delta T \\
-F_t &= \kappa N \\
-$$
->>>>>>> a7c00a1ad86aa98b651be2ba77dc50cf3d8e46d1
 \item 
 \begin{align*}
 F_s &= \Delta T \\
@@ -93,6 +77,10 @@ F_{ss} &= \Delta^2\kappa N + \Delta_sT\\
 \pr{\Delta}{t}&=\frac{\ip{F_s}{F_s}_t}{2\Delta}=\frac{\ip{F_{st}}{F_s}}{\Delta}=\frac{\ip{F_t}{F_s}_s-\ip{F_{t}}{F_{ss}}}{\Delta}=-\frac{\ip{F_t}{F_{ss}}}{\Delta}=-\kappa^2\Delta
 \end{align*}
 \item Denote the length of $\gamma_t$ by $|\gamma_t|$ and let $|\gamma_0|=\lambda$. Then by 2., $$\pr{|\gamma_t|}{t} =\int_0^{\lambda}\pr{\Delta}{t}\Delta ds = \int_0^{\lambda}-\kappa_t^2(s)\Delta^2 ds \leq 0.$$
+\item
+顯然若 $\gamma_{1t}$ 和 $\gamma_{2t}$ 會相交的話, 則他們在某個時間點會是相切的, 不妨假設這時間點就是兩條曲線第一次相交的時間點.\\
+若在切點處兩曲線的曲率不一樣大, 則在較裡面那條曲線的曲率會比較大, 故在 $t$ 往回一點時他會往外長得比較快, 所以兩曲線仍然是相交的.\\
+故在切點處兩條曲線的曲率一樣大, 而因為這兩條曲線在 $t$ 往回一點時是不相交的, 故外面那條曲線在 $t$ 往回一點時會往外長得比較快，但這卻表示在 $t$ 往回一點時外面那條曲線在該切點對應到的點附近的曲率比較大, 但這樣外面曲線的曲率比較大, 當往回一點的 $\Delta t$ 很小時, 就會和裡面的那條曲線相交, 而和我們假設這兩條曲線第一次相交矛盾. 故 $\gamma_{1t}$ 和 $\gamma_{2t}$ 不會相交.
 \end{enumerate}
 \end{proof}
 \end{document}
